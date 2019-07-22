@@ -16,9 +16,37 @@
     display: flex;
     flex-direction: row;
     list-style: none;
-    justify-content: center;
+    justify-content: space-between;
 
 }
+
+.news__list{
+    padding-inline-start: 0px;
+
+}
+
+.news__text {
+    width: 644px;
+
+}
+
+.news__img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 11px;
+    margin-left: 0px;
+    
+    
+}
+
+.news__img--plane {
+    width: 160px;
+    height:160px;
+
+}
+
 
 .news__box {
     font-family: Roboto;
@@ -30,16 +58,19 @@
     letter-spacing: normal;
     text-align: left;
     color: #221f1f;
+    flex-shrink: 2;
 }
 
 time{
     font-size: 14px;
     line-height: 1.5;
     color: #656464;
+    
 }
 
 .news__box h3{
     font-weight: bold;
     line-height: 1.17;  
+    flex-shrink: 2;
 }
 
