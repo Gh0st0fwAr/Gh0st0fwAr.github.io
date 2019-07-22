@@ -22,10 +22,22 @@
 }
 
 
-
-
 .tariffs__icon--flower {
     background-image: url(../../img/mainpage/flower.png);
     background-repeat: no-repeat;
-    
+    background-position: center;
+
+}
+
+.tariffs__icon--star{
+    background-image: url(../../img/mainpage/star.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.tariffs__icon--palette{
+    background-image: url(../../img/mainpage/palette.png);
+    background-repeat: no-repeat;
+    background-position: center;
 }
