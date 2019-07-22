@@ -58,7 +58,7 @@
     letter-spacing: normal;
     text-align: left;
     color: #221f1f;
-    flex-shrink: 2;
+    
 }
 
 time{
@@ -71,6 +71,26 @@ time{
 .news__box h3{
     font-weight: bold;
     line-height: 1.17;  
-    flex-shrink: 2;
+    
 }
 
+.counter--flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    
+}
+
+.pagecounter__pages--flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    
+}
+
+.pagecounter__pages{
+    padding-inline-start: 0px;
+
+}

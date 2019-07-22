@@ -1,9 +1,24 @@
+* {
+   margin: 0;
+   padding: 0;
+ }
+  
+html,body {
+   height: 100%;
+}
+
+.wrapper1{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
 .wrapper {
     overflow: hidden;
     min-width: 1100px;
-    height: 100%;
+    
 
 }
+
 
 .container {
     width:1060px;
@@ -21,7 +36,7 @@
     overflow: hidden;
     min-width: 1100px;
     height: 100%;
-    border: 1px solid black
+    flex: 1 0 auto;
 }
 
 .main{
@@ -32,6 +47,13 @@
 .main--flex{
     display: flex;
     align-items: center;
+}
+
+.filling {
+    overflow: hidden;
+    min-width: 1100px;
+    margin: 0 auto;
+
 }
 
 .tariffs__icon {
@@ -66,18 +88,4 @@
     margin: 0px 0px 0px 70px;
 }
 
-.pagecontent {
-    border: 1px solid black;
-}
 
-.tariffs {
-    border: 1px solid black;
-}
-
-.news {
-    border: 1px solid black;
-}
-
-.banner {
-    border: 1px solid black;
-}

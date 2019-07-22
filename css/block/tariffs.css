@@ -2,10 +2,8 @@
     padding-inline-start: 0px;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: baseline;
     list-style: none;
-    align-items: center;
-    
     
 }
 
