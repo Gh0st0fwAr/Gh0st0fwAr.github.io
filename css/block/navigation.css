@@ -1,0 +1,19 @@
+.menu {
+    margin: 15px 0px 0px 14px;
+    border: 1px solid black;
+    align-self: baseline;
+
+}
+
+.navigation__panel {
+    list-style-type: none;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 4.1;
+    letter-spacing: 2.4px;
+    text-align: left;
+    color: #4b73b5;
+}
+

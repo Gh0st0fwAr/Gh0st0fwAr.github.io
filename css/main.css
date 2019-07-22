@@ -3,3 +3,8 @@
 @import "block/header.css";
 @import "addition.css";
 
+/* Main page CSS */
+@import "block/navigation.css";
+@import "block/mainpage.css";
+@import "block/tariffs.css";
+

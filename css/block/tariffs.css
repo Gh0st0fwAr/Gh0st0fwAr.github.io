@@ -1,0 +1,38 @@
+.tariffs__icon {
+    display: block;
+    width: 68px;
+    height: 68px;   
+    background: #4b73b5;
+    border-radius: 34px;
+        
+}
+
+.tariffs__list--flex {
+    padding-inline-start: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+    
+}
+
+.tariffs__icon {
+    display: block;
+    width: 68px;
+    height: 68px;   
+    background: #4b73b5;
+    border-radius: 34px;
+        
+}
+
+.tariffs__item {
+    width: 250px;
+    
+}
+
+
+
+
+.tariffs__icon--flower {
+    background-image: url(../../img/mainpage/flower.png);
+}
