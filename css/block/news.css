@@ -8,8 +8,10 @@
     letter-spacing: normal;
     text-align: left;
     color: #221f1f;
-    
-  }
+    margin-top: 60px;
+
+}
+
 
 .news__box--flex{
     padding-inline-start: 0px;
@@ -22,12 +24,12 @@
 
 .news__list{
     padding-inline-start: 0px;
-
+    margin-top: 65px;
 }
 
 .news__text {
-    width: 644px;
-
+    width: 645px;
+    margin-right: 59px;
 }
 
 .news__img {
@@ -58,7 +60,9 @@
     letter-spacing: normal;
     text-align: left;
     color: #221f1f;
-    
+    margin-top: 43px;
+}
+
 }
 
 time{
@@ -69,9 +73,10 @@ time{
 }
 
 .news__box h3{
+    font-size: 18px;
     font-weight: bold;
     line-height: 1.17;  
-    
+    margin-bottom: 9px;
 }
 
 .counter--flex{
