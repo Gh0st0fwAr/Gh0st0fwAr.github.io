@@ -1,3 +1,7 @@
+.tariffs__list {
+    margin: 78px 0px 0px 20px;
+}
+
 .tariffs__list--flex {
     padding-inline-start: 0px;
     display: flex;
@@ -30,6 +34,11 @@
 
         
 }
+
+.tariffs {
+    margin: -20px 0px 0px 69px;
+}
+
 
 .tariffs__item {
     width: 250px;

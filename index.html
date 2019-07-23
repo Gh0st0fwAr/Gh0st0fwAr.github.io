@@ -35,11 +35,11 @@
 			<!-- Меню навигации aside -->
 			<aside class="menu">
 				<nav class="navigation">
-					<ul class="navigation__panel">
-						<li class="navigation__panel--index"><a>ГЛАВНАЯ</a></li>
-						<li class="navigation__panel--reviews"><a href="reviews.html">ОТЗЫВЫ</a></li>
-						<li class="navigation__panel--crew"><a href="crew.html">ЭКИПАЖ</a></li>
-					</ul>
+					<ul class="navigation__panel navigation__panel--flex">
+						<li><img src="/img/mainpage/main-icon-black.png" class="navigation__icon navigation__icon--index"><a class="link__index inactive">ГЛАВНАЯ</a></li>
+						<li><img src="/img/mainpage/feed-icon.png" class="navigation__icon navigation__icon--reviews"><a href="reviews.html" class="link__reviews active">ОТЗЫВЫ</a></li>
+						<li><img src="/img/mainpage/team-icon.png" class="navigation__icon navigation__icon--crew"><a href="crew.html" class="link__crew active">ЭКИПАЖ</a></li>
+					</ul> 
 				</nav>
 			</aside>
 			<!-- Конец меню навигации aside -->
@@ -197,14 +197,35 @@
 
 	<div class="footer__wrapper">
 		<footer class="footer footer--flex">
-			<div class="autor"></div>
+			<div class="autor">Сделано с любовью и старанием на курсе 
+					&#171;HTML + CSS&#187; в <b>LoftSchool</b>
+					Автор работы: Вирин Даниил
+			</div>
 			<div class="logo__img">
 				<a href="#" class="logo">
 			     <img src="img/mainpage/logo-header.png" alt="air logo" class="logo__img">
 				</a>
 		    </div>
 			<div class="social__links">
-
+				Наши социальные сети
+				<ul class="social__list social__list--flex">
+					<li class="social__item">
+						<div class="social__icon social__icon--vk"></div>
+					</li>
+					<li class="social__item">
+							<div class="social__icon social__icon--fb"></div>
+					</li>
+					<li class="social__item">
+							<div class="social__icon social__icon--gplus"></div>
+					</li>
+					<li class="social__item">
+							<div class="social__icon social__icon--twitter"></div>
+					</li>
+					<li class="social__item">
+							<div class="social__icon social__icon--mail"></div>
+					</li>
+					
+				</ul>
 			</div>
 		</footer>
 	</div>

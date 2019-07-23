@@ -1,7 +1,26 @@
 .menu {
-    margin: 15px 0px 0px 14px;
+    margin: 29px 0px 0px 0px;
     align-self: baseline;
 
+}
+
+.navigation__icon--index {
+    width: 17px;
+    height: 18px;
+}
+
+.navigation__icon--reviews {
+    width: 20px;
+    height: 18px;
+}
+
+.navigation__icon--crew {
+    width: 23px;
+    height: 18px;
+}
+
+.navigation__icon {
+    margin: 14px 20px 0px 19px;
 }
 
 .navigation__panel {
@@ -12,7 +31,25 @@
     font-style: normal;
     line-height: 4.1;
     letter-spacing: 2.4px;
-    text-align: left;
+    
+
+}
+
+.navigation__panel li {
+    display: flex;
+
+}
+
+
+.navigation__panel a {
+    text-decoration: none;
+   
+}
+
+.active {
     color: #4b73b5;
 }
 
+.inactive {
+    color: black;
+}
