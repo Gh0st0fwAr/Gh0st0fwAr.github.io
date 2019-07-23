@@ -45,7 +45,7 @@
 
 .tariffs__item {
     width: 250px;
-    border: 1px solid black;
+   
 }
 
 
@@ -131,4 +131,12 @@
     vertical-align: 0.35em;
     font-size: 30px;
     letter-spacing: 3px;
+}
+
+
+.tariffs__item:hover {
+    border-radius: 5px;
+    border: solid 1px #e8e9ed;
+    width: 250px;
+    height: 456px;
 }
