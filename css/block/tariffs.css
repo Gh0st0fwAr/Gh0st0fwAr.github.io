@@ -1,29 +1,13 @@
 .tariffs__list {
     margin: 0px 65px 0px -15px;
     justify-content: space-evenly;
-}
-
-.tariffs__list--flex {
     padding-inline-start: 0px;
     display: flex;
-    flex-direction: row;
     justify-content: baseline;
     list-style: none;
-    
 }
 
-.tariffs h1{
-  font-family: Roboto;
-  font-size: 49px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 0.78;
-  letter-spacing: normal;
-  text-align: left;
-  color: #221f1f;
-  margin: 13px 0px 34px 0px;
-}
+
 
 .tariffs__icon {
     display: block;
@@ -69,7 +53,7 @@
     background-position: center;
 }
 
-.tariffs__item h3{
+.tariffs__title {
     font-family: Roboto;
     font-size: 11px;
     font-weight: bold;
@@ -98,7 +82,7 @@
 }
 
 
-.benefits {
+.tariffs__benefits {
     font-family: Roboto;
     font-size: 18px;
     font-weight: 300;
@@ -114,7 +98,7 @@
 
 }
 
-.price {
+.tariffs__price {
     font-family: Roboto;
     font-size: 54px;
     font-weight: normal;
@@ -127,7 +111,7 @@
     margin: -38px 0px -19px -10px;
 }
 
-.price sub {
+.tariffs__dollar {
     vertical-align: 0.35em;
     font-size: 30px;
     letter-spacing: 3px;

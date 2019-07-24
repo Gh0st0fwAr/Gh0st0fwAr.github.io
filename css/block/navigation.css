@@ -1,27 +1,45 @@
-.menu {
-    margin: 29px 0px 0px 0px;
-    align-self: baseline;
+.aside {
+    align-self: flex-start;
+    margin-top: 29px;
+    margin-left: -20px;
+}
+
+.navigation__item {
+    display: flex;
 
 }
 
-.navigation__icon--index {
-    width: 17px;
-    height: 18px;
+.navigation__link {
+    display: flex;
+    align-items: center;
+   
 }
 
-.navigation__icon--reviews {
-    width: 20px;
-    height: 18px;
-}
-
-.navigation__icon--crew {
+.navigation__link:before {
+    content: "";
     width: 23px;
     height: 18px;
+    display: block;
+    margin-right: 7px;
+    background-repeat: no-repeat;
+    background-image: url("../../img/mainpage/spritesheet.png");
+
 }
 
-.navigation__icon {
-    margin: 14px 20px 0px 19px;
+
+.navigation__link--main:before {
+    background-position: -155px -5px;
 }
+
+.navigation__link--reviews:before {
+    background-position: -21px -5px;
+}
+
+.navigation__link--crew:before {
+    background-position: -182px -5px;
+}
+
+
 
 .navigation__panel {
     list-style-type: none;
@@ -31,25 +49,19 @@
     font-style: normal;
     line-height: 4.1;
     letter-spacing: 2.4px;
-    
+    width: 130px;
 
-}
-
-.navigation__panel li {
-    display: flex;
 
 }
 
 
-.navigation__panel a {
-    text-decoration: none;
-   
-}
+
+
 
 .active {
-    color: #4b73b5;
+    color: black;
 }
 
 .inactive {
-    color: black;
+    color: #4b73b5;
 }

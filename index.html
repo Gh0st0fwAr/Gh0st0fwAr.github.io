@@ -9,66 +9,69 @@
 	</head>
 
 <body>
-	<div class=wrapper1>
-	<div class="wrapper">
+	
+	<div class=wrapper>
+	
 		<header class="header">
-    <div class="container container--flex">
-		<div class="header__left">
-			<a href="#" class="logo">
+    		<div class="container container--flex">
+				<div class="header__left">
+			<a class="logo">
 				<img src="img/mainpage/logo-header.png" alt="air logo" class="logo__img">
 			</a>
-		</div>
-		    <div class="header__right">
-				<div class="contact">
+				</div>
+		    	<div class="header__right">
+					<div class="contact">
 				<a href="tel:88000039210" class="contact__phone">8 (800) 00-392-10</a> <br />
 				<button type="button" class="contact__desc">График работы</button>
-				</div>
+					</div>
 				
-		</div>
-	</div>
+				</div>
+			</div>
 		</header>
-	</div>
 
-	<div class="maincontent">
-		<div class="main main--flex">
-
+		<div class="maincontent">
+		<div class="container container--flex">
+			
+			<!-- Основной контент страницы -->
+			
 			<!-- Меню навигации aside -->
-			<aside class="menu">
+			<aside class="aside">
 				<nav class="navigation">
-					<ul class="navigation__panel navigation__panel--flex">
-						<li><img src="/img/mainpage/main-icon-black.png" class="navigation__icon navigation__icon--index"><a class="link__index inactive">ГЛАВНАЯ</a></li>
-						<li><img src="/img/mainpage/feed-icon.png" class="navigation__icon navigation__icon--reviews"><a href="reviews.html" class="link__reviews active">ОТЗЫВЫ</a></li>
-						<li><img src="/img/mainpage/team-icon.png" class="navigation__icon navigation__icon--crew"><a href="crew.html" class="link__crew active">ЭКИПАЖ</a></li>
+					<ul class="navigation__panel">
+						<li class="navigation__item"><a class="navigation__link navigation__link--main active ">ГЛАВНАЯ</a></li>
+						<li class="navigation__item"><a href="reviews.html" class="navigation__link navigation__link--reviews inactive">ОТЗЫВЫ</a></li>
+						<li class="navigation__item"><a href="crew.html" class="navigation__link navigation__link--crew inactive">ЭКИПАЖ</a></li>
 					</ul> 
 				</nav>
 			</aside>
 			<!-- Конец меню навигации aside -->
-
-			<!-- Основной контент страницы -->
-
+			
 			<div class="pagecontent">
-
+				
+				
+				
+				
 				<div class="banner">
-				<!-- Баннер -->
-				<img src="img/mainpage/banner.png" alt="Airplanet logo" class="banner__img">
+					<!-- Баннер -->
+					<img src="img/mainpage/banner.png" alt="Airplanet logo" class="banner__img">
 				</div>
-				<div class="filling">
+				<main class="main">
 					
-				    	<section class="tariffs">
+					<section class="tariffs">
 						<!--        Тарифы         -->
-							<h1>Тарифы</h1>
-							<!-- Шаблон li тарифов-->
-							<ul class="tariffs__list tariffs__list--flex">
-								<li class="tariffs__item">
-									<div class="tariffs__icon tariffs__icon--flower"></div>
-									<h3 class=>СТАНДАРТ</h3>
-									<div class="tariffs__text">Создан для вашего комфортного отдыха</div>
-									<ul class="benefits">
-										<li class="benefits__list">Питание включено</li>
-										<li class="benefits__list">Багаж (5 кг)</li>
-										<li class="benefits__list">Детское кресло</li>
+						<h1 class="title">Тарифы</h1>
+						<!-- Шаблон li тарифов-->
+						<ul class="tariffs__list">
+							<li class="tariffs__item">
+								<div class="tariffs__icon tariffs__icon--flower"></div>
+								<h3 class="tariffs__title">СТАНДАРТ</h3>
+								<div class="tariffs__text">Создан для вашего комфортного отдыха</div>
+								<ul class="tariffs__benefits">
+										<li class="tariffs__benefit">Питание включено</li>
+										<li class="tariffs__benefit">Багаж (5 кг)</li>
+										<li class="tariffs__benefit">Детское кресло</li>
 									</ul>
-									<div class="price"><sub>$</sub>19</div>
+									<div class="tariffs__price"><sub class="tariffs__dollar">$</sub>19</div>
 
 								</li>		
 							<!-- Шаблон li тарифов-->
@@ -76,28 +79,28 @@
 								<li class="tariffs__item">
 										<div class="tariffs__icon tariffs__icon--star"></div>
 
-										<h3>ПРЕМИУМ</h3>
+										<h3 class="tariffs__title">ПРЕМИУМ</h3>
 										<div class="tariffs__text">Для любителей хороших впечатлений</div>
-										<ul class="benefits">
-										<li class="benefits__list">Питание включено</li>
-										<li class="benefits__list">Багаж (5 кг)</li>
-										<li class="benefits__list">Детское кресло</li>
+										<ul class="tariffs__benefits">
+										<li class="tariffs__benefit">Питание включено</li>
+										<li class="tariffs__benefit">Багаж (5 кг)</li>
+										<li class="tariffs__benefit">Детское кресло</li>
 										</ul>
-										<div class="price"><sub>$</sub>39</div>
+										<div class="tariffs__price"><sub class="tariffs__dollar">$</sub>39</div>
 										
 	
 									</li>	
 
 									<li class="tariffs__item">
 											<div class="tariffs__icon tariffs__icon--palette"></div>
-											<h3>ЛАКШЕРИ</h3>
+											<h3 class="tariffs__title">ЛАКШЕРИ</h3>
 											<div class="tariffs__text">Всё самое лучшее и незабываемое</div>
-											<ul class="benefits">
-											<li class="benefits__list">Питание включено</li>
-										    <li class="benefits__list">Багаж (5 кг)</li>
-											<li class="benefits__list">Детское кресло</li>
+											<ul class="tariffs__benefits">
+											<li class="tariffs__benefit">Питание включено</li>
+										    <li class="tariffs__benefit">Багаж (5 кг)</li>
+											<li class="tariffs__benefit">Детское кресло</li>
 										    </ul>
-											<div class="price"><sub>$</sub>99</div>
+											<div class="tariffs__price"><sub class="tariffs__dollar">$</sub>99</div>
 		
 										</li>	
 							</ul>
@@ -107,16 +110,16 @@
 
 						<section class="news">
 						<!-- Новости -->
-						<h1>Последние новости</h1>
+						<h2 class="title">Последние новости</h1>
 						
 						<ul class="news__list">
 							
-							<li class="news__box news__box--flex">
+							<li class="news__box">
 								<div class="news__img"> <img class src="img/mainpage/newsplane.png"></div>
 								<div class="news__text">
-								<time datetime="12.10.2016">12.10.2016</time>
-								<h3>Ночные перелёты дешевле!</h3>
-								<p>Летящий в ночном небе самолет — зрелище загадочное
+								<time class="news__time" datetime="12.10.2016">12.10.2016</time>
+								<h3 class="news__title">Ночные перелёты дешевле!</h3>
+								<p class="news__description">Летящий в ночном небе самолет — зрелище загадочное
 								и романтическое. Крылатая машина величественно плывет
 								в вышине, мерцая разноцветными огнями, и почему-то
 								кажется, что она наполнена удивительными людьми,
@@ -124,12 +127,12 @@
 								</div>
 							</li>
 							
-							<li class="news__box news__box--flex">
+							<li class="news__box">
 									<div class="news__img"> <img class src="img/mainpage/newsmountain.png"></div>
 									<div class="news__text">
-									<time datetime="01.02.2016">01.02.2016</time>
-									<h3>Путешествие в Грузию стало доступнее</h3>
-									<p>Экскурсии по Грузии в 2017 году от русских гидов: 
+									<time class="news__time" datetime="01.02.2016">01.02.2016</time>
+									<h3 class="news__title">Путешествие в Грузию стало доступнее</h3>
+									<p class="news__description">Экскурсии по Грузии в 2017 году от русских гидов: 
 									самые интересные маршруты в Грузии от профессиональных
 									гидов. Обзорные, пешеходные, автомобильные, тематические
 									экскурсии по интересным городам и курортам Грузии. 
@@ -137,12 +140,12 @@
 									</div>
 							</li>
 							
-							<li class="news__box news__box--flex">
+							<li class="news__box">
 									<div class="news__img"> <img class src="img/mainpage/newsparasite.png"></div>
 									<div class="news__text">
-									<time datetime="22.12.2016">22.12.2015</time>
-									<h3>Детские авиабилеты доступны для бизнес-класса</h3>
-									<p>Путешествие на самолете с детьми - небольшое испытание
+									<time class="news__time" datetime="22.12.2016">22.12.2015</time>
+									<h3 class="news__title">Детские авиабилеты доступны для бизнес-класса</h3>
+									<p class="news__description">Путешествие на самолете с детьми - небольшое испытание
 									для родителей. Но это не экстремальное приключение,
 									а обычный цивилизованный поход. Тем более, различные
 									авиакомпании стараются помочь скидками на детские авиабилеты,
@@ -154,80 +157,81 @@
 
 						<!-- Счетчик страниц -->
 						<div class="pagecounter ">
-								<div class="counter counter--flex">
+								<div class="counter">
 									<div class=counter__text>Страница 1 из 7</div>
-									<button type="button" class="counter__previous">&#60;</button>
-										<ul class="pagecounter__pages pagecounter__pages--flex">
+									<a href="" class="counter__previous">&#60;</a>
+										<ul class="pagecounter__pages">
 											<li class="pagecounter__pagenumber">
-												<button type="button" class="pagenumber">1</button>
+												<a href="" class="pagenumber">1</a>
 											</li>
 											<li class="pagecounter__pagenumber">
-													<button type="button" class="pagenumber">2</button>
+													<a href="" class="pagenumber">2</a>
 											</li>
 											<li class="pagecounter__pagenumber">
-													<button type="button" class="pagenumber">3</button>
+													<a href="" class="pagenumber">3</a>
 											</li>
 											<li class="pagecounter__pagenumber">
-													<button type="button" class="pagenumber">4</button>
+													<a href="" class="pagenumber">4</a>
 											</li>
 											<li class="pagecounter__pagenumber">
-													<button type="button" class="pagenumber">5</button>
+													<a href="" class="pagenumber">5</a>
 											</li>
 											<li class="pagecounter__pagenumber">
-													<button type="button" class="pagenumber">6</button>
+													<a href="" class="pagenumber">6</a>
 											</li>
 											<li class="pagecounter__pagenumber">
-													<button type="button" class="pagenumber">7</button>
+													<a href="" class="pagenumber">7</a>
 											</li>
 																				
 										</ul>
-									<button type="button" class="counter__next">	&#62;</button>
+									<a href="" class="counter__next">&#62;</a>
 								</div>
 							</div>
 						</section>
-					</div>
+					</main>
 					
 
 				
 			</div>
 		</div>
-	</div>
-</div>
-
-
-	<div class="footer__wrapper">
-		<footer class="footer footer--flex">
+		</div>
+		
+		<footer class="footer">
+			<div class="container container--flex">
 			<div class="autor">Сделано с любовью и старанием на курсе 
-					&#171;HTML + CSS&#187; в <b>LoftSchool</b>
-					Автор работы: Вирин Даниил
+					&#171;HTML + CSS&#187; в <a href="https://loftschool.com/" class="LoftSchool">LoftSchool</a>
+					Автор работы: <a href="https://u.to/T_LrFQ" class="autor__contacts">Вирин Даниил</a>
 			</div>
-			<div class="logo__img">
+			<div class="footer__col">
 				<a href="#" class="logo">
-			     <img src="img/mainpage/logo-header.png" alt="air logo" class="logo__img">
+				 <img src="img/mainpage/logo-header.png" alt="air logo" class="logo__img">
 				</a>
-		    </div>
-			<div class="social__links">
-				Наши социальные сети
-				<ul class="social__list social__list--flex">
+			</div>
+			<div class="social">
+				<h3 class="social__title">Наши социальные сети</h3>
+				<ul class="social__list ">
 					<li class="social__item">
-						<div class="social__icon social__icon--vk"></div>
+						<a class="social__icon social__icon--vk"></a>
 					</li>
 					<li class="social__item">
-							<div class="social__icon social__icon--fb"></div>
+							<a class="social__icon social__icon--fb"></a>
 					</li>
 					<li class="social__item">
-							<div class="social__icon social__icon--gplus"></div>
+							<a class="social__icon social__icon--gplus"></a>
 					</li>
 					<li class="social__item">
-							<div class="social__icon social__icon--twitter"></div>
+							<a class="social__icon social__icon--twitter"></a>
 					</li>
 					<li class="social__item">
-							<div class="social__icon social__icon--mail"></div>
+							<a class="social__icon social__icon--mail"></a>
 					</li>
 					
 				</ul>
 			</div>
+		</div>
 		</footer>
+				
 	</div>
+
 </body>
 </html>
