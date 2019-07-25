@@ -52,20 +52,18 @@ html,body {
     height: auto;
 }
 
-.news {
-    width: 880px;
-    height: auto;
-}
 
 
 .banner {
     margin: 11px 0px 0px 68px;
 }
 
-
-.news {
+.content {
+    width: 880px;
+    height: auto;
     margin: 0px 0px 0px 70px;
 }
+
 
 .pagecounter {
     margin-top: 100px;
