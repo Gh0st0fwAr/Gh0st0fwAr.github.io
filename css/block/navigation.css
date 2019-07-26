@@ -4,30 +4,53 @@
     margin-left: -20px;
 }
 
-.navigation__item {
-    display: flex;
-
+.navigation {
+    display: inline-block;
+    width: auto;
 }
 
 .navigation__link {
-    display: flex;
-    align-items: center;
-   
+    text-transform: uppercase;
+    padding: 5px 0px 5px 35px;
+    position: relative;
+    color: #4b73b5;
+       
 }
 
-.navigation__link:before {
+.navigation__link:after {
+    opacity: 0;
+}
+
+
+.active.navigation__link:after {
+    opacity: 1;
+}
+
+.navigation__link:hover:after {
+    opacity: 1;
+}
+
+.navigation__link:before, .navigation__link:after {
     content: "";
     width: 23px;
     height: 18px;
-    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
     margin-right: 7px;
     background-repeat: no-repeat;
     background-image: url("../../img/mainpage/spritesheet.png");
-
+    transition: 0.3s;
+    margin-left: 1px;
+    margin-top: 3px;
 }
 
 
 .navigation__link--main:before {
+    background-position: -128px -5px;
+}
+
+.navigation__link--main:after {
     background-position: -155px -5px;
 }
 
@@ -35,8 +58,19 @@
     background-position: -21px -5px;
 }
 
+
+.navigation__link--reviews:after {
+    background-position: -51px -5px;
+
+}
+
+
 .navigation__link--crew:before {
     background-position: -182px -5px;
+}
+
+.navigation__link--crew:after {
+    background-position: -215px -5px;
 }
 
 
@@ -49,19 +83,20 @@
     font-style: normal;
     line-height: 4.1;
     letter-spacing: 2.4px;
-    width: 130px;
+    
 
 
 }
 
 
 
-
-
-.active {
+.navigation__link:hover{
     color: black;
+    transition: 0.3s;
+
 }
 
-.inactive {
-    color: #4b73b5;
+
+.navigation__link.active {
+    color: black;
 }

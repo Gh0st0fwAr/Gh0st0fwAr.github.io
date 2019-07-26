@@ -1,3 +1,8 @@
+.tariffs {
+    margin: 0px 0px 0px 69px;
+}
+
+
 .tariffs__list {
     margin: 0px 65px 0px -15px;
     justify-content: space-evenly;
@@ -20,12 +25,6 @@
     margin-top: 43px;
 }
      
-
-
-.tariffs {
-    margin: 0px 0px 0px 69px;
-}
-
 
 .tariffs__item {
     width: 250px;

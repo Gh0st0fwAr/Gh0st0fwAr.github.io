@@ -5,10 +5,9 @@
 
 /* Main page CSS */
 @import "block/navigation.css";
-@import "block/mainpage.css";
 @import "block/tariffs.css";
 @import "block/news.css";
 @import "block/footer.css";
 @import "block/content.css";
-
+@import "base.css";
 

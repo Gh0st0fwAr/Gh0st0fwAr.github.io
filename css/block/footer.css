@@ -3,7 +3,7 @@
 .footer {
     width: 100%;
     background-color: #4b73b5;
-    padding: 3px 0px;
+    padding: 11px 0px;
     flex: 0 0 auto;
 
 }
@@ -36,6 +36,7 @@
     background-repeat: no-repeat;
     cursor: pointer;
     display: block;
+    transition: 0.3s;
 
 }
 
@@ -98,7 +99,7 @@
     color: #ffffff;
 }
 
-.LoftSchool {
+.autor__loftschool {
     font-weight: bold;
     text-decoration: underline;
     color: #ffffff;

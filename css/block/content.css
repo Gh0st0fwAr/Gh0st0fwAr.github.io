@@ -1,10 +1,10 @@
 
 .content__box{
-    padding-inline-start: 0px;
     display: flex;
     flex-direction: row;
     list-style: none;
     justify-content: space-between;
+    margin-bottom: 50px;
 
 }
 
