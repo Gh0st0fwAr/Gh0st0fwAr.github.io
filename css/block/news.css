@@ -77,7 +77,7 @@
     letter-spacing: normal;
     text-align: center;
     text-decoration: none;
-    opacity: 0.3;
+   
 }
 
 .pagecounter__pages{
@@ -103,3 +103,30 @@
 .active.pagenumber:hover {
     color: white;
 }
+
+
+
+.counter__previous, .counter__next {
+    transition: 0.3s;
+}
+
+.counter__previous:hover {
+    color: #4b73b5
+}
+
+.inactive.counter__previous:hover {
+    color: #656464;
+}
+
+.counter__next:hover {
+    color: #4b73b5;
+}
+
+.inactive.counter__next, .inactive.counter__previous {
+    opacity: 0.3;
+}
+
+.inactive.counter__next:hover {
+    color: #656464;
+}
+
