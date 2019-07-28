@@ -6,7 +6,12 @@
 
 } 
 
-
+.contact {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  
+}
 
 .contact__phone {
   font-family: Roboto, sans-serif;
@@ -15,12 +20,77 @@
   font-style: normal;
   color: #ffffff;
   text-align: right;
-
+  
     
 }
 
+.contact__dropdown {
+   display: inline-flex;
+   width: fit-content;
+   
+
+}
 
 .contact__desc {
-    float: right;
-    
+    text-align: left;
+    opacity: 0.7;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  text-decoration: underline;
+  display: inline-block;
+  margin-left: 75px;
+}
+
+.contact__menu {
+ 
+  position: absolute;
+  width: 158px;
+  height: 70px;
+  top: 100%;
+  border-radius: 3px;
+  box-shadow: 2.5px 4.3px 5px;
+  background-color: #ffffff;
+  text-align: center;
+  padding-top: 13px;
+  margin-top: 17px;
+  margin-left: 10px;
+  left: -9999px;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.contact__working {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #1c5bc3;
+  line-height: 1.5;
+}
+
+.contact__lunch {
+  font-weight: 300;
+  color: #221f1f;
+}
+
+.contact:hover .contact__desc {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.contact__menu:before {
+  content: "";
+  display: block;
+  height: 35px;
+  left: 0;
+  right: 0;
+  top: -34px;
+  position: absolute;
+}
+
+.contact__dropdown:hover .contact__menu {
+  left: 0;
+  opacity: 1;
+
 }

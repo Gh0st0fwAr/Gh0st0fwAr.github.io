@@ -11,3 +11,8 @@
 @import "block/content.css";
 @import "base.css";
 
+/* Reviews page CSS */
+@import "block/reviews.css";
+
+/* Crew page CSS */
+@import "block/crew.css";

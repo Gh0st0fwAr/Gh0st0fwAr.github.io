@@ -16,15 +16,27 @@
 
 }
 
+.logo__img {
+    margin-right: 80px;
+}
+
 
 .social__list {
     display: flex;
     justify-content: space-evenly;
     list-style: none;
     padding-inline-start: 0px;
-    margin: 0px;
+    margin: 2px 7px -4px -8px;
 }
 
+.footer__col {
+    padding-top: 6px;
+
+}
+
+.social {
+    margin-top: -8px;
+}
 
 
 .social__icon {

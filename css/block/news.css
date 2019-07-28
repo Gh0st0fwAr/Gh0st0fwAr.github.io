@@ -1,23 +1,5 @@
 
 
-/*
-.news__box {
-    font-family: Roboto;
-    font-size: 18px;
-    font-weight: 300;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.67;
-    letter-spacing: normal;
-    text-align: left;
-    color: #221f1f;
-    margin-top: 43px;
-
-}
-*/
-
-
-
 .counter__text {
     font-family: Roboto;
     font-size: 14px;
@@ -28,6 +10,7 @@
     letter-spacing: normal;
     text-align: left;
     color: #656464;
+    padding-right: 25px;
 }
 
 .pagecounter__pages{
@@ -37,9 +20,7 @@
     
 }
 
-.pagenumber {
-    margin: 0px content
-}
+
 
 .pagenumber {
     text-decoration: none;
@@ -93,6 +74,7 @@
     border-radius: 3px;
     background-color: #4b73b5;
     color: #fff;
+
 }
 
 
