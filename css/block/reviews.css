@@ -166,6 +166,31 @@
     margin-top: 14px;
 }
 
+.reviewbox__button:after {
+    content: "";
+    background-image: url(../../img/mainpage/main_icon_blue.png);
+    display: block;
+    position: absolute;
+    width: 15px;
+    height: 14px;
+    margin-left: 115px;
+    margin-top: -31px;
+    color: #4b73b5;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.reviewbox__button:hover {
+    background-color: #fff;
+    color: #4b73b5;
+    transition: 0.3s;
+}
+
+.reviewbox__button:hover:after {
+    opacity: 1;
+    
+}
+
 
 
 .submit__review {

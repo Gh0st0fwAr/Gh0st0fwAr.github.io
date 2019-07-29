@@ -16,3 +16,6 @@
 
 /* Crew page CSS */
 @import "block/crew.css";
+
+/* Intro page CSS */
+@import "block/intro.css";
