@@ -61,6 +61,21 @@
   transition: opacity 0.4s;
 }
 
+.contact__menu:after {
+  position: absolute;
+  content: "";
+  top: -10px;
+  left: 70%;
+  width: 0;
+  height: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-bottom: 14px solid #fff;
+
+}
+
+
+
 .contact__working {
   font-family: Roboto, sans-serif;
   font-size: 14px;

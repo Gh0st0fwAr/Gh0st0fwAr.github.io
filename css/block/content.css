@@ -4,8 +4,13 @@
     flex-direction: row;
     list-style: none;
     justify-content: space-between;
-    margin-bottom: 50px;
+    margin-bottom: 29px;
+    border-bottom: #f5f5f5 2px solid;
+    padding-bottom: 19px;
+}
 
+.content__box:last-child {
+    border-bottom: none;
 }
 
 .content__list{

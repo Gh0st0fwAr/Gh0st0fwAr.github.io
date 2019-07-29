@@ -32,7 +32,7 @@
     line-height: 1.67;
     color: white;
     padding: 41px 248px 0px 230px;
-    margin: 3px 0px 0px 192px;
+    margin: 56px 0px 0px 192px;
 }
 
 .request {
@@ -145,20 +145,27 @@
     background-color: #4b73b5;
     font-family: Roboto;
     font-size: 12px;
-    font-weight: normal;
+    font-weight: bold;
     line-height: 3.8;
     letter-spacing: 2.4px;
     text-transform: uppercase;
     color: #fff;
     text-align: center;
     margin: 243px 0px 0px 475px;
-    
+    padding-right: 20px;
 }
 
 .reviewbox__button:before {
     content: "";
-    
+    background-image: url(../../img/mainpage/main_icon_white.png);
+    display: block;
+    position: absolute;
+    width: 15px;
+    height: 14px;
+    margin-left: 115px;
+    margin-top: 14px;
 }
+
 
 
 .submit__review {
@@ -235,3 +242,13 @@
 .reviewbox__rd:checked + .reviewbox__custom + .reviewbox__text {
     opacity: 1;
 }
+
+.content__box--reviews:nth-child(3) {
+    margin-bottom: 15px;
+    padding-bottom: 0px;
+}
+
+.content__box--reviews:last-child {
+    margin-bottom: 12px;
+}
+
