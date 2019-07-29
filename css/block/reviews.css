@@ -19,7 +19,10 @@
     display: flex;
     flex: 1 0 auto;
     flex-direction: column;
+   
 }
+
+
 
 .greenbox {
     width: 1100px;
@@ -32,8 +35,10 @@
     line-height: 1.67;
     color: white;
     padding: 41px 248px 0px 230px;
-    margin: 56px 0px 0px 192px;
+    margin-top: 55px;
 }
+
+
 
 .request {
     font-weight: bold;
@@ -62,7 +67,7 @@
     width: 700px;
     height: 427px;
     background-color: #f5f5f5;
-    margin: 58px 0px 49px 392px;
+    margin: 58px 0px 49px 199px;
     padding-top: 1px;
     font-family: Roboto;
     font-size: 14px;
