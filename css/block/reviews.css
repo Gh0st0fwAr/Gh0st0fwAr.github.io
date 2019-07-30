@@ -1,13 +1,4 @@
-.main__reviews {
-    display: flex;
-    
-}
 
-.content__maintitle--reviews {
-    margin-left: 70px;
-    margin-top: 24px;
-
-}
 
 .content__list--reviews {
     margin-left: 74px;
@@ -25,22 +16,24 @@
 
 
 .greenbox {
-    width: 1100px;
-    height: 170px;
     background-color: #4bb56b;
     background-image: url("../../img/mainpage/pattern.png");
+    margin-top: 55px;
+}
+
+.greenbox__text {
     font-family: Roboto;
     font-size: 18px;
     font-weight: 300;
     line-height: 1.67;
     color: white;
-    padding: 41px 248px 0px 230px;
-    margin-top: 55px;
+    margin: 0 auto;
+    width: 43%;
+    padding: 40px 0;
 }
 
 
-
-.request {
+.greenbox__request {
     font-weight: bold;
     text-decoration: underline;
     cursor: pointer;
@@ -55,29 +48,23 @@
     margin: 0px 39px 0px 0px;
 }
 
-.request {
-    font-weight: bold;
-}
 
-.requestnumber {
+.greenbox__requestnumber {
     font-weight: bold;
 }
 
 .reviewbox {
-    width: 700px;
-    height: 427px;
     background-color: #f5f5f5;
-    margin: 58px 0px 49px 199px;
-    padding-top: 1px;
     font-family: Roboto;
     font-size: 14px;
     font-weight: 300;
-    font-style: normal;
-    font-stretch: normal;
-    letter-spacing: normal;
     text-align: left;
     color: #221f1f;
+    margin: 50px auto 0;
+    width: 47%;
+    padding: 40px;
 }
+
 
 .name {
     width: 269px;
@@ -112,52 +99,56 @@
     padding: 6px 6px;
 }
 
-.content__maintitle--box {
-    margin-top: 50px;
-    margin-left: 68px;
-}
 
-.reviewbox__name {
+.reviewbox__row {
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 30px;
+
+}
+
+.reviewbox__col {
+    width: 48%;
+}
+
+.reviewbox__input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 3px;
+    border: none;
+}
+
+
+.reviewbox__input:focus {
+    border: 1px solid #4b73b5;
+}
+
+
+.reviewbox__row--ta {
     flex-direction: column;
-    position: absolute;
-    margin: 23px 0px 0px 68px;
-}
-
-.reviewbox__vk {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    margin: 23px 0px 0px 360px;
-}
-
-.reviewbox__review {
-    position: absolute;
-    margin: 109px 0px 0px 68px;
-}
-
-.reviewbox__radio {
-    position: absolute;
-  
 }
 
 .reviewbox__button {
-    position: absolute; 
-    width: 154px;
-    height: 45px;
-    object-fit: contain;
     border-radius: 3px;
     background-color: #4b73b5;
     font-family: Roboto;
     font-size: 12px;
     font-weight: bold;
-    line-height: 3.8;
     letter-spacing: 2.4px;
     text-transform: uppercase;
     color: #fff;
     text-align: center;
-    margin: 243px 0px 0px 475px;
-    padding-right: 20px;
+    padding: 15px 30px 15px 15px;
+    border: none;  
+    position: relative;
+    
+}
+
+
+.reviewbox__col--btn {
+    text-align: right;
 }
 
 .reviewbox__button:before {
@@ -167,8 +158,8 @@
     position: absolute;
     width: 15px;
     height: 14px;
-    margin-left: 115px;
-    margin-top: 14px;
+    right: 8px;
+
 }
 
 .reviewbox__button:after {
@@ -178,11 +169,12 @@
     position: absolute;
     width: 15px;
     height: 14px;
-    margin-left: 115px;
-    margin-top: -31px;
     color: #4b73b5;
     opacity: 0;
     transition: 0.3s;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .reviewbox__button:hover {
@@ -204,17 +196,11 @@
 }
 
 
-.reviewbox__lbl {
-    display: flex;
-    position: space-around;
-    margin-left: 28px;
-    margin-top: -41px;
-}
+
 
 .reviewbox__radio {
     display: flex;
-    margin: 307px 0px 0px 50px;
-    width: 200px;
+
 }
 
 .reviewbox__rd {
@@ -237,14 +223,8 @@
     border-radius: 50%;
     border: solid 1px #4b73b5;
     background-image: linear-gradient(to bottom, #ededed, #ffffff);
-    margin-right: 15px;
-    margin-left: -9px;
+    
 
-}
-
-.reviewbox__radiotitle{
-    position: absolute;
-    margin: 239px 0px 0px 68px;
 }
 
 

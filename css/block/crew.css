@@ -3,7 +3,7 @@
 
 }
 
-.crewbox {
+.crew__list {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -21,14 +21,14 @@
     margin-left: 71px;
 }
 
-.crewbox__member {
+.crew__item {
     width: 257px;
     font-family: Roboto;
     text-align: center;
     margin-bottom: 44px;
 }
 
-.crewbox__image {
+.crew__image {
     width: 160px;
     height: 160px;
     border-radius: 50%;
@@ -40,9 +40,9 @@
 
 /* Images */
 
-.crewbox__image--alex {
+.crew__image--alex {
     content: "";
-    background-image: url(../../img/mainpage/alex.png);
+    
     width: 160px;
     height: 160px; 
     position: relative;
@@ -53,7 +53,7 @@
      
 }
 
-.crewbox__image--alex:after {
+.crew__image--alex:after {
     content: "Алексей";
     background-image: url(../../img/mainpage/fotomask.png);
     position: absolute;
@@ -66,14 +66,14 @@
 }
 
 
-.crewbox__image--alex:hover:after {
+.crew__image--alex:hover:after {
     opacity: 0;
     
 }
 
 /**/
 
-.crewbox__image--inna {
+.crew__image--inna {
     content: "";
     background-image: url(../../img/mainpage/inna.png);
     width: 160px;
@@ -86,7 +86,7 @@
      
 }
 
-.crewbox__image--inna:after {
+.crew__image--inna:after {
     content: "Инна";
     background-image: url(../../img/mainpage/fotomask.png);
     position: absolute;
@@ -99,14 +99,14 @@
 }
 
 
-.crewbox__image--inna:hover:after {
+.crew__image--inna:hover:after {
     opacity: 0;
     
 }
 
 /**/
 
-.crewbox__image--boris {
+.crew__image--boris {
     content: "";
     background-image: url(../../img/mainpage/boris.png);
     width: 160px;
@@ -119,7 +119,7 @@
      
 }
 
-.crewbox__image--boris:after {
+.crew__image--boris:after {
     content: "Борис";
     background-image: url(../../img/mainpage/fotomask.png);
     position: absolute;
@@ -132,14 +132,14 @@
 }
 
 
-.crewbox__image--boris:hover:after {
+.crew__image--boris:hover:after {
     opacity: 0;
     
 }
 
 /**/
 
-.crewbox__image--elina {
+.crew__image--elina {
     content: "";
     background-image: url(../../img/mainpage/elina.png);
     width: 160px;
@@ -152,7 +152,7 @@
      
 }
 
-.crewbox__image--elina:after {
+.crew__image--elina:after {
     content: "Элина";
     background-image: url(../../img/mainpage/fotomask.png);
     position: absolute;
@@ -165,14 +165,14 @@
 }
 
 
-.crewbox__image--elina:hover:after {
+.crew__image--elina:hover:after {
     opacity: 0;
     
 }
 
 /**/
 
-.crewbox__image--elena {
+.crew__image--elena {
     content: "";
     background-image: url(../../img/mainpage/elena.png);
     width: 160px;
@@ -185,7 +185,7 @@
      
 }
 
-.crewbox__image--elena:after {
+.crew__image--elena:after {
     content: "Елена";
     background-image: url(../../img/mainpage/fotomask.png);
     position: absolute;
@@ -198,14 +198,14 @@
 }
 
 
-.crewbox__image--elena:hover:after {
+.crew__image--elena:hover:after {
     opacity: 0;
     
 }
 
 /**/
 
-.crewbox__image--yuri {
+.crew__image--yuri {
     content: "";
     background-image: url(../../img/mainpage/yrii.png);
     width: 160px;
@@ -218,7 +218,7 @@
      
 }
 
-.crewbox__image--yuri:after {
+.crew__image--yuri:after {
     content: "Юрий";
     background-image: url(../../img/mainpage/fotomask.png);
     position: absolute;
@@ -231,7 +231,7 @@
 }
 
 
-.crewbox__image--yuri:hover:after {
+.crew__image--yuri:hover:after {
     opacity: 0;
     
 }
@@ -240,7 +240,7 @@
 
 /* Images end */
 
-.membername {
+.crew__membername {
     font-size: 18px;
     font-weight: bold;
     line-height: 1.5;
@@ -248,7 +248,7 @@
     margin-top: 9px;
 }
 
-.role {
+.crew__role {
     font-size: 14px;
     font-weight: bold;
     color: #4b73b5;
@@ -256,7 +256,7 @@
     margin-top: -2px;
 }
 
-.description {
+.crew__description {
     font-size: 14px;
     font-weight: 300;
     font-style: normal;
@@ -268,18 +268,16 @@
 
 
 
-.partnersbox {
+.partners__list {
     display: flex;
     align-items: baseline;
     flex-flow: row wrap;
     justify-content: space-between;
-    width: 730px;
-    margin-left: 134px;
     margin-top: 48px;
     margin-bottom: 36px;
 }
 
-.partnersbox__logo {
+.partners__logo {
     margin-right: 122px;
     margin-bottom: 63px;
     filter: grayscale(100%);
@@ -287,13 +285,13 @@
     transition: 0.4s;
 }
 
-.partnersbox__logo:hover {
+.partners__logo:hover {
     filter: grayscale(0%);
     opacity: 1;
 }
 
 
-.partnersbox__logo:nth-child(3n) {
+.partners__logo:nth-child(3n) {
     margin-right: 0px;   
 }
 
