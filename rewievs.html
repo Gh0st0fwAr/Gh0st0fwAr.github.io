@@ -61,7 +61,7 @@
                                     </ul>
                                 </div>
                                     <!-- Универсальный контейнер контента -->
-                                    <h1 class="title">Отзывы</h1>
+                                    <h1 class="title title--reviews">Отзывы</h1>
                                     
                                     <ul class="content__list content__list--reviews">
                                         
@@ -173,44 +173,44 @@
 
                         <form name="form" method="post" class="reviewbox">
                         
-                            <h2 class="title">Оставить отзыв</h2>
+                            <h2 class="title title--reviewbox">Оставить отзыв</h2>
 
                                 <div class="reviewbox__row">
 
                             <label  class="reviewbox__col">
-                                <h4 class="reviewbox__title">Ваше имя</h4> 
-                                <input type="text" size="23" placeholder=" Андрей" name="user" class="reviewbox__input">
+                                <h4 class="reviewbox__title reviewbox__title--user">Ваше имя</h4> 
+                                <input type="text" size="23" placeholder=" Андрей" name="user" class="reviewbox__input reviewbox__input--user">
                             </label>
     
                             <label class="reviewbox__col">
-                                <h4 class="reviewbox__title">Ссылка на профиль VK</h4> 
-                                <input type="text" size="23" placeholder="vk.com/example" name="vklink" class="reviewbox__input">
+                                <h4 class="reviewbox__title reviewbox__title--vklink">Ссылка на профиль VK</h4> 
+                                <input type="text" size="23" placeholder="vk.com/example" name="vklink" class="reviewbox__input reviewbox__input--vklink">
                             </label>
 
                             </div>
                             
                             <label class="reviewbox__row reviewbox__row--ta">
-                                <h4 class="reviewbox__title">Текст отзыва</h4> 
-                                <textarea rows="7" cols="40" placeholder="Мне понравилось" style="resize:none" name="reviewtext" class="reviewbox__input reviewbox__input--ta"></textarea>
+                                <h4 class="reviewbox__title reviewbox__title--ta">Текст отзыва</h4> 
+                                <textarea rows="4" cols="40" placeholder="Мне понравилось" style="resize:none" name="reviewtext" class="reviewbox__input reviewbox__input--ta"></textarea>
                             </label>
                                
-                            <div class="reviewbox__row">
+                            <div class="reviewbox__row reviewbox__row--radio">
 
                                 <div class="reviewbox__col">
 
                                         <h4 class="reviewbox__radiotitle">Отображать фото в отзыве?</h4> 
                                 
-                                        <div class="reviewbox__radio">   
+                                        <div class="reviewbox__radio ">   
                                                 <label class="reviewbox__lbl">
                                                     <input type="radio" class="reviewbox__rd" name="radio">
                                                     <span class="reviewbox__custom"></span>
-                                                    <span class="reviewbox__text">Да</span>
+                                                    <span class="reviewbox__text reviewbox__text--radio">Да</span>
                                                 </label>
                     
                                                 <label class="reviewbox__lbl">
                                                     <input type="radio" class="reviewbox__rd" name="radio">
                                                     <span class="reviewbox__custom"></span>
-                                                    <span class="reviewbox__text">Нет</span>
+                                                    <span class="reviewbox__text reviewbox__text--radio">Нет</span>
                                                 </label>
                                         </div>
 

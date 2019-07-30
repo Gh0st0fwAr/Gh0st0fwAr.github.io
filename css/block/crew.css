@@ -12,6 +12,11 @@
     margin-top: 48px;
 }
 
+.title--crew {
+    margin-top: 24px;
+    margin-left: 69px;
+}
+
 .content__maintitle--crew {
     margin: 24px 0px 0px 69px;
 }
@@ -38,7 +43,20 @@
     
 }
 
-/* Images */
+
+.partners {
+    margin-top: 18px;
+    margin-left: 68px;
+    width: 100%;
+    margin-bottom: -62px;
+}
+
+
+.partners__item {
+    margin-left: 40px;
+    width: 28%;
+
+}
 
 .crew__image--alex {
     content: "";

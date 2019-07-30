@@ -1,4 +1,12 @@
 
+.title--reviews {
+    margin: 24px 0px 0px 69px;
+}
+
+.title--reviewbox {
+    margin: 18px 0px 0px 27px;
+}
+
 
 .content__list--reviews {
     margin-left: 74px;
@@ -66,27 +74,29 @@
 }
 
 
-.name {
-    width: 269px;
-     height: 45px;
-     object-fit: contain;
-    border: none;
-    border-radius: 3px;
-    background-color: #ffffff;
-    margin-top: -19px;
-    padding: 0px 6px;
+.reviewbox__input--user {
+    margin-left: 31px;
 }
 
-.vklink {
-    width: 269px;
-    height: 45px;
-    object-fit: contain;
-    border: none;
-    border-radius: 3px;
-    background-color: #ffffff;
-    margin-top: -19px;
-    padding: 0px 6px;
+
+.reviewbox__title--user {
+    margin-left: 31px;
 }
+
+.reviewbox__input--ta {
+    margin-left: 31px;
+    margin-top: -2px;
+}
+
+.reviewbox__title--ta {
+    margin-left: 31px;
+    margin-top: -2px;
+}
+
+.reviewbox__row--radio {
+    margin-top: 19px;
+}
+
 
 .reviewtext {
     width: 561px;
@@ -104,7 +114,8 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-top: 30px;
+    margin-top: 23px;
+    margin-left: -4px;
 
 }
 
@@ -113,9 +124,9 @@
 }
 
 .reviewbox__input {
-    width: 100%;
-    padding: 10px;
-    margin-top: 20px;
+    width: 90%;
+    padding: 14px;
+    margin-top: 2px;
     border-radius: 3px;
     border: none;
 }
@@ -140,10 +151,12 @@
     text-transform: uppercase;
     color: #fff;
     text-align: center;
-    padding: 15px 30px 15px 15px;
-    border: none;  
+    padding: 16px 45px 13px 18px;
+    border: none;
     position: relative;
-    
+    margin-top: -5px;
+    margin-right: 29px;
+
 }
 
 
@@ -158,8 +171,9 @@
     position: absolute;
     width: 15px;
     height: 14px;
-    right: 8px;
-
+    right: 22px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .reviewbox__button:after {
@@ -172,7 +186,7 @@
     color: #4b73b5;
     opacity: 0;
     transition: 0.3s;
-    right: 8px;
+    right: 22px;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -201,6 +215,21 @@
 .reviewbox__radio {
     display: flex;
 
+}
+
+.reviewbox__radiotitle {
+    margin: -12px 0px -24px 31px;
+}
+
+
+.reviewbox__custom {
+    margin: 30px 1px 0px 33px;
+}
+
+
+.reviewbox__text--radio {
+    margin: 29px -14px 0px 0px;
+    padding-left: 15px;
 }
 
 .reviewbox__rd {
