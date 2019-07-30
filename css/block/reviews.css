@@ -27,6 +27,7 @@
     background-color: #4bb56b;
     background-image: url("../../img/mainpage/pattern.png");
     margin-top: 55px;
+    padding: 40px 0;
 }
 
 .greenbox__text {
@@ -37,7 +38,7 @@
     color: white;
     margin: 0 auto;
     width: 43%;
-    padding: 40px 0;
+    
 }
 
 
@@ -69,7 +70,7 @@
     text-align: left;
     color: #221f1f;
     margin: 50px auto 0;
-    width: 47%;
+    max-width: 700px;
     padding: 40px;
 }
 
@@ -189,6 +190,11 @@
     right: 22px;
     top: 50%;
     transform: translateY(-50%);
+}
+
+
+.reviewbox__lbl {
+    display: flex;
 }
 
 .reviewbox__button:hover {

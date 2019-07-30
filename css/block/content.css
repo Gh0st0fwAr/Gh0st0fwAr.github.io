@@ -24,13 +24,18 @@
 }
 
 .content__img {
+    content: "";
+    position: relative;
     width: 160px;
     height: 160px;
     border-radius: 50%;
     overflow: hidden;
     margin-top: 2px;
+    background-image: url("../../img/mainpage/nonavatar.jpg");
     
 }
+
+
 
 .content__img--plane {
     width: 160px;
