@@ -112,11 +112,20 @@
     padding: 40px;
 }
 
+.reviewbox__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 21px;
+    margin-left: 27px;
 
+}
 
 
 .reviewbox__title--user {
     margin-left: 31px;
+    margin-right: 34px;
+    margin-top: 2px;
 }
 
 .reviewbox__input--ta {
@@ -126,19 +135,23 @@
 
 .reviewbox__title--vklink {
     margin-left: -15px;
+    margin-top: 2px;
 }
 
-.reviewbox__input--vklink {
-    margin-left: -14px;
-}
+
 
 .reviewbox__title--ta {
-    margin-left: 31px;
-    margin-top: -2px;
+    margin-left: 58px;
+    margin-top: 18px;
+}
+
+.reviewbox__row--ta {
+    margin-top: 0px;
+    margin-left: 0px;
 }
 
 .reviewbox__row--radio {
-    margin-top: 19px;
+    margin-top: 28px;
 }
 
 
@@ -154,14 +167,7 @@
 }
 
 
-.reviewbox__row {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-top: 21px;
-    margin-left: 27px;
 
-}
 
 .reviewbox__col {
     width: 48%;
@@ -180,9 +186,7 @@
 }
 
 
-.reviewbox__row--ta {
-    flex-direction: column;
-}
+
 
 .reviewbox__button {
     border-radius: 3px;
