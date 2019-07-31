@@ -16,7 +16,7 @@
 }
 
 .title--reviewbox {
-    margin: 12px 0px 0px 58px;
+    margin: 12px 0px 0px 0px;
 }
 
 .content--reviews {
@@ -109,15 +109,14 @@
     margin-left: 22px;
     margin-top: 50px;
     max-width: 767px;
-    padding: 40px;
+    padding: 40px 100px;
 }
 
 .reviewbox__row {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-top: 21px;
-    margin-left: 27px;
+    margin-top: 23px;
 
 }
 
@@ -126,50 +125,23 @@
     margin-top: 2px;
     border-radius: 3px;
     border: none;
-    width: 86%;
+    width: 100%;
 }
 
 
-.reviewbox__title--user {
-    margin-left: 31px;
-    margin-right: 34px;
-    margin-top: 2px;
-}
-
-.reviewbox__input--user {
-    margin-left: 31px;
-}
-
-.reviewbox__input--ta {
-    margin-left: 58px;
-    width: 82%;
-}
-
-.reviewbox__title--vklink {
-    margin-left: -15px;
-    margin-top: 2px;
-}
-
-.reviewbox__input--vklink {
-    margin-left: -21px;
-
-}
-
-
-.reviewbox__title--ta {
-    margin-left: 58px;
-    margin-top: 18px;
-}
 
 .reviewbox__row--ta {
     display: flex;
     flex-direction: column;
-    margin-top: 4px;
-    margin-left: 0px;
+    margin-top: 18px;
 }
 
 .reviewbox__row--radio {
-    margin-top: 28px;
+    margin-top: 14px;
+}
+
+.reviewbox__radio {
+    margin-top: 5px;
 }
 
 
@@ -214,8 +186,7 @@
     padding: 16px 45px 13px 18px;
     border: none;
     position: relative;
-    margin-top: -5px;
-    margin-right: 58px;
+    margin-top: 6px;
 
 }
 
@@ -257,6 +228,7 @@
 
 .reviewbox__lbl {
     display: flex;
+    margin-right: 15px;
 }
 
 .reviewbox__button:hover {
@@ -285,18 +257,9 @@
 
 }
 
-.reviewbox__radiotitle {
-    margin: -12px 0px -24px 31px;
-}
-
-
-.reviewbox__custom {
-    margin: 30px 1px 0px 33px;
-}
 
 
 .reviewbox__text--radio {
-    margin: 29px -14px 0px 0px;
     padding-left: 15px;
 }
 
