@@ -1,12 +1,14 @@
-.aside {
-    align-self: flex-start;
-    margin-top: 29px;
-    
-}
+
 
 .navigation {
     display: inline-block;
     width: auto;
+    margin-top: 10px;
+    margin-left: 23px;
+}
+
+.navigation__item {
+    margin-right: 95px;
 }
 
 .navigation__link {
@@ -76,6 +78,7 @@
 
 
 .navigation__panel {
+    display: flex;
     list-style-type: none;
     font-family: Roboto;
     font-size: 12px;

@@ -2,14 +2,17 @@
 @import "layout/fonts.css";
 @import "block/header.css";
 @import "addition.css";
+@import "base.css";
+
 
 /* Main page CSS */
 @import "block/navigation.css";
 @import "block/tariffs.css";
-@import "block/news.css";
 @import "block/footer.css";
 @import "block/content.css";
-@import "base.css";
+@import "block/news.css";
+@import "block/social.css";
+
 
 /* Reviews page CSS */
 @import "block/reviews.css";

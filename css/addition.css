@@ -5,7 +5,7 @@ html,body {
 
 .wrapper {
     overflow: hidden;
-    min-width: 1100px;
+    min-width: 1400px;
     min-height: 100%;
     display: flex;
     flex-direction: column;
@@ -14,14 +14,15 @@ html,body {
 
 
 .container {
-    width:1060px;
+    width:1160px;
     margin: 0 auto;
+    margin-left: 214px;
 }
 
 .container--flex{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
    
 }
 
@@ -37,31 +38,11 @@ html,body {
 }
 
 
-.tariffs__icon {
-    display: block;
-    width: 68px;
-    height: 68px;   
-    background: #4b73b5;
-    border-radius: 34px;
-        
-}
-
-.tariffs {
-    width: 880px;
-    height: auto;
-}
-
-
 
 .banner {
-    margin: 11px 0px 0px 73px;
+    margin: -3px 0px 0px 24px;
 }
 
-.content {
-    width: 880px;
-    height: auto;
-    margin: 0px 0px 0px 70px;
-}
 
 
 .pagecounter {

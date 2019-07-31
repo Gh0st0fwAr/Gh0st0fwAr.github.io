@@ -1,4 +1,7 @@
-
+.title--news {
+    margin-top: 13px;
+    margin-left: -46px;
+}
 
 .counter__text {
     font-family: Roboto;
@@ -20,6 +23,46 @@
     
 }
 
+.content--news {
+    margin: 0px 0px 0px 0px;
+}
+
+.content__box--news {
+    max-width: 31%;
+    margin-left: 9px;
+
+}
+
+.content__text--news {
+    margin: 46px 24px 0px 2px;
+}
+
+.content__list--news {
+    margin-top: 44px;
+    margin-left: -56px;
+    align-items: baseline;
+    max-width: 96%;
+}
+
+.pagecounter--news {
+    margin-top: -33px;
+    margin-bottom: 61px;
+    margin-right: 34.4%;
+}
+
+.content__description--news{
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: -5px;
+    line-height: 1.57;
+
+
+}
+
+.content__img--news {
+    margin-left: 60px;
+
+}
 
 
 .pagenumber {

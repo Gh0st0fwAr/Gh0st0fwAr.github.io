@@ -1,17 +1,53 @@
+.reviewscontainer {
+    display: flex;
+    align-items: flex-start;
+    width: auto;
+    margin: 0 auto;
+    margin-left: 214px;
+}
+
+.aside--reviews {
+    max-width: 20%;
+}
+
 
 .title--reviews {
     margin: 24px 0px 0px 69px;
 }
 
 .title--reviewbox {
-    margin: 18px 0px 0px 27px;
+    margin: 12px 0px 0px 58px;
 }
 
+.reviews {
+    margin-top: -13px;
+    margin-left: -45px;
+}
 
 .content__list--reviews {
     margin-left: 74px;
     margin-top: 46px;
+    display: flex;
+    flex-direction: column;
+}
 
+.content__box--reviews {
+    flex-direction: row;
+
+}
+
+.content__img--reviews {
+    width: 171px;
+    height: 171px;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+}
+
+.content__fit{
+    width: 171px;
+    height: 171px;
 }
 
 .boxes {
@@ -24,10 +60,10 @@
 
 
 .greenbox {
-    background-color: #4bb56b;
+    background-color: #4b73b5;
     background-image: url("../../img/mainpage/pattern.png");
-    margin-top: 55px;
-    padding: 40px 0;
+    margin-top: 31px;
+    padding: 22px 0px;
 }
 
 .greenbox__text {
@@ -37,7 +73,8 @@
     line-height: 1.67;
     color: white;
     margin: 0 auto;
-    width: 43%;
+    width: 91%;
+    text-align: center;
     
 }
 
@@ -54,7 +91,7 @@
 }
 
 .pagecounter--reviews {
-    margin: 0px 39px 0px 0px;
+    margin: 0px 53px 0px 0px;
 }
 
 
@@ -69,8 +106,9 @@
     font-weight: 300;
     text-align: left;
     color: #221f1f;
-    margin: 50px auto 0;
-    max-width: 700px;
+    margin-left: 22px;
+    margin-top: 50px;
+    max-width: 767px;
     padding: 40px;
 }
 
@@ -116,7 +154,7 @@
     justify-content: space-between;
     align-items: flex-start;
     margin-top: 23px;
-    margin-left: -4px;
+    margin-left: 27px;
 
 }
 
@@ -156,7 +194,7 @@
     border: none;
     position: relative;
     margin-top: -5px;
-    margin-right: 29px;
+    margin-right: 58px;
 
 }
 
