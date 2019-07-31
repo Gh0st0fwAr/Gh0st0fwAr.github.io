@@ -1,5 +1,5 @@
 .tariffs {
-    width: 272px;
+    min-width: 272px;
     padding: 29px 47.5px 40px;
     font-family: Roboto;
     text-align: center;
@@ -9,7 +9,7 @@
 
 }
 
-.tariffs__maintitle {
+.aside--title {
     font-size: 18px;
     font-family: Roboto;
     font-weight: bold;
@@ -17,6 +17,7 @@
     color: #221f1f;
     margin-top: -4px;
     margin-left: -7px;
+    text-align: center;
 }
 
 .tariffs__title {
@@ -92,6 +93,6 @@
 .tariffs:hover {
     border-radius: 5px;
     border: solid 1px #e8e9ed;
-    width: 273px;
+    min-width: 273px;
     
 }

@@ -34,7 +34,6 @@
 
 
 
-
 .autor {
     font-family: Roboto;
     font-size: 14px;
@@ -49,11 +48,18 @@
 }
 
 
+
 .autor__loftschool {
     font-weight: bold;
     text-decoration: underline;
     color: #ffffff;
 }
+
+.autor__loftschool:hover {
+    color: gray;
+    transition: 0.2s;
+}
+
 
 .autor__contacts {
     font-weight: bold;
@@ -62,4 +68,13 @@
     
 }
 
+.autor__contacts:hover {
+    color: gray;
+    transition: 0.2s;
+}
+
+.logo__img--footer:hover {
+    transform: translateY(-5px);
+    transition: 0.2s;
+}
 
