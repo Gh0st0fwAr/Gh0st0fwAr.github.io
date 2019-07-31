@@ -19,7 +19,7 @@
     margin: 12px 0px 0px 58px;
 }
 
-.content--reviews {
+.reviews {
     margin-top: -13px;
     margin-left: -45px;
 }
@@ -113,9 +113,6 @@
 }
 
 
-.reviewbox__input--user {
-    margin-left: 31px;
-}
 
 
 .reviewbox__title--user {
@@ -123,7 +120,7 @@
 }
 
 .reviewbox__input--ta {
-    margin-left: 31px;
+    
     margin-top: -2px;
 }
 
