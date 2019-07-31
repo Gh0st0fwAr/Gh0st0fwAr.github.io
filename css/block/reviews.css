@@ -128,6 +128,10 @@
     margin-top: 2px;
 }
 
+.reviewbox__input--user {
+    margin-left: 31px;
+}
+
 .reviewbox__input--ta {
     
     margin-top: -2px;
@@ -138,6 +142,10 @@
     margin-top: 2px;
 }
 
+.reviewbox__input--vklink {
+    margin-left: -21px;
+
+}
 
 
 .reviewbox__title--ta {
@@ -211,9 +219,10 @@
     text-align: right;
 }
 
-.reviewbox__button:before {
+.reviewbox__button:before, .reviewbox__button:after {
     content: "";
-    background-image: url(../../img/mainpage/main_icon_white.png);
+    background-image: url(../../img/mainpage/css_sprites.png);
+    background-position: -15px -28px;
     display: block;
     position: absolute;
     width: 15px;
@@ -225,7 +234,9 @@
 
 .reviewbox__button:after {
     content: "";
-    background-image: url(../../img/mainpage/main_icon_blue.png);
+    background-position: 0px -28px;
+    width: 15px;
+    height: 14px;
     display: block;
     position: absolute;
     width: 15px;

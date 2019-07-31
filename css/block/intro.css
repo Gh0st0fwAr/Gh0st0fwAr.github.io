@@ -43,13 +43,15 @@
     height: 185px;
 }
 
-.wlcm__link:before {
+.wlcm__link:before, .wlcm__link:after {
     content: "";
     display: block;
     position: absolute;
     width: 15px;
     height: 14px;
-    background-image: url(../../img/mainpage/main_icon_blue.png);
+    background-image: url(../../img/mainpage/css_sprites.png);
+    background-position: -0 -28px;
+    background-repeat: no-repeat;
     margin: 4px 0px 0px 151px;
 }
 
@@ -59,7 +61,7 @@
     position: absolute;
     width: 15px;
     height: 14px;
-    background-image: url(../../img/mainpage/main_icon_white.png);
+    background-position: -15px -28px;
     margin: -18px 0px 0px 151px;
     opacity: 0;
 }
