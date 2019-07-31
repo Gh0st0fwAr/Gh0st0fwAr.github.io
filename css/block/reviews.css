@@ -133,8 +133,7 @@
 }
 
 .reviewbox__input--ta {
-    
-    margin-top: -2px;
+    margin-left: 58px;
 }
 
 .reviewbox__title--vklink {
@@ -154,7 +153,9 @@
 }
 
 .reviewbox__row--ta {
-    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 4px;
     margin-left: 0px;
 }
 
@@ -219,7 +220,7 @@
     text-align: right;
 }
 
-.reviewbox__button:before, .reviewbox__button:after {
+.reviewbox__button:before, {
     content: "";
     background-image: url(../../img/mainpage/css_sprites.png);
     background-position: -15px -28px;
