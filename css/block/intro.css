@@ -62,7 +62,7 @@
     width: 15px;
     height: 14px;
     background-position: -15px -28px;
-    margin: -18px 0px 0px 151px;
+    transform: translateY(-22px);
     opacity: 0;
 }
 

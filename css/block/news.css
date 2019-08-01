@@ -1,6 +1,5 @@
 .title--news {
-    margin-top: 13px;
-    margin-left: -46px;
+    margin-left: 23px;
 }
 
 .counter__text {
@@ -24,11 +23,11 @@
 }
 
 .content--news {
-    margin: 0px 0px 0px 0px;
+    margin: 0px 13px 0px 0px;
 }
 
 .content__box--news {
-    max-width: 31%;
+    max-width: 29%;
     margin-left: 9px;
 
 }
@@ -38,22 +37,20 @@
 }
 
 .content__list--news {
-    margin-top: 44px;
-    margin-left: -56px;
+    margin-top: 43px;
     align-items: baseline;
-    max-width: 96%;
+    padding-left: 13px;
+    padding-right: 29px;
 }
 
 .pagecounter--news {
-    margin-top: -33px;
-    margin-bottom: 61px;
-    margin-right: 34.4%;
+    margin-bottom: 60px;
+    margin-right: 25.4%;
 }
 
 .content__description--news{
     font-size: 14px;
     font-weight: 300;
-    margin-top: -5px;
     line-height: 1.57;
 
 
