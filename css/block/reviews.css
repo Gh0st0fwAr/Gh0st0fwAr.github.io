@@ -12,7 +12,7 @@
 
 
 .title--reviews {
-    margin: 24px 0px 0px 69px;
+    margin-left: 24px;
 }
 
 .title--reviewbox {
@@ -20,12 +20,11 @@
 }
 
 .content--reviews {
-    margin-top: -13px;
-    margin-left: -45px;
+    margin: 0px;
 }
 
 .content__list--reviews {
-    margin-left: 74px;
+    margin-left: 30px;
     margin-top: 46px;
     display: flex;
     flex-direction: column;
