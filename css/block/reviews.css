@@ -1,9 +1,8 @@
-.reviewscontainer {
+.container--reviews {
     display: flex;
     align-items: flex-start;
     width: auto;
-    margin: 0 auto;
-    margin-left: 214px;
+    
 }
 
 .aside--reviews {
