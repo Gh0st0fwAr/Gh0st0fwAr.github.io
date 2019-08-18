@@ -1,0 +1,69 @@
+.wrbest {
+    background: url(../../img/layout/wrbestbg.png) center center / cover no-repeat;
+    
+    & .container {
+        align-items: center;
+    }
+
+    & .title {
+        color: $black;
+    } 
+
+}
+
+.container--wrbest {
+    height: 44%;
+}
+
+.wrbest__features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33%;
+    margin-top: 90px;
+
+    .subtitle {
+        padding-top: 40px;
+    }
+
+    .wrbest__description {
+        padding-top: 25px;
+    }
+}
+
+.wrbest__icon {
+    display: block;
+    width: 97px;
+    height: 89px;
+    align-items: center;
+}
+
+@each $wrbestic in (meat, hand, natural) {
+    .wrbest__icon--#{$wrbestic} {
+        background: url(../../img/layout/#{$wrbestic}.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+
+.wrbest__list {
+    display: flex;
+
+    .subtitle {
+        color:$black;
+        font-size: 24px;
+        text-align: center;
+
+    }
+
+    .wrbest__description {
+        font:$description;
+        font-size: 14px;
+        font-weight: 300;
+        color: rgba(47, 50, 52, 0.8);
+        text-align: center;
+        line-height: 1.71;
+        
+    }
+}

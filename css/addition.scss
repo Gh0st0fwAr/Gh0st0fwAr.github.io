@@ -1,0 +1,34 @@
+html,body {
+    height: 100%;
+ }
+
+.title--maintitle {
+    position: absolute;
+    left: -9999px;
+}
+
+.wrapper {
+    overflow: hidden;
+    min-height: 100%;
+    position: relative;
+
+}
+
+.maincontent {
+    width: 100%;
+}
+
+.section {
+    display: flex;
+    height: 100vh;
+    min-height: 650px;
+    align-items: center;
+}
+
+.container {
+    width: 943px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+

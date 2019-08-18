@@ -1,0 +1,34 @@
+.intro {
+    background: url(../../img/layout/introbg.png) center center / cover no-repeat;
+    position: relative;
+}
+
+.intro__content {
+    display: flex;
+    align-items: center;
+}
+
+.intro__title {
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    padding-top: 52px;
+}
+
+.intro__logo {
+    display: flex;
+}
+
+
+.title {
+    font: $title;
+    color: $orange;
+}
+
+.subtitle {
+    font: $subtitle;
+    font-size: 65px;
+    line-height: 0.92;
+    color: white;
+    padding-top: 28px;
+}

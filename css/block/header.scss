@@ -1,0 +1,32 @@
+
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.header__btns {
+    display: flex;
+    align-items: center;
+
+}
+
+
+.btn {
+    font-family: Ubuntu;
+    font-size: 13px;
+    font-weight: 500;
+    color: white;
+    border-style: none;
+    border-radius: 5px;
+    background-color: #e45028;
+    text-transform: uppercase;
+    padding: 7px 16px 7px 16px;
+    &:active {
+        background-color: #990000;
+    }
+}
+
