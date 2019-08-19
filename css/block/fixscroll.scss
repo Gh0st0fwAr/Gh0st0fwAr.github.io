@@ -13,9 +13,11 @@
     margin-bottom: 4px;
     position: relative;
     
+    
 
     &--active {
         border-color: white;
+        
     }
 
     &::before {
@@ -28,9 +30,12 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-
+        cursor: pointer;
+       
 
     }
+
+
 
     &:last-child {
         margin-bottom: 0px;
@@ -38,4 +43,8 @@
     }
 
 
+}
+
+.fixscroll__item--active::before {
+    cursor: default;
 }

@@ -502,9 +502,13 @@ html, body {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    cursor: pointer; }
   .fixscroll__item:last-child {
     margin-bottom: 0px; }
+
+.fixscroll__item--active::before {
+  cursor: default; }
 
 .header {
   display: -webkit-box;
@@ -774,6 +778,8 @@ html, body {
   width: 29px;
   height: 14px;
   background: url(../../img/icons/arrow-scroll.svg) center center/contain no-repeat;
-  display: block; }
+  display: block;
+  cursor: pointer; }
   .scrollbutton:active {
-    opacity: 0.65; }
+    opacity: 0.65;
+    cursor: none; }
