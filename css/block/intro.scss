@@ -3,26 +3,41 @@
     position: relative;
 }
 
+.container--intro {
+    justify-content: space-between;
+}
+
 .intro__content {
     display: flex;
     align-items: center;
+    margin-bottom: 100px;
 }
 
 .intro__title {
     display: flex;
     flex-direction: column;
-    padding-left: 30px;
-    padding-top: 52px;
+    margin-top: 65px;
+    margin-left: 11px;
+
 }
 
-.intro__logo {
+.intro__bur {    
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+.intro__img {
     display: flex;
+    flex-shrink: 0;
+
 }
 
 
 .title {
     font: $title;
     color: $orange;
+
 }
 
 .subtitle {
@@ -30,5 +45,19 @@
     font-size: 65px;
     line-height: 0.92;
     color: white;
-    padding-top: 28px;
+
+}
+
+.subtitle--intro {
+    margin-top: 28px;
+    
+}
+
+
+
+
+.intro__scrollbtn {
+    margin-bottom: 40px;
+    align-self: center;
+
 }

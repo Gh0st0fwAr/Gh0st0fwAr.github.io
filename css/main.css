@@ -464,10 +464,7 @@ html, body {
   display: -ms-flexbox;
   display: flex;
   height: 100vh;
-  min-height: 650px;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
+  min-height: 650px; }
 
 .container {
   width: 943px;
@@ -520,9 +517,8 @@ html, body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between; }
+  margin-top: 13px;
+  width: 100%; }
 
 .header__btns {
   display: -webkit-box;
@@ -544,6 +540,10 @@ html, body {
   padding: 7px 16px 7px 16px; }
   .btn:active {
     background-color: #990000; }
+
+.nav {
+  margin-left: auto;
+  margin-right: 15px; }
 
 .nav__list {
   display: -webkit-box;
@@ -569,9 +569,11 @@ html, body {
     border-radius: 50%;
     display: block;
     margin-left: 17px; }
-  .nav__item:last-child:after {
-    display: none;
-    margin-left: 0px; }
+  .nav__item:last-child {
+    margin-right: 0px; }
+    .nav__item:last-child:after {
+      display: none;
+      margin-left: 0px; }
 
 .nav__link {
   font-family: Ubuntu;
@@ -585,13 +587,19 @@ html, body {
   background: url(../../img/layout/introbg.png) center center/cover no-repeat;
   position: relative; }
 
+.container--intro {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
 .intro__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  margin-bottom: 100px; }
 
 .intro__title {
   display: -webkit-box;
@@ -601,13 +609,19 @@ html, body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding-left: 30px;
-  padding-top: 52px; }
+  margin-top: 65px;
+  margin-left: 11px; }
 
-.intro__logo {
+.intro__bur {
+  max-width: 100%;
+  max-height: 100%; }
+
+.intro__img {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -ms-flex-negative: 0;
+  flex-shrink: 0; }
 
 .title {
   font: normal 72px/1 "Gagalin", sans-serif;
@@ -617,8 +631,16 @@ html, body {
   font: normal 14px/1 "Lifehack", sans-serif;
   font-size: 65px;
   line-height: 0.92;
-  color: white;
-  padding-top: 28px; }
+  color: white; }
+
+.subtitle--intro {
+  margin-top: 28px; }
+
+.intro__scrollbtn {
+  margin-bottom: 40px;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center; }
 
 .wrbest {
   background: url(../../img/layout/wrbestbg.png) center center/cover no-repeat; }
@@ -630,7 +652,15 @@ html, body {
     color: #2f3234; }
 
 .container--wrbest {
-  height: 44%; }
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.wrbest__advantages {
+  margin-top: 55px; }
+
+.wrbest__text {
+  margin-top: 40px; }
 
 .wrbest__features {
   display: -webkit-box;
@@ -643,10 +673,7 @@ html, body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 33%;
-  margin-top: 90px; }
-  .wrbest__features .subtitle {
-    padding-top: 40px; }
+  width: 33%; }
   .wrbest__features .wrbest__description {
     padding-top: 25px; }
 
@@ -719,6 +746,7 @@ html, body {
   height: 100%;
   padding-top: 50px;
   padding-left: 19px;
+  padding-right: 33px;
   opacity: 0; }
   .reviews__hover:hover {
     opacity: 1;
@@ -735,9 +763,10 @@ html, body {
     margin-top: 30px; }
     .reviews__hover .reviews__text p {
       font-weight: 300; }
-  .reviews__hover .btn {
-    background-color: #2f3234;
+  .reviews__hover .reviews__btn {
     margin-top: 17px; }
+  .reviews__hover .btn {
+    background-color: #2f3234; }
     .reviews__hover .btn:active {
       opacity: 0.7; }
 
@@ -745,12 +774,6 @@ html, body {
   width: 29px;
   height: 14px;
   background: url(../../img/icons/arrow-scroll.svg) center center/contain no-repeat;
-  display: block;
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%); }
+  display: block; }
   .scrollbutton:active {
     opacity: 0.65; }

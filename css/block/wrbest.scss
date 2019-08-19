@@ -12,7 +12,17 @@
 }
 
 .container--wrbest {
-    height: 44%;
+    justify-content: center;
+}
+
+.wrbest__advantages {
+    margin-top: 55px;
+
+}
+
+.wrbest__text {
+    margin-top: 40px;
+    
 }
 
 .wrbest__features {
@@ -20,12 +30,7 @@
     flex-direction: column;
     align-items: center;
     width: 33%;
-    margin-top: 90px;
-
-    .subtitle {
-        padding-top: 40px;
-    }
-
+    
     .wrbest__description {
         padding-top: 25px;
     }
