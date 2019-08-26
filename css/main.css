@@ -1160,3 +1160,100 @@ html, body {
   background-color: transparent;
   text-transform: none;
   font-weight: 300; }
+
+.map {
+  position: relative; }
+
+.map__img {
+  width: 100vw;
+  height: 100vh;
+  -o-object-fit: cover;
+  object-fit: cover; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url(../../img/layout/footerbg.png) center center/cover no-repeat;
+  padding: 10px 0px; }
+
+.container--footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+
+.footer__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font: normal 14px/1.71 "Ubuntu", sans-serif; }
+
+.footer__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.footer__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 8rem; }
+
+.footer__adress {
+  font-weight: 300;
+  color: white; }
+
+.footer__tel {
+  font-weight: bold;
+  color: #e45028; }
+
+.footer__icon {
+  display: block;
+  height: 20px;
+  width: 23px;
+  cursor: pointer;
+  display: block;
+  opacity: 0.3; }
+  .footer__icon:hover {
+    opacity: 1;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s; }
+
+.footer__icon--vk {
+  background: url(../../img/layout/vk.png);
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.footer__icon--fb {
+  background: url(../../img/layout/fb.png);
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.footer__icon--inst {
+  background: url(../../img/layout/inst.png);
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.footer__icon--tw {
+  background: url(../../img/layout/tw.png);
+  background-repeat: no-repeat;
+  background-position: center; }
