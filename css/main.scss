@@ -7,6 +7,9 @@ $description: normal 14px/1.71 'Ubuntu', sans-serif;
 $orange: #f9b43b;
 $black: #2f3234;
 
+html {
+    font-size: 16px;
+}
 
 //normalize
 @import "normalize.scss";
@@ -27,3 +30,6 @@ $black: #2f3234;
 @import "block/wrbest.scss";
 @import "block/reviews.scss";
 @import "block/scrollbtn.scss";
+@import "block/team.scss";
+@import "block/menu.scss";
+@import "block/form.scss";

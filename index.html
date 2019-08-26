@@ -16,9 +16,13 @@
             <section class="section intro">
                 <div class="container container--intro">
         <header class="header">
-            <a class ="header__link" href=#>
+            <div class=header__left><a class ="header__link" href=#>
             <img src="img/icons/logo.svg" alt="MyBurgers logo" class="header__logo">
-            </a>
+            <!-- <svg class="header__logo">
+            <use xlink:href="css/sprite.svg#logo"></use>
+            </svg> -->
+        </a>
+    </div>
 
             <nav class="nav">
                 <ul class="nav__list">
@@ -74,7 +78,8 @@
         <div class="intro__scrollbtn"><button type="button" class="scrollbutton"></button></div>
         
              
-              </section>
+        </section>
+
 
 
         <section class="section wrbest">
@@ -84,7 +89,9 @@
                 <div class="wrbest__advantages">
                     <ul class="wrbest__list">
                         <li class="wrbest__features">
-                            <div class="wrbest__icon wrbest__icon--meat"></div>
+                            <div class="wrbest__icon wrbest__icon--meat">
+                                
+                            </div>
                             <div class="wrbest__text">
                                 <h3 class="subtitle">100% свежее мясо</h3>
                                 <div class="wrbest__description">Драма представляет собой деструктивный 
@@ -115,10 +122,110 @@
 
         </section>
 
+        <section class="section team">
+           <div class="team__section">
+               <div class="team__wrap">
+               <div class="title">Команда</div>
+               <ul class="team-acco">
+                    <li class="team-acco__item ">
+                            <a class="team-acco__trigger" href="#">Дэниэл Редклиф</a>
+                            <div class="team-acco__content">
+                                <div class="team-acco__img"><img src="img/layout/richard.jpg" alt="Richard's photo" class="team-acco__fit"></div>
+                                <div class="team-acco__desc">
+                                    <div class="team-acco__title">Оператор</div>
+                                    <div class="team-acco__port">С радостью поможет подобрать
+                                        идеальный бургер и оформить заказ
+                                    </div>
+                                </div>
+                            </div>
+                        </li>   
+                    <li class="team-acco__item team-acco__item--active">
+                       <a class="team-acco__trigger" href="#">Ричард Джеймс</a>
+                       <div class="team-acco__content">
+                           <div class="team-acco__img"><img src="img/layout/richard.jpg" alt="Richard's photo" class="team-acco__fit"></div>
+                           <div class="team-acco__desc">
+                               <div class="team-acco__title">Оператор</div>
+                               <div class="team-acco__port">С радостью поможет подобрать
+                                   идеальный бургер и оформить заказ
+                               </div>
+                           </div>
+                       </div>
+                   </li>
+                   <li class="team-acco__item ">
+                        <a class="team-acco__trigger" href="#">Джейк Финн</a>
+                        <div class="team-acco__content">
+                            <div class="team-acco__img"><img src="img/layout/richard.jpg" alt="Richard's photo" class="team-acco__fit"></div>
+                            <div class="team-acco__desc">
+                                <div class="team-acco__title">Оператор</div>
+                                <div class="team-acco__port">С радостью поможет подобрать
+                                    идеальный бургер и оформить заказ
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="team-acco__item ">
+                            <a class="team-acco__trigger" href="#">Николай Иванов</a>
+                            <div class="team-acco__content">
+                                <div class="team-acco__img"><img src="img/layout/richard.jpg" alt="Richard's photo" class="team-acco__fit"></div>
+                                <div class="team-acco__desc">
+                                    <div class="team-acco__title">Оператор</div>
+                                    <div class="team-acco__port">С радостью поможет подобрать
+                                        идеальный бургер и оформить заказ
+                                    </div>
+                                </div>
+                            </div>
+                    </li>      
+               </ul>
+               </div>
+           </div>
+
+        </section>
+
+        <section class="section menu">
+            <div class="title title--menu">Меню</div>
+            <div class="menu__wrap">
+            <ul class="menu-acco">
+                <!-- Активный элемент при помощи вложений в scss
+                образует конструкцию, разворачивающую .menu-acco__desc  -->
+                <li class="menu-acco__item menu-acco__item--active ">
+                    <div class="menu-acco__vert menu-acco__vert--meat">
+                    <div class="menu-acco__title">Для мясоедов</div>
+                    </div>
+                    <div class="menu-acco__desc">Lorem ipsum dolor sit amet 
+                        consectetur adipisicing elit. Incidunt iure dolore 
+                        sint magni nesciunt earum, sunt voluptates excepturi 
+                        reiciendis quo quas ab esse nemo, fugit beatae debitis 
+                        soluta nulla quod?</div>
+                </li>
+                <li class="menu-acco__item">
+                    <div class="menu-acco__vert menu-acco__vert--veg">
+                    <div class="menu-acco__title">Вегетарианское</div>
+                    </div>
+                    <div class="menu-acco__desc">Lorem ipsum dolor sit amet 
+                        consectetur adipisicing elit. Incidunt iure dolore 
+                        sint magni nesciunt earum, sunt voluptates excepturi 
+                        reiciendis quo quas ab esse nemo, fugit beatae debitis 
+                        soluta nulla quod?</div>
+                </li>
+                <li class="menu-acco__item">
+                        <div class="menu-acco__vert menu-acco__vert--diet">
+                        <div class="menu-acco__title">Диетическое</div>
+                        </div>
+                        <div class="menu-acco__desc">Lorem ipsum dolor sit amet 
+                            consectetur adipisicing elit. Incidunt iure dolore 
+                            sint magni nesciunt earum, sunt voluptates excepturi 
+                            reiciendis quo quas ab esse nemo, fugit beatae debitis 
+                            soluta nulla quod?</div>
+                </li>
+            </ul>
+                
+            </div>
+        </section>
+
         <section class="section reviews">
             
             <ul class="reviews__list">
-    <li class="reviews__item" style ="background-image: url('img/layout/rev1.jpg')">
+    <li class="reviews__item reviews__item--rev1">
             <div class="reviews__hover">
             <div class="reviews__title">Лорем Ипсумович</div>
             <div class="reviews__text">
@@ -133,7 +240,7 @@
         </div>
     </li>
 
-    <li class="reviews__item" style ="background-image: url('img/layout/rev1.jpg')">
+    <li class="reviews__item reviews__item--rev2">
         <div class="reviews__hover">
         <div class="reviews__title">Лорем Ипсумович</div>
         <div class="reviews__text">
@@ -148,7 +255,7 @@
         </div>
     </li>   
 
-    <li class="reviews__item" style ="background-image: url('img/layout/rev1.jpg')">
+    <li class="reviews__item reviews__item--rev3">
         <div class="reviews__hover">
         <div class="reviews__title">Лорем Ипсумович</div>
         <div class="reviews__text">
@@ -163,7 +270,7 @@
         </div>
     </li>
 
-    <li class="reviews__item" style ="background-image: url('img/layout/rev1.jpg')">
+    <li class="reviews__item reviews__item--rev4">
         <div class="reviews__hover">
         <div class="reviews__title">Лорем Ипсумович</div>
         <div class="reviews__text">
@@ -178,7 +285,7 @@
         </div>
     </li> 
 
-    <li class="reviews__item" style ="background-image: url('img/layout/rev1.jpg')">
+    <li class="reviews__item reviews__item--rev5">
         <div class="reviews__hover">
         <div class="reviews__title">Лорем Ипсумович</div>
         <div class="reviews__text">
@@ -193,7 +300,7 @@
         </div>
     </li>
 
-    <li class="reviews__item" style ="background-image: url('img/layout/rev1.jpg')">
+    <li class="reviews__item reviews__item--rev6">
         <div class="reviews__hover">
         <div class="reviews__title">Лорем Ипсумович</div>
         <div class="reviews__text">
@@ -207,7 +314,7 @@
         </div>
         </div>
     </li>
-    <li class="reviews__item" style ="background-image: url('img/layout/rev1.jpg')">
+    <li class="reviews__item reviews__item--rev7">
         <div class="reviews__hover">
         <div class="reviews__title">Лорем Ипсумович</div>
         <div class="reviews__text">
@@ -222,7 +329,7 @@
         </div>
     </li>
         
-    <li class="reviews__item" style ="background-image: url('img/layout/rev1.jpg')">
+    <li class="reviews__item reviews__item--rev8">
         <div class="reviews__hover">
         <div class="reviews__title">Лорем Ипсумович</div>
         <div class="reviews__text">
@@ -239,6 +346,80 @@
             </ul>
             
         </section>
+
+        <section class="section delivery">
+            <div class="title title--form">Закажите доставку</div>
+            <form class="form">
+                <div class="form__block">
+                    <div class="form__row">
+                        <label class="form__col">
+                            <span class="form__desc">Имя</span>
+                            <input type="text" class="form__input">
+                        </label>
+                        <label class="form__col">
+                            <span class="form__desc">Телефон</span>
+                            <input type="text" class="form__input">
+                        </label>
+                    </div>
+                    <div class="form__row">
+                        <label class="form__col">
+                            <span class="form__desc">Улица</span>
+                            <input type="text" class="form__input">
+                        </label>
+                    </div>
+                    <div class="form__row">
+                        <label class="form__col">
+                            <span class="form__desc">Дом</span>
+                            <input type="text" class="form__input">
+                        </label>
+                        <label class="form__col">
+                            <span class="form__desc">Корпус</span>
+                            <input type="text" class="form__input">
+                        </label>
+                        <label class="form__col">
+                            <span class="form__desc">Квартира</span>
+                            <input type="text" class="form__input">
+                        </label>
+                        <label class="form__col">
+                            <span class="form__desc">Этаж</span>
+                            <input type="text" class="form__input">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form__block">
+                    <label class="form__col">
+                            <span class="form__desc">Комментарий</span>
+                            <!-- На comment стоит фиксированная высота в рэмах. 
+                            Не уверен, что так будет правильно, выглядит так,  
+                            как будто есть какое-то другое решение -->
+                            <input type="text" class="form__input form__input--comment">
+                    </label>
+                    <div class="form__radio">
+                        <label class="form__payment">
+                            <input type="radio" class="form__rd" name="radio">
+                            <span class="form__custom"></span>
+                            <span class="form__desc form__desc--rd">Потребуется сдача</span>
+                        </label>
+                        <label class="form__payment">
+                            <input type="radio" class="form__rd" name="radio">
+                            <span class="form__custom"></span>
+                            <span class="form__desc form__desc--rd">Оплата по карте</span>
+                        </label>
+                    </div>
+                    <label class="form__checkbox">
+                        <input type="checkbox" class="form__check">
+                        <span class="form__boxcustom"></span>
+                        <span class="form__desc">Не перезванивать</span>
+                    </label>
+                    <div class="form__buttons">
+                    <button type="submit" class="btn btn--form">Заказать</button>
+                    <button type="button" class="btn btn--clear">Очистить</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
         <ul class="fixscroll">
                 <li class="fixscroll__item fixscroll__item--active"></li>
                 <li class="fixscroll__item"></li>
