@@ -658,7 +658,10 @@ html, body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 6.25rem; }
+  margin-bottom: 6.25rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
   @media screen and (max-width: 768px) {
     .intro__content {
       -webkit-box-orient: vertical;
@@ -695,8 +698,7 @@ html, body {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-negative: 1;
-  flex-shrink: 1;
-  width: 50%; }
+  flex-shrink: 1; }
 
 .subtitle {
   font: normal 0.875rem "Lifehack", sans-serif;

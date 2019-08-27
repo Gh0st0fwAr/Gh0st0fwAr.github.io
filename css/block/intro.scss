@@ -11,6 +11,7 @@
     display: flex;
     align-items: center;
     margin-bottom: rem(100px);
+    justify-content: center;
 
     @include tablets {
         flex-direction: column;
@@ -43,7 +44,6 @@
 .intro__img {
     display: flex;
     flex-shrink: 1;
-    width: 50%;
 
 }
 
