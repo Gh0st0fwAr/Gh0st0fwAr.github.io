@@ -482,6 +482,7 @@ html, body {
 
 .container {
   width: 90%;
+  max-width: 943px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

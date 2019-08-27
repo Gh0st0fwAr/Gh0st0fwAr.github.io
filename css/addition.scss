@@ -49,7 +49,8 @@ html,body {
 }
 
 .container {
-    width: 90%;
+    width: 90%;    
+    max-width: 943px;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
