@@ -57,9 +57,10 @@
 
                 </ul>                   
             </nav>
-            <button type="button" class="btn">Заказать</button>
-           
-           
+            <button type="button" class="btn btn-nav">Заказать</button>
+            <a class="hamburger-menu-link" href="#">
+            <div class="hamburger-menu-link__bars"></div>
+            </a>
 
         </header>
 
@@ -69,7 +70,7 @@
             </div>
             <div class="intro__title">
                 <h1 class="title title--maintitle">Доставка MyBurger</h1>
-                <div class="title">Мы делаем</div>
+                <div class="title title--intro">Мы делаем</div>
                 <div class="subtitle subtitle--intro">натуральные бургеры</div>
             </div>
         </div>
@@ -93,7 +94,7 @@
                                 
                             </div>
                             <div class="wrbest__text">
-                                <h3 class="subtitle">100% свежее мясо</h3>
+                                <h3 class="subtitle subtitle--wrbest">100% свежее мясо</h3>
                                 <div class="wrbest__description">Драма представляет собой деструктивный 
                             цикл. Анапест представляет собой анапест. Ямб 
                             неравномерен.</div>
@@ -127,6 +128,7 @@
                <div class="team__wrap">
                <div class="title">Команда</div>
                <ul class="team-acco">
+                   <!-- Активный элемент активирует сворачивание team-acco__desc -->
                     <li class="team-acco__item ">
                             <a class="team-acco__trigger" href="#">Дэниэл Редклиф</a>
                             <div class="team-acco__content">
@@ -139,6 +141,10 @@
                                 </div>
                             </div>
                         </li>   
+                        <!-- Временно повесил border-radius на img, потому что
+                        div сжимал изображение. Правильно ли я понимаю, что чтобы 
+                        этого не происходило надо проставить div'у flex-shrink: 0? 
+                        Адаптив тогда не поедет? -->
                     <li class="team-acco__item team-acco__item--active">
                        <a class="team-acco__trigger" href="#">Ричард Джеймс</a>
                        <div class="team-acco__content">
@@ -401,7 +407,7 @@
                     </div>
                 </div>
 
-                <div class="form__block">
+                <div class="form__block form__block--adph">
                     <label class="form__col">
                             <span class="form__desc">Комментарий</span>
                             <!-- На comment стоит фиксированная высота в рэмах. 
@@ -430,7 +436,7 @@
                     <button type="submit" class="btn btn--form">Заказать</button>
                     <button type="button" class="btn btn--clear">Очистить</button>
                     </div>
-                </div>C
+                </div>
             </form>
         </section>
 

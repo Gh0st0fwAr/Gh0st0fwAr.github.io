@@ -9,7 +9,11 @@
     top: 0;
     bottom: 0;
     background:rgba(47, 50, 52, 0.93);
-    // padding: 15% 5% 15% 5%;
+    
+    @include tablets {
+        width: 100%;
+
+    }
     
 }
 
@@ -19,27 +23,42 @@
     justify-content: center;
     height: 100%;
     padding: 0% 5% 0% 5%;
+
+    @include tablets {
+        align-items: center;
+    }
 }
 
 .team-acco {
-    margin-top: 40px;
+    margin-top: rem(40px);
+
+  
 }
 
 .team-acco__item {
     display: flex;
     flex-direction: column;
-    margin-bottom: 25px;
+    margin-bottom: rem(25px);
     
+    @include tablets {
+        align-items: center;
+    }
 
     .team-acco__content {
         height: 0;
         overflow: hidden;
 
+        @include tablets {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
     }
 }
 
 .team-acco__trigger {
-    font: normal 14px/1 'Gagalin', sans-serif;
+    font: normal rem(14px)/1 'Gagalin', sans-serif;
     color: $orange;
     display: flex;
     align-items: flex-end;
@@ -47,8 +66,8 @@
     &::before {
      content: "";
      display: block;
-     border: 5px solid transparent;	border-top: 6px solid $orange;
-     margin-right: 4px;
+     border: rem(5px) solid transparent;	border-top: rem(6px) solid $orange;
+     margin-right: rem(4px);
      
     }
  
@@ -61,7 +80,7 @@
     }
     
     .team-acco__trigger {
-       font: normal 14px/1 'Gagalin', sans-serif;
+       font: normal rem(14px)/1 'Gagalin', sans-serif;
        color: $orange;
        display: flex;
        align-items: flex-end;
@@ -69,8 +88,8 @@
        &::before {
         content: "";
         display: block;
-        border: 5px solid transparent;	border-bottom: 6px solid $orange;
-        margin-right: 4px;
+        border: rem(5px) solid transparent;	border-bottom: rem(6px) solid $orange;
+        margin-right: rem(4px);
         
        }
     
@@ -81,7 +100,7 @@
 .team-acco__content {
    display: flex;
    color: white;
-   margin-top: 20px;
+   margin-top: rem(20px);
 }
 
 .team-acco__fit {
@@ -98,13 +117,18 @@
     flex-direction: column;  
     font: $description;
     text-align: left;
-    margin-left: 10px;
+    margin-left: rem(10px);
+
+    @include tablets {
+        text-align: center;
+        width: 70%;
+    }
         
 }
 
 .team-acco__port {
     font-weight: 300;
     line-height: 1.71;
-    margin-top: 10px;
+    margin-top: rem(10px);
 }
 

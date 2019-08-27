@@ -16,13 +16,19 @@
 }
 
 .wrbest__advantages {
-    margin-top: 55px;
+    margin-top: rem(55px);
 
+    
 }
 
 .wrbest__text {
-    margin-top: 40px;
+    margin-top: rem(40px);
+
+    @include phones {
+        margin-left: 1rem;
     
+    }
+
 }
 
 .wrbest__features {
@@ -30,17 +36,25 @@
     flex-direction: column;
     align-items: center;
     width: 33%;
+
+    @include phones {
+        width: 100%;
+        flex-direction: row;
+
+    }
     
     .wrbest__description {
-        padding-top: 25px;
+        padding-top: rem(25px);
+
     }
 }
 
 .wrbest__icon {
     display: block;
-    width: 97px;
-    height: 89px;
+    width: rem(120px);
+    height: rem(100px);
     align-items: center;
+    flex-shrink: 0;
 }
 
 @each $wrbestic in (meat, hand, natural) {
@@ -55,10 +69,16 @@
 .wrbest__list {
     display: flex;
 
+    
+
     .subtitle {
         color:$black;
-        font-size: 24px;
+        font-size: rem(24px);
         text-align: center;
+
+        @include phones {
+            text-align: left;
+        }
 
     }
 
@@ -69,6 +89,16 @@
         color: rgba(47, 50, 52, 0.8);
         text-align: center;
         line-height: 1.71;
+
+        @include phones {
+            text-align: left;
+        }
         
     }
+
+    @include phones {
+        flex-direction: column;
+        
+    }
+
 }

@@ -5,21 +5,21 @@
 
 .title--menu {
     margin-top: 3rem;
-    margin-left: 5rem;
+    margin-left: 10%;
 }
 
 .menu__wrap {
     position: absolute;
     top: 0;
     right: 0;
-    bottom: 0;
+    bottom: 0;    
+    width: 50%;
 }
 
 .menu-acco {
     position: relative;
     height: 100%;
     display: flex;
-    
 }
 
 .menu-acco__item {
@@ -49,16 +49,17 @@
 .menu-acco__vert {
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100%;
 }
 
 .menu-acco__title {
     text-transform: uppercase;
     color: white;
     font: $title;
-    font-size: 35px;
+    font-size: rem(35px);
     writing-mode: vertical-lr;
     transform: rotate(180deg);
-    padding: 40px 15px 0px 15px;
+    padding: rem(40px) rem(15px) rem(0px) rem(15px);
     height: 100%;    
     background-color: rgba(47, 50, 52, 0.83);
 }
@@ -74,7 +75,12 @@
 
 .menu-acco__item--active {
     .menu-acco__desc {
-        width: 30rem;
-        padding: 50px 25px 50px 25px;
+        width: 100%;
+        padding: rem(50px) rem(25px) rem(50px) rem(25px);
+
+        @include tablets { 
+        }
+
+       
     }
 }

@@ -14,7 +14,11 @@
     display: flex;
     justify-content: center;
     margin-top: 3rem;
-    
+
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+    }    
 
     &__block {
         display: flex;
@@ -25,6 +29,15 @@
         &:last-child {
             margin-right: 0;
         }
+
+        @include tablets {
+            width: 70%;
+            margin-right: 0;
+        }
+
+        @include phones {
+            width: 90%;
+        }
     }
 
     &__row {
@@ -34,7 +47,7 @@
     &__col {
         display: flex;
         flex-direction: column;
-        margin-right: 20px;
+        margin-right: rem(20px);
         width: 100%;
 
         &:last-child {
@@ -50,10 +63,10 @@
     }
 
     &__input {
-        border-radius: 5px;
-        border: solid 1px #d1cfcb;
-        padding-top: 8px;
-        padding-bottom: 8px;
+        border-radius: rem(5px);
+        border: solid rem(1px) #d1cfcb;
+        padding-top: rem(8px);
+        padding-bottom: rem(8px);
         width: 100%;
 
         &--comment {
@@ -62,11 +75,17 @@
         
 
         &:focus {
-            border: solid 3px $orange;
+            border: solid rem(3px) $orange;
         }
         
     }
 
+}
+
+.form__block--adph {
+    @include phones {
+        align-items: center;
+    }
 }
 
 
@@ -86,6 +105,7 @@
 .form__radio {
     display: flex;
     margin-top: 0.7rem;
+
 }
 
 .form__rd {
@@ -97,8 +117,8 @@
     position: relative;
     content: "";
     display: block;
-    width: 16px;
-    height: 16px;
+    width: rem(16px);
+    height: rem(16px);
     border-radius: 50%;
     background-color: white;
     margin-right: 0.7rem;
@@ -109,8 +129,8 @@
     content: "";
     display: block;
     position: absolute;
-    width: 8px;
-    height: 8px;
+    width: rem(8px);
+    height: rem(8px);
     background-color: #e35028;
     border-radius: 50%;
     top: 50%;    
@@ -141,8 +161,8 @@
     position: relative;
     content: "";
     display: block;
-    width: 16px;
-    height: 16px;
+    width: rem(16px);
+    height: rem(16px);
     background-color: white;
     margin-right: 0.7rem;
 }
@@ -151,14 +171,14 @@
     content: "";
     display: block;
     position: absolute;
-    width: 10px;
-    height: 5px;
-    border-radius: 1px;
-    border-left: 4px solid #e35028;
-    border-bottom: 4px solid #e35028;
+    width: rem(10px);
+    height: rem(5px);
+    border-radius: rem(1px);
+    border-left: rem(4px) solid #e35028;
+    border-bottom: rem(4px) solid #e35028;
     transform: rotate(315deg);
-    top: 2px;    
-    left: 1px;    
+    top: rem(2px);    
+    left: rem(1px);    
     opacity: (0);
     
 }

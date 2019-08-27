@@ -1,25 +1,29 @@
-//fonts
-$title: normal 72px/1 'Gagalin', sans-serif;
-$subtitle: normal 14px/1 'Lifehack', sans-serif;
-$description: normal 14px/1.71 'Ubuntu', sans-serif;
+
 
 //colors
 $orange: #f9b43b;
 $black: #2f3234;
 
-html {
-    font-size: 16px;
-}
+
 
 //normalize
 @import "normalize.scss";
 
+
+//media
+@import "media.scss";
+
+//fonts
+$title: normal rem(72px)/1 'Gagalin', sans-serif;
+$subtitle: normal rem(14px)/1 'Lifehack', sans-serif;
+$description: normal rem(14px)/1 'Ubuntu', sans-serif;
 
 
 //base
 @import "base.scss";
 @import "fonts.scss";
 @import "addition.scss";
+
 
 
 
@@ -34,3 +38,5 @@ html {
 @import "block/menu.scss";
 @import "block/form.scss";
 @import "block/footer.scss";
+
+
