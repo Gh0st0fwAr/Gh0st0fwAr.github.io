@@ -29,7 +29,7 @@
         align-items: center;
         text-align: center;
        
-        .footer__com {
+        .footer__block--com {
             margin-top: 0.5rem;
         }
     }
@@ -40,13 +40,14 @@
     display: flex;
 }
 
-.footer__add {
+.footer__block--add {
     flex-direction: column;
     font: $description;
     
 }
 
-.footer__com {
+
+.footer__block--com {
     align-items: center;    
 
 }
@@ -71,6 +72,7 @@
 .footer__adress {
     font-weight: 300;
     color: white;
+    line-height: 2;
 
 }
 
@@ -81,11 +83,10 @@
 }
 
 .footer__icon {
-    display: block;
+    align-items: center;
     height: rem(23px);
     width: rem(23px);
     cursor: pointer;
-    display: block;
     opacity: (0.3);
     flex-shrink: 1;
     
@@ -96,11 +97,3 @@
 
 }
 
-@each $socialicon in (vk, fb, inst, tw) {
-    .footer__icon--#{$socialicon} {
-        background: url(../../img/layout/#{$socialicon}.png);
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-    
-}
