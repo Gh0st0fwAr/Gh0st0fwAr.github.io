@@ -631,15 +631,15 @@ html, body {
   display: none;
   top: 3.45rem;
   right: 2rem; }
-  @media screen and (max-width: 768px) {
-    .hamburger-menu-link__bars {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; } }
   @media screen and (max-width: 480px) {
     .hamburger-menu-link__bars {
       top: 3.6rem;
       right: 1.8rem; } }
+  @media screen and (max-width: 900px) {
+    .hamburger-menu-link__bars {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
   .hamburger-menu-link__bars::before {
     content: "";
     position: absolute;
@@ -659,14 +659,10 @@ html, body {
     background-color: white;
     margin-top: 1.25rem; }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .btn-nav {
     margin-left: auto;
     margin-right: 2.5rem; } }
-
-@media screen and (max-width: 900px) {
-  .btn-nav {
-    margin-left: auto; } }
 
 .intro {
   background: url(../../img/layout/introbg.png) center center/cover no-repeat;
