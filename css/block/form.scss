@@ -14,30 +14,29 @@
     display: flex;
     justify-content: center;
     margin-top: 3rem;
+    padding: 0 7%;
 
     @include tablets {
         flex-direction: column;
         align-items: center;
+        
     }    
 
     &__block {
         display: flex;
         flex-direction: column;
-        width: 40%;
         margin-right: 2rem;
+        width: 100%;
 
         &:last-child {
             margin-right: 0;
         }
 
         @include tablets {
-            width: 70%;
             margin-right: 0;
         }
 
-        @include phones {
-            width: 90%;
-        }
+        
     }
 
     &__row {
@@ -53,6 +52,7 @@
         &:last-child {
             margin-right: 0;
         }
+        
     }
 
     &__desc {
@@ -60,6 +60,7 @@
         font-weight: 300;
         color: white;
         line-height: 2.5;
+        
     }
 
     &__input {
@@ -68,9 +69,12 @@
         padding-top: rem(8px);
         padding-bottom: rem(8px);
         width: 100%;
+        outline: none;
+        border: solid rem(3px) transparent;
 
         &--comment {
             height: 6.7rem;
+            resize: none;
         }
         
 
@@ -82,9 +86,26 @@
 
 }
 
+.form__col--floor {
+    @include phones {
+        display: none;
+    }
+}
+
+.form__col--room {
+    @include phones {
+        margin-right: 0;
+    }
+}
+
 .form__block--adph {
     @include phones {
         align-items: center;
+
+        .form__col {
+            margin-right: 0;
+        }
+
     }
 }
 

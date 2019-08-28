@@ -70,6 +70,15 @@
             font-weight: 300;
         }
 
+        @include tablets {
+            margin-top: rem(10px);
+            line-height: 1.2;
+        }
+
+        @include phones {
+            display: none;
+        }
+
     }
     
     .reviews__btn {

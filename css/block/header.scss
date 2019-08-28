@@ -8,10 +8,20 @@
     width: 100%;
 }
 
+.container--header {
+    align-items: center;
+}
+
 .header__btns {
     display: flex;
     align-items: center;
 
+}
+
+.header__logo {
+    width: rem(98px);
+    height: rem(74px);
+    flex-shrink: 1;
 }
 
 

@@ -14,15 +14,16 @@
         <div class="maincontent">
             
             <section class="section intro">
-                <div class="container container--intro">
+                
         <header class="header">
+                <div class="container container--header">
             <div class=header__left><a class ="header__link" href=#>
-            <img src="img/icons/logo.svg" alt="MyBurgers logo" class="header__logo">
-            <!-- <svg class="header__logo">
+            <!-- <img src="img/icons/logo.svg" alt="MyBurgers logo" class="header__logo"> -->
+            <svg class="header__logo">
             <use xlink:href="css/sprite.svg#logo"></use>
-            </svg> -->
-        </a>
-    </div>
+            </svg>
+            </a>
+            </div>
 
             <nav class="nav">
                 <ul class="nav__list">
@@ -58,12 +59,9 @@
                 </ul>                   
             </nav>
             <button type="button" class="btn btn-nav">Заказать</button>
-            <a class="hamburger-menu-link" href="#">
-            <div class="hamburger-menu-link__bars"></div>
-            </a>
-
+            
+            </div>
         </header>
-
         <div class="intro__content">
             <div class="intro__img">
                 <img src="img/layout/introbur.png" alt="Burger picture" class="intro__bur">
@@ -77,8 +75,7 @@
 
         
         <div class="intro__scrollbtn"><button type="button" class="scrollbutton"></button></div>
-        
-             
+            
         </section>
 
 
@@ -90,9 +87,13 @@
                 <div class="wrbest__advantages">
                     <ul class="wrbest__list">
                         <li class="wrbest__features">
-                            <div class="wrbest__icon wrbest__icon--meat">
+                            <!-- <div class="wrbest__icon wrbest__icon--meat">
                                 
-                            </div>
+                            </div> -->
+                            
+                            <svg class="wrbest__icon wrbest__icon--meat">
+                                <use xlink:href="sprite.svg#meat"></use>
+                            </svg>
                             <div class="wrbest__text">
                                 <h3 class="subtitle subtitle--wrbest">100% свежее мясо</h3>
                                 <div class="wrbest__description">Драма представляет собой деструктивный 
@@ -101,7 +102,10 @@
                             </div>
                         </li>
                         <li class="wrbest__features">
-                            <div class="wrbest__icon wrbest__icon--hand"></div>
+                            <!-- <div class="wrbest__icon wrbest__icon--hand"></div> -->
+                            <svg class="wrbest__icon wrbest__icon--hand">
+                                    <use xlink:href="css/sprite.svg#hans"></use>
+                            </svg>
                             <div class="wrbest__text">
                                 <h3 class="subtitle">Ручная сборка</h3>
                                 <div class="wrbest__description">Драма представляет собой деструктивный цикл. 
@@ -110,7 +114,10 @@
                             </div>
                         </li>
                         <li class="wrbest__features">
-                            <div class="wrbest__icon wrbest__icon--natural"></div>
+                            <!-- <div class="wrbest__icon wrbest__icon--natural"></div> -->
+                            <svg class="wrbest__icon wrbest__icon--natural">
+                                    <use xlink:href="css/sprite.svg#natural"></use>
+                            </svg>
                             <div class="wrbest__text">
                                 <h3 class="subtitle">Натуральные ингридиенты</h3>
                                 <div class="wrbest__description">Драма представляет собой деструктивный цикл. 
@@ -141,10 +148,7 @@
                                 </div>
                             </div>
                         </li>   
-                        <!-- Временно повесил border-radius на img, потому что
-                        div сжимал изображение. Правильно ли я понимаю, что чтобы 
-                        этого не происходило надо проставить div'у flex-shrink: 0? 
-                        Адаптив тогда не поедет? -->
+                        
                     <li class="team-acco__item team-acco__item--active">
                        <a class="team-acco__trigger" href="#">Ричард Джеймс</a>
                        <div class="team-acco__content">
@@ -197,44 +201,50 @@
                     <div class="menu-acco__vert menu-acco__vert--meat">
                     <div class="menu-acco__title">Для мясоедов</div>
                     </div>
-                    <div class="menu-acco__desc">Lorem ipsum dolor sit amet 
+                    <div class="menu-acco__desc"><p class="menu-acco__par">Lorem ipsum dolor sit amet 
                         consectetur adipisicing elit. Incidunt iure dolore 
                         sint magni nesciunt earum, sunt voluptates excepturi 
                         reiciendis quo quas ab esse nemo, fugit beatae debitis 
-                        soluta nulla quod? </br>
+                        soluta nulla quod? </p>
                         
-                        Lorem ipsum dolor sit amet 
+                        <p class="menu-acco__par">Lorem ipsum dolor sit amet 
                         consectetur adipisicing elit. Incidunt iure dolore 
                         sint magni nesciunt earum, sunt voluptates excepturi 
                         reiciendis quo quas ab esse nemo, fugit beatae debitis 
-                        soluta nulla quod?
+                        soluta nulla quod? </p>
                     </div>
                 </li>
                 <li class="menu-acco__item">
                     <div class="menu-acco__vert menu-acco__vert--veg">
                     <div class="menu-acco__title">Вегетарианское</div>
                     </div>
-                    <div class="menu-acco__desc">Lorem ipsum dolor sit amet 
+                    <div class="menu-acco__desc"><p class="menu-acco__par">Lorem ipsum dolor sit amet 
                         consectetur adipisicing elit. Incidunt iure dolore 
                         sint magni nesciunt earum, sunt voluptates excepturi 
                         reiciendis quo quas ab esse nemo, fugit beatae debitis 
-                        soluta nulla quod?</div>
+                        soluta nulla quod? </p>
+                        
+                        <p class="menu-acco__par">Lorem ipsum dolor sit amet 
+                        consectetur adipisicing elit. Incidunt iure dolore 
+                        sint magni nesciunt earum, sunt voluptates excepturi 
+                        reiciendis quo quas ab esse nemo, fugit beatae debitis 
+                        soluta nulla quod? </p></div>
                 </li>
                 <li class="menu-acco__item">
                         <div class="menu-acco__vert menu-acco__vert--diet">
                         <div class="menu-acco__title">Диетическое</div>
                         </div>
-                        <div class="menu-acco__desc">Lorem ipsum dolor sit amet 
-                            consectetur adipisicing elit. Incidunt iure dolore 
-                            sint magni nesciunt earum, sunt voluptates excepturi 
-                            reiciendis quo quas ab esse nemo, fugit beatae debitis 
-                            soluta nulla quod?
-                            
-                            Lorem ipsum dolor sit amet 
-                            consectetur adipisicing elit. Incidunt iure dolore 
-                            sint magni nesciunt earum, sunt voluptates excepturi 
-                            reiciendis quo quas ab esse nemo, fugit beatae debitis 
-                            soluta nulla quod?
+                        <div class="menu-acco__desc"><p class="menu-acco__par">Lorem ipsum dolor sit amet 
+                        consectetur adipisicing elit. Incidunt iure dolore 
+                        sint magni nesciunt earum, sunt voluptates excepturi 
+                        reiciendis quo quas ab esse nemo, fugit beatae debitis 
+                        soluta nulla quod? </p>
+                        
+                        <p class="menu-acco__par">Lorem ipsum dolor sit amet 
+                        consectetur adipisicing elit. Incidunt iure dolore 
+                        sint magni nesciunt earum, sunt voluptates excepturi 
+                        reiciendis quo quas ab esse nemo, fugit beatae debitis 
+                        soluta nulla quod? </p>
                         </div>
                 </li>
             </ul>
@@ -374,35 +384,35 @@
                     <div class="form__row">
                         <label class="form__col">
                             <span class="form__desc">Имя</span>
-                            <input type="text" class="form__input">
+                            <input type="text" class="form__input" name="firstName">
                         </label>
                         <label class="form__col">
                             <span class="form__desc">Телефон</span>
-                            <input type="text" class="form__input">
+                            <input type="text" class="form__input" name="telNumber">
                         </label>
                     </div>
                     <div class="form__row">
                         <label class="form__col">
                             <span class="form__desc">Улица</span>
-                            <input type="text" class="form__input">
+                            <input type="text" class="form__input" name="street">
                         </label>
                     </div>
                     <div class="form__row">
                         <label class="form__col">
                             <span class="form__desc">Дом</span>
-                            <input type="text" class="form__input">
+                            <input type="text" class="form__input" name="house">
                         </label>
                         <label class="form__col">
                             <span class="form__desc">Корпус</span>
-                            <input type="text" class="form__input">
+                            <input type="text" class="form__input" name="housing">
                         </label>
-                        <label class="form__col">
+                        <label class="form__col form__col--room">
                             <span class="form__desc">Квартира</span>
-                            <input type="text" class="form__input">
+                            <input type="text" class="form__input" name="room">
                         </label>
-                        <label class="form__col">
+                        <label class="form__col form__col--floor">
                             <span class="form__desc">Этаж</span>
-                            <input type="text" class="form__input">
+                            <input type="text" class="form__input" name="floor">
                         </label>
                     </div>
                 </div>
@@ -410,10 +420,7 @@
                 <div class="form__block form__block--adph">
                     <label class="form__col">
                             <span class="form__desc">Комментарий</span>
-                            <!-- На comment стоит фиксированная высота в рэмах. 
-                            Не уверен, что так будет правильно, выглядит так,  
-                            как будто есть какое-то другое решение -->
-                            <textarea class="form__input form__input--comment"></textarea>
+                            <textarea class="form__input form__input--comment" name="commentBox"></textarea>
                     </label>
                     <div class="form__radio">
                         <label class="form__payment">
@@ -434,7 +441,7 @@
                     </label>
                     <div class="form__buttons">
                     <button type="submit" class="btn btn--form">Заказать</button>
-                    <button type="button" class="btn btn--clear">Очистить</button>
+                    <button type="reset" class="btn btn--clear">Очистить</button>
                     </div>
                 </div>
             </form>
@@ -444,13 +451,13 @@
             <img src="img/layout/map.png" alt="Map" class="map__img">
             <footer class="footer">
                 <div class="container container--footer">
-                    <div class="footer__left">
+                    <div class="footer__block footer__block--add">
                         <div class="footer__adress">Санкт-Петербург, ул.Бабушкина,
                             д.12/1, 15
                         </div>
                         <div class="footer__tel"><a href="tel:88123771377">+7(812)377-13-77</a></div>
                     </div>
-                    <div class="footer__right">
+                    <div class="footer__block footer__block--com">
                         <ul class="footer__social">
                             <li class="footer__links">
                                 <a href="#" class="footer__icon footer__icon--vk"></a></li>
@@ -473,8 +480,13 @@
                 <li class="fixscroll__item"></li>
                 <li class="fixscroll__item"></li>
                 <li class="fixscroll__item"></li>
-            </ul>
+        </ul>
             
+        <a class="hamburger-menu-link" href="#">
+            <div class="hamburger-menu-link__bars"></div>
+        </a>
+
+
         </div>
 
         

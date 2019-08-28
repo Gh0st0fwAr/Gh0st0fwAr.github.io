@@ -4,16 +4,17 @@
 }
 
 .title--menu {
-    margin-top: 3rem;
-    margin-left: 10%;
+    position: absolute;
+    top: rem(50px);
+    left: rem(50px);
+
 }
 
 .menu__wrap {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;    
-    width: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
 }
 
 .menu-acco {
@@ -50,7 +51,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
-    width: auto;
+
 }
 
 .menu-acco__title {
@@ -63,6 +64,10 @@
     padding: rem(40px) rem(15px) rem(0px) rem(15px);
     height: 100%;    
     background-color: rgba(47, 50, 52, 0.83);
+
+    @include phones {
+        padding: rem(40px) rem(8px) rem(0px) rem(8px);
+    }
 }
 
 .menu-acco__desc {
@@ -74,14 +79,14 @@
 
 }
 
+.menu-acco__par {
+    padding: 5% 5% 0% 5%;
+}
+
 .menu-acco__item--active {
     .menu-acco__desc {
-        width: 100%;
-        padding: rem(50px) rem(25px) rem(50px) rem(25px);
+        width: rem(540px);
 
-        @include tablets { 
-        }
-
-       
+               
     }
 }

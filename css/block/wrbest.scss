@@ -1,23 +1,22 @@
 .wrbest {
     background: url(../../img/layout/wrbestbg.png) center center / cover no-repeat;
-    
-    & .container {
-        align-items: center;
-    }
-
+        
     & .title {
         color: $black;
     } 
 
 }
 
+
 .container--wrbest {
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
 }
 
 .wrbest__advantages {
     margin-top: rem(55px);
-
     
 }
 
@@ -26,7 +25,8 @@
 
     @include phones {
         margin-left: 1rem;
-    
+        margin-top: 0;
+
     }
 
 }
@@ -40,6 +40,11 @@
     @include phones {
         width: 100%;
         flex-direction: row;
+        margin-bottom: rem(20px);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
 
     }
     
@@ -50,20 +55,13 @@
 }
 
 .wrbest__icon {
-    display: block;
     width: rem(120px);
     height: rem(100px);
     align-items: center;
-    flex-shrink: 0;
+    flex-shrink: 1;
 }
 
-@each $wrbestic in (meat, hand, natural) {
-    .wrbest__icon--#{$wrbestic} {
-        background: url(../../img/layout/#{$wrbestic}.png);
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-}
+
 
 
 .wrbest__list {
@@ -92,6 +90,8 @@
 
         @include phones {
             text-align: left;
+            padding-top: 0.8rem;
+            line-height: 1.5;
         }
         
     }

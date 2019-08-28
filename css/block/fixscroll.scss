@@ -3,6 +3,10 @@
     top: rem(91px);
     right: rem(50px);
 
+    @include tablets {
+        display: none;
+        
+    }
 }
 
 .fixscroll__item {

@@ -5,6 +5,12 @@
     @include tablets {
         display: none;
     }
+
+    @media screen and (max-width: 900px) {
+        display: none;
+    
+    }
+
 }
 
 .nav__list {
@@ -56,11 +62,19 @@
     background-color: white;
     margin-top: -0.785rem;
     margin-left: 0.6rem;
+    position: fixed;
     display: none;
+    top: 3.45rem;
+    right: 2rem;
 
     @include tablets {
         display: flex;
 
+    }
+
+    @include phones {
+        top: 3.6rem;
+        right: 1.8rem;
     }
 
     &::before {
@@ -89,5 +103,11 @@
 .btn-nav {
     @include tablets {
         margin-left: auto;
+        margin-right: 2.5rem;
+    }
+
+    @media screen and (max-width: 900px) {
+        margin-left: auto;
+    
     }
 }

@@ -4,7 +4,7 @@
 
 .team__section {
     position: absolute;
-    width: 45%;
+    width: 50%;
     right: 0;
     top: 0;
     bottom: 0;
@@ -31,14 +31,29 @@
 
 .team-acco {
     margin-top: rem(40px);
-
   
 }
+
+.team-acco__img {
+    width: rem(100px);
+    height: rem(100px);
+    flex-shrink: 0;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+
+
 
 .team-acco__item {
     display: flex;
     flex-direction: column;
     margin-bottom: rem(25px);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
     
     @include tablets {
         align-items: center;
@@ -59,7 +74,7 @@
 
 .team-acco__trigger {
     font: normal rem(14px)/1 'Gagalin', sans-serif;
-    color: $orange;
+    color: white;
     display: flex;
     align-items: flex-end;
  
@@ -104,8 +119,10 @@
 }
 
 .team-acco__fit {
-    border-radius: 50%;
-    
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+        
 }
 
 .team-acco__title {
