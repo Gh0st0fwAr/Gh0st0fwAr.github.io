@@ -2,7 +2,8 @@
 const nav = document.getElementById('nav');
 const menu = document.getElementById('menu');
 const cross = document.getElementById('cross');
-const menuLinks = document.getElementsByClassName('nav__link');
+const menuLinks = document.querySelectorAll('#navLink');
+
 
 
 menu.addEventListener("click", function(e) {
@@ -13,6 +14,16 @@ menu.addEventListener("click", function(e) {
     document.body.style.overflow = 'hidden';
 })
 
+menuLinks.forEach(function(elem){
+    elem.addEventListener('click' , function(e){
+    
+    nav.style.display = "none";
+    cross.style.display = "none";
+    document.body.style.overflow = 'unset';
+    })
+})
+
+
 cross.addEventListener("click", function(e) {
     event.preventDefault();
 
@@ -21,10 +32,4 @@ cross.addEventListener("click", function(e) {
     document.body.style.overflow = 'unset';
 })
 
-menuLinks.addEventListener("click", function(e) {
-    event.preventDefault();
-    
-    nav.style.display = "none";
-    cross.style.display = "none";
-    document.body.style.overflow = 'unset';
-})
+
