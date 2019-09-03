@@ -1,13 +1,18 @@
 
-const nav = document.querySelector('#nav');
-const menu = document.querySelector('#menu');
-const cross = document.querySelector('#cross');
+const nav = document.getElementById('nav');
+const menu = document.getElementById('menu');
+const cross = document.getElementById('cross');
 
 menu.addEventListener("click", function(e) {
     event.preventDefault();
 
     nav.style.display = "flex";
+    cross.style.display = "unset";
 })
 
-let menuActive = String(nav.display);
-console.log(menuActive);
+cross.addEventListener("click", function(e) {
+    event.preventDefault();
+
+    nav.style.display = "none";
+    cross.style.display = "none";
+})

@@ -573,7 +573,7 @@ html, body {
 .nav {
   margin-left: auto;
   margin-right: 0.9375rem; }
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 800px) {
     .nav {
       display: none; } }
   @media screen and (max-width: 768px) {
@@ -681,7 +681,7 @@ html, body {
     .hamburger-menu-link__bars {
       top: 3.6rem;
       right: 1.8rem; } }
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 800px) {
     .hamburger-menu-link__bars {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -803,7 +803,8 @@ html, body {
       -ms-flex-align: center;
       align-items: center;
       width: 90%;
-      margin-top: 1.5625rem; } }
+      margin-top: 1.5625rem;
+      text-align: center; } }
 
 .intro__bur {
   display: inline-block;
