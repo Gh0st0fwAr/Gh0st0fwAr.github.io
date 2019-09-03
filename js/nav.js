@@ -8,6 +8,7 @@ menu.addEventListener("click", function(e) {
 
     nav.style.display = "flex";
     cross.style.display = "unset";
+    document.body.style.overflow = 'hidden';
 })
 
 cross.addEventListener("click", function(e) {
