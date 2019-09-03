@@ -15,8 +15,9 @@ menu.addEventListener("click", function(e) {
 })
 
 menuLinks.forEach(function(elem){
-    elem.addEventListener('click' , function(e){
     
+    elem.addEventListener('click' , function(e){ 
+    e.preventDefault();   
     nav.style.display = "none";
     cross.style.display = "none";
     document.body.style.overflow = 'unset';
