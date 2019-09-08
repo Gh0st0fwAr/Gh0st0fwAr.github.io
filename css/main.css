@@ -1065,45 +1065,6 @@ html, body {
   visibility: hidden;
   will-change: auto; }
 
-.popup--animation {
-  -webkit-animation: popan;
-  animation: popan;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s; }
-
-@-webkit-keyframes popan {
-  from {
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    -webkit-transform: scale(0);
-    transform: scale(0); }
-  to {
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    -webkit-transform: scale(1);
-    transform: scale(1); } }
-
-@keyframes popan {
-  from {
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    -webkit-transform: scale(0);
-    transform: scale(0); }
-  to {
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    -webkit-transform: scale(1);
-    transform: scale(1); } }
-
 .popup__title {
   font-family: Gagalin, sans-serif;
   font-size: 0.875rem;
