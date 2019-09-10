@@ -464,9 +464,11 @@
             <ul class="menu-acco">
                 <!-- Активный элемент при помощи вложений в scss
                 образует конструкцию, разворачивающую .menu-acco__desc  -->
-                <li class="menu-acco__item menu-acco__item--active ">
+                <li class="menu-acco__item">
                     <div class="menu-acco__vert menu-acco__vert--meat">
-                    <div class="menu-acco__title">Для мясоедов</div>
+                        <div class="menu-acco__title">
+                            <a class="menu-acco__link">Для мясоедов</a>
+                        </div>
                     </div>
                     <div class="menu-acco__desc"><p class="menu-acco__par">Lorem ipsum dolor sit amet 
                         consectetur adipisicing elit. Incidunt iure dolore 
@@ -483,7 +485,8 @@
                 </li>
                 <li class="menu-acco__item">
                     <div class="menu-acco__vert menu-acco__vert--veg">
-                    <div class="menu-acco__title">Вегетарианское</div>
+                    <div class="menu-acco__title">
+                        <a class="menu-acco__link">Вегетарианское</a></div>
                     </div>
                     <div class="menu-acco__desc"><p class="menu-acco__par">Lorem ipsum dolor sit amet 
                         consectetur adipisicing elit. Incidunt iure dolore 
@@ -499,7 +502,7 @@
                 </li>
                 <li class="menu-acco__item">
                         <div class="menu-acco__vert menu-acco__vert--diet">
-                        <div class="menu-acco__title">Диетическое</div>
+                        <div class="menu-acco__title"><a class="menu-acco__link">Диетическое</a></div>
                         </div>
                         <div class="menu-acco__desc"><p class="menu-acco__par">Lorem ipsum dolor sit amet 
                         consectetur adipisicing elit. Incidunt iure dolore 
@@ -798,6 +801,7 @@
     <script src="js/teamacco.js"></script>
     <script src="js/reviews.js"></script>
     <script src="js/slider.js"></script>
+    <script src="js/menu.js"></script>
 </body>
 
 </html>

@@ -1319,15 +1319,21 @@ html, body {
     .menu-acco__title {
       padding: 2.5rem 0.5rem 0rem 0.5rem; } }
 
+.menu-acco__link {
+  cursor: pointer; }
+
 .menu-acco__desc {
   font: normal 0.875rem "Ubuntu", sans-serif;
   color: white;
   background-color: rgba(47, 50, 52, 0.83);
-  width: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  width: 0; }
 
 .menu-acco__par {
   padding: 5% 5% 0% 5%; }
+
+.menu-acco__item--active .menu-acco__title {
+  color: #f9b43b; }
 
 .menu-acco__item--active .menu-acco__desc {
   width: 540px; }

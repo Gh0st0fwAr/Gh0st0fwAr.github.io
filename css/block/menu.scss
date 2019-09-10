@@ -64,18 +64,23 @@
     padding: rem(40px) rem(15px) rem(0px) rem(15px);
     height: 100%;    
     background-color: rgba(47, 50, 52, 0.83);
+    
 
     @include phones {
         padding: rem(40px) rem(8px) rem(0px) rem(8px);
     }
 }
 
+.menu-acco__link {
+    cursor: pointer;
+}
+
 .menu-acco__desc {
     font: $description;
     color: white;
     background-color: rgba(47, 50, 52, 0.83);
-    width: 0;
     overflow: hidden;
+    width: 0;
 
 }
 
@@ -83,10 +88,16 @@
     padding: 5% 5% 0% 5%;
 }
 
+
 .menu-acco__item--active {
+
+    .menu-acco__title {
+        color: $orange;
+    }
+
     .menu-acco__desc {
         width: 540px;
-
                
     }
 }
+
