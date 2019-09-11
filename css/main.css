@@ -1276,7 +1276,10 @@ html, body {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-transition: 0.8s;
+  -o-transition: 0.8s;
+  transition: 0.8s; }
 
 .menu-acco__item {
   height: 100%;
@@ -1327,7 +1330,10 @@ html, body {
   color: white;
   background-color: rgba(47, 50, 52, 0.83);
   overflow: hidden;
-  width: 0; }
+  width: 0;
+  -webkit-transition: 0.8s;
+  -o-transition: 0.8s;
+  transition: 0.8s; }
 
 .menu-acco__par {
   padding: 5% 5% 0% 5%; }

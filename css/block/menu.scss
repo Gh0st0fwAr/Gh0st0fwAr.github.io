@@ -21,6 +21,8 @@
     position: relative;
     height: 100%;
     display: flex;
+    transition: 0.8s;
+    
 }
 
 .menu-acco__item {
@@ -73,6 +75,7 @@
 
 .menu-acco__link {
     cursor: pointer;
+    
 }
 
 .menu-acco__desc {
@@ -81,11 +84,13 @@
     background-color: rgba(47, 50, 52, 0.83);
     overflow: hidden;
     width: 0;
+    transition: 0.8s;
 
 }
 
 .menu-acco__par {
     padding: 5% 5% 0% 5%;
+    
 }
 
 
