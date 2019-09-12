@@ -1,6 +1,9 @@
 
 const form = document.querySelector("#form");
 const send = document.querySelector("#sendButton");
+const modal = document.querySelector(".modal");
+const modalBtn = document.getElementById("modalBtn");
+const modalText = document.querySelector(".modal__text");
 
 send.addEventListener("click", event => {
     event.preventDefault();
@@ -19,6 +22,9 @@ send.addEventListener("click", event => {
         xhr.addEventListener("load", () => {
             if (xhr.response.status) {
                 console.log("Файл загружен");
+                modal.classList.add("modal--active");
+                modalText.textContent = "Заявка отправлена";
+                
             } 
         })
 
@@ -48,3 +54,8 @@ function validateField(field) {
     return field.checkValidity();
 
 }
+
+modalBtn.addEventListener ("click", e=> {
+    e.preventDefault();
+    modal.classList.remove("modal--active");
+})
