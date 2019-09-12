@@ -464,7 +464,7 @@
             <ul class="menu-acco">
                 <!-- Активный элемент при помощи вложений в scss
                 образует конструкцию, разворачивающую .menu-acco__desc  -->
-                <li class="menu-acco__item">
+                <li class="menu-acco__item menu-acco__item--active ">
                     <div class="menu-acco__vert menu-acco__vert--meat">
                         <div class="menu-acco__title">
                             <a class="menu-acco__link">Для мясоедов</a>
@@ -650,7 +650,7 @@
 
         <section class="section delivery">
             <div class="title title--form">Закажите доставку</div>
-            <form class="form">
+            <form class="form" id="form">
                 <div class="form__block">
                     <div class="form__row">
                         <label class="form__col">
@@ -711,7 +711,7 @@
                         <span class="form__desc">Не перезванивать</span>
                     </label>
                     <div class="form__buttons">
-                    <button type="submit" class="btn btn--form">Заказать</button>
+                    <button type="submit" class="btn btn--form" id="sendButton">Заказать</button>
                     <button type="reset" class="btn btn--clear">Очистить</button>
                     </div>
                 </div>
@@ -802,6 +802,7 @@
     <script src="js/reviews.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/form.js"></script>
 </body>
 
 </html>
