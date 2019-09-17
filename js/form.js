@@ -5,7 +5,7 @@ const modal = document.querySelector(".modal");
 const modalBtn = document.getElementById("modalBtn");
 const modalText = document.querySelector(".modal__text");
 
-send.addEventListener("click", event => {
+form.addEventListener("submit", event => {
     event.preventDefault();
 
     if (validateForm(form)) {
@@ -19,14 +19,28 @@ send.addEventListener("click", event => {
         xhr.responseType = "json";
         xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
         xhr.send(data);
-        xhr.addEventListener("load", () => {
+        // xhr.addEventListener("load", () => {
+        //     if (xhr.response.status) {
+        //         console.log("Файл загружен");
+        //         modal.classList.add("modal--active");
+        //         modalText.textContent = "Заявка отправлена";
+                
+        //     } 
+        // })
+
+        xhr.onload = loadEvent;
+        function loadEvent() {
             if (xhr.response.status) {
                 console.log("Файл загружен");
                 modal.classList.add("modal--active");
                 modalText.textContent = "Заявка отправлена";
                 
+            } else if (xhr.response.status) {
+                console.log("Произошла ошибка");
+                modal.classList.add("modal--active");
+                modalText.textContent = "Произошла какая-то ошибка";
             } 
-        })
+        }
 
     }
 

@@ -21,6 +21,7 @@
 
     &--active {
         border-color: white;
+        transition: 0.3s; 
         
     }
 
@@ -35,6 +36,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         cursor: pointer;
+        
        
 
     }

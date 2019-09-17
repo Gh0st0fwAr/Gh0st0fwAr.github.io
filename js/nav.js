@@ -9,6 +9,7 @@ const menuLinks = document.querySelectorAll('#navLink');
 menu.addEventListener("click", function(e) {
     event.preventDefault();
 
+    $(nav).appendTo(".wrapper");
     nav.style.display = "flex";
     cross.style.display = "unset";
     document.body.style.overflow = 'hidden';
