@@ -40,22 +40,25 @@ function playStop() {
 
     let playImg = document.querySelector(".video__play");
     playImg.classList.toggle("video__play--active");
-    // Здесь в видео появляется баг, который можно вызвать следующим образом:
-    // необходимо поставить видео на паузу, чтобы появился значок playImg
-    // после него переместить флажок тайминга куда-нибудь в сторону, чтобы 
-    // видео перемоталось. В результате значок playImg останется висеть на 
-    // видео несмотря на то, что оно идёт.
+    
 
     durationControl.max = video.duration;
 
     if(video.paused) {
         video.play();
         intervalId = setInterval(updateDuration, 1000/66);
+        
     } else {
         video.pause();
         clearInterval(intervalId);
+        playImg.classList.remove("video__play--active");
     }
+
+    
+
 }
+
+
 
 function updateDuration() {
     durationControl.value = video.currentTime;
@@ -64,14 +67,19 @@ function updateDuration() {
 function stopInterval() {
     video.pause();
     clearInterval(intervalId);
+    
+    
 }
 
 function setVideoDuration() {
     if(video.paused) {
         video.play();
+        
     } else {
         video.pause();
+        playImg.classList.remove("video__play--active");
     }
+    
 
     video.currentTime = durationControl.value;
     intervalId = setInterval(updateDuration, 1000/66);

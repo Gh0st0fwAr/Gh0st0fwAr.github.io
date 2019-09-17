@@ -6,6 +6,7 @@ function init() {
         zoom: 11
     })
 
+    burMap.behaviors.disable('scrollZoom');
     // Создаём макет содержимого.
     MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
         '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
