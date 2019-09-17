@@ -808,7 +808,10 @@ html, body {
   -ms-flex-direction: column;
   flex-direction: column;
   margin-top: 4.0625rem;
-  margin-left: 0.6875rem; }
+  margin-left: 0.6875rem;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content; }
   @media screen and (max-width: 768px) {
     .intro__title {
       -webkit-box-align: center;

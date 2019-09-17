@@ -75,6 +75,8 @@ function stopInterval() {
 function setVideoDuration() {
     if(video.paused) {
         video.play();
+        let playImg = document.querySelector(".video__play");
+        playImg.classList.add("video__play--active");
         
     } else {
         video.pause();

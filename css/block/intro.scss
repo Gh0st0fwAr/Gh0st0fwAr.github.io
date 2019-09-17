@@ -28,6 +28,7 @@
     flex-direction: column;
     margin-top: rem(65px);
     margin-left: rem(11px);
+    width: min-content;
     
     @include tablets {
         align-items: center;
