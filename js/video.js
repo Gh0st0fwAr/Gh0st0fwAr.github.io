@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", e => {
     soundControl.addEventListener("click", changeSoundVolume);
     soundControl.addEventListener("mouseup", changeSoundVolume);
 
+
     soundControl.min = 0;
     soundControl.max = 10;
 
@@ -55,7 +56,6 @@ function playStop() {
     }
 
     
-
 }
 
 
@@ -67,9 +67,10 @@ function updateDuration() {
 function stopInterval() {
     video.pause();
     clearInterval(intervalId);
-    
+        
     
 }
+
 
 function setVideoDuration() {
     if(video.paused) {
@@ -77,7 +78,6 @@ function setVideoDuration() {
         
     } else {
         video.pause();
-        playImg.classList.remove("video__play--active");
     }
     
 
