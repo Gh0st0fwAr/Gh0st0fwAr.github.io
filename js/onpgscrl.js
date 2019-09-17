@@ -11,8 +11,6 @@ const performTransition = sectionEq => {
     if (inscroll === false) {
         inscroll = true;
         const position = sectionEq * -100 + '%';
-        // const scrollMenuPosition = positionEq;
-        console.log(sectionEq);
     
         sections
             .eq(sectionEq)
