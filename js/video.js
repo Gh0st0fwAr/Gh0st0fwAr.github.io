@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", e => {
     video.addEventListener("click", playStop);
 
     let playButtons = document.querySelectorAll(".play");
-    for (let i=0; i < playButtons.length; i++) {
+    for (let i = 0; i < playButtons.length; i++) {
         playButtons[i].addEventListener("click", playStop);
     }
 
@@ -41,21 +41,21 @@ function playStop() {
 
     let playImg = document.querySelector(".video__play");
     playImg.classList.toggle("video__play--active");
-    
+
 
     durationControl.max = video.duration;
 
-    if(video.paused) {
+    if (video.paused) {
         video.play();
-        intervalId = setInterval(updateDuration, 1000/66);
-        
+        intervalId = setInterval(updateDuration, 1000 / 66);
+
     } else {
         video.pause();
         clearInterval(intervalId);
         playImg.classList.remove("video__play--active");
     }
 
-    
+
 }
 
 
@@ -67,33 +67,33 @@ function updateDuration() {
 function stopInterval() {
     video.pause();
     clearInterval(intervalId);
-        
-    
+
+
 }
 
 
 function setVideoDuration() {
-    if(video.paused) {
+    if (video.paused) {
         video.play();
         let playImg = document.querySelector(".video__play");
         playImg.classList.add("video__play--active");
-        
+
     } else {
         video.pause();
     }
-    
+
 
     video.currentTime = durationControl.value;
-    intervalId = setInterval(updateDuration, 1000/66);
+    intervalId = setInterval(updateDuration, 1000 / 66);
 }
 
 function changeSoundVolume() {
-    video.volume = soundControl.value/10;
+    video.volume = soundControl.value / 10;
 }
 
 function soundOf() {
 
-    if(video.volume === 0) {
+    if (video.volume === 0) {
         video.volume = soundLevel;
         soundControl.value = soundLevel * 10;
     } else {

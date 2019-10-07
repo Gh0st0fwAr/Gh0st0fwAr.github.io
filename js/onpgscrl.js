@@ -1,4 +1,3 @@
-
 const sections = $('.section');
 const display = $('.maincontent');
 const fixScrl = $('.fixscroll__item')
@@ -11,7 +10,7 @@ const performTransition = sectionEq => {
     if (inscroll === false) {
         inscroll = true;
         const position = sectionEq * -100 + '%';
-    
+
         sections
             .eq(sectionEq)
             .addClass("active")
@@ -61,7 +60,7 @@ $(document).on("wheel", e => {
     if (deltaY < 0) {
         scrollViewport("prev");
     }
-    
+
 })
 
 $(document).on("keydown", e => {
@@ -69,17 +68,17 @@ $(document).on("keydown", e => {
     const userTypingInInputs = tagName === "input" || tagName === "textarea";
 
     if (userTypingInInputs === false) {
-        switch(e.keyCode) {
-            case 38: 
+        switch (e.keyCode) {
+            case 38:
                 scrollViewport("prev");
                 break;
             case 40:
                 scrollViewport("next");
                 break;
-        }   
+        }
     }
-   
-   
+
+
 })
 
 $("[data-scroll-to]").on("click", e => {
@@ -90,20 +89,21 @@ $("[data-scroll-to]").on("click", e => {
 })
 
 if (isMobile) {
-    window.addEventListener("touchmove", e=> {
+    window.addEventListener("touchmove", e => {
         e.preventDefault();
-    }, {passive: false} );
-   
-    
-    $("body").swipe( {
-        swipe:function(event, direction) {
+    }, {
+        passive: false
+    });
+
+
+    $("body").swipe({
+        swipe: function (event, direction) {
             let scrollDirection;
-    
+
             if (direction === "up") scrollDirection = "next";
             if (direction === "down") scrollDirection = "prev";
-            
+
             scrollViewport(scrollDirection);
         }
     });
 }
-
