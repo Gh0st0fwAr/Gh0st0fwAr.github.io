@@ -1,7 +1,7 @@
 {
   "name": "Gh0st0fwAr.github.io",
   "version": "1.0.0",
-  "description": "",
+  "description": "Daniil Virin",
   "main": "index.js",
   "scripts": {
     "gulp": "gulp"
@@ -19,5 +19,6 @@
   "homepage": "https://github.com/Gh0st0fwAr/Gh0st0fwAr.github.io#readme",
   "devDependencies": {
     "gulp": "^4.0.2"
-  }
+  },
+  "dependencies": {}
 }
