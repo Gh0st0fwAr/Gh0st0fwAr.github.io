@@ -4,7 +4,9 @@
   "description": "Daniil Virin",
   "main": "index.js",
   "scripts": {
-    "gulp": "gulp"
+    "gulp": "gulp",
+    "build": "webpack --output dist/bundle.js"
+    
   },
   "repository": {
     "type": "git",
@@ -18,7 +20,9 @@
   },
   "homepage": "https://github.com/Gh0st0fwAr/Gh0st0fwAr.github.io#readme",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
   },
   "dependencies": {
     "normalize.css": "^8.0.1",
