@@ -1,0 +1,49 @@
+
+.title {
+   font-size: 36px;
+   font-weight: bold;
+   
+}
+
+.subtitle {
+   font-size: 18px;
+   font-weight: 600;
+   line-height: 1.67;
+}
+
+.wrapper {
+	overflow: hidden;
+	min-height: 100%;
+	position: relative;
+}
+
+.container {
+	display: flex;
+	margin: 0 auto;
+   max-width: 1406px;
+   align-items: center;
+	width: 90%;
+	// width: 1490px;
+
+	@include phones {
+		width: 85%;
+	}
+}
+
+.fullscreen-section {
+	height: 100vh;
+	min-height: 650px;
+}
+
+.maindesc {
+   font-size: 16px;
+   font-weight: 600;
+   line-height: 1.88;
+}
+
+.subdesc {
+   opacity: 0.5;
+   font-size: 16px;
+   font-style: italic;
+   line-height: 1.88;
+}

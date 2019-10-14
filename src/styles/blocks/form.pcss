@@ -1,0 +1,76 @@
+.opinions__form {
+   z-index: 300;
+   margin-top: 200px;
+   width: 80%;
+}
+
+.subtitle--form {
+   font-size: 15px;
+   opacity: 0.3;
+   font-weight: 600;
+   margin-bottom: 5px;
+}
+
+.form {
+   margin-top: 100px;
+   margin-bottom: 150px;
+}
+
+.form__data {
+   display: flex;
+   margin-bottom: 40px;
+}
+
+.form__comment {
+   margin-bottom: 60px;
+}
+
+.form__name {
+   width: 100%;
+   margin-right: 50px;
+}
+
+.form__email {
+   width: 100%;
+}
+
+.form__input {
+   background-color: transparent;
+   border: 1px solid transparent;
+   border-bottom: 1px solid white;
+   padding: 20px 40px;
+   outline: none;
+   color: white;
+   font-size: 18px;
+   font-weight: bold;
+   width: 100%;
+
+}
+
+
+
+.form__input--comment {
+   resize: none;  
+
+}
+
+.form__button {
+   text-transform: uppercase;
+   padding: 25px 100px;
+   font-size: 18px;
+   font-weight: bold;
+   color: white;
+   background-image: linear-gradient(to right, #d0731b, #dc9322, #d0731b);
+   
+
+   &:hover {
+      animation: btnhover 0.7s;
+      
+   }
+}
+
+@keyframes btnhover {
+   100% {
+      background-position: 300px;
+   }
+}
