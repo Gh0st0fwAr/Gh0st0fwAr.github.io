@@ -17,7 +17,8 @@
 }
 
 .myworks__sliderbox {
-   margin-right: 100px;
+   margin-right: 100px;   
+   z-index: 10;
 }
 
 .myworks__slider {
@@ -27,10 +28,16 @@
    background-size: contain;
    display: block;
    content: "";
-   z-index: 10;
    position: relative;
+   z-index: 10;
 
 }
+
+.myworks__desc {   
+   z-index: 10;
+
+}
+
 
 .myworks__examples {
    display: flex;
@@ -140,6 +147,9 @@
 
 .myworks__title {
    color: black;
+   z-index: 1;
+   position: relative;
+
 }
 
 .title--myworks {
