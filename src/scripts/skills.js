@@ -3,7 +3,16 @@ import Vue from 'vue';
 
 const perk = {
    template: "#perk",
-   props: ["perkName", "perkPercent"]
+   props: ["perkName", "perkPercent"],
+   mounted() {
+      const circle = this.$refs["color-circle"];
+      const dashArray = parseInt(
+         getComputedStyle(circle).getPropertyValue('stroke-dasharray')
+      );
+      const percent = (dashArray/100) * (100 - this.perkPercent);
+
+      circle.style.strokeDashoffset = percent;
+   },
 }
 
 const perksRow = {
