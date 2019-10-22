@@ -88,11 +88,11 @@ body
 												.perks__wrap
 													svg(viewbox="0 0 200 200" preserveAspectRatio="none").perks__shape
 														defs
-															linear-gradient#linear(x1='100%' x2='100%').perks__circle--gradient
+															linearGradient#linear(x1='0%' x2='100%').perks__circle--gradient
 																stop(offset="0%" stop-color="#d0731b")
 																stop(offset="100%" stop-color="#dc9322")
 														circle(r="80" cx="100" cy="100").perks__circle.perks__circle--position--under
-														circle(r="80" cx="100" cy="100" fill="url(#linear)").perks__circle.perks__circle--position--above
+														circle(r="80" cx="100" cy="100" stroke="url(#linear)").perks__circle.perks__circle--position--above
 														.perks__title #{perk}
 				.perks__hands
 			section.section.myworks
