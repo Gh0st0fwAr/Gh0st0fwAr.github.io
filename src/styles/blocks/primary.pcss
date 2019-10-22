@@ -30,6 +30,7 @@
    text-align: right;
    margin-right: 42px;
    width: 50%;
+   white-space: nowrap;
 }
 
 .primary__scroll {
@@ -39,7 +40,9 @@
    bottom: 50px;
    font-weight: 600;
    font-size: 18px;
-   
+   cursor: pointer;
+   transition: 0.3s;
+      
    &:after {
       display: block;
       content: "";
@@ -49,5 +52,16 @@
       background-repeat: no-repeat;
       align-self: center;
       margin-left: 13px;
+
+   }
+
+   &:hover {
+      color: #d0731b;
+
+      &:after {
+         transition: 0.3s;
+         background: svg-load('scroll.svg' fill=#d0731b, width=100%, height=100%);
+      }
    }
 }
+
