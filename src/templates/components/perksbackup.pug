@@ -1,0 +1,21 @@
+ul.perks__array
+	- 
+		var perk = [
+			['Front-end', ['HTML', 'CSS', 'JS', 'Jquery и Vue.js']],
+			['Workflow', ['git', 'Terminal', 'gulp']],
+		]
+	each item in perk
+		li.perks__row
+			h3.title.title--perks #{item[0]}
+			ul.perks__list
+				each perk in item[1]
+					li.perks__item
+						.perks__wrap
+							svg(viewbox="0 0 200 200" preserveAspectRatio="none").perks__shape
+								defs
+									linearGradient#linear(x1='0%' x2='100%').perks__circle--gradient
+										stop(offset="0%" stop-color="#d0731b")
+										stop(offset="100%" stop-color="#dc9322")
+								circle(r="80" cx="100" cy="100").perks__circle.perks__circle--position--under
+								circle(r="80" cx="100" cy="100" stroke="url(#linear)").perks__circle.perks__circle--position--above
+								.perks__title #{perk}

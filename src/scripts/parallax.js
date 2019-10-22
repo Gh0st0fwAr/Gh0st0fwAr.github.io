@@ -18,7 +18,7 @@ var parallax = (function () {
       },
 
       init: function(wScroll) {
-         this.move (bg, wScroll, 70);
+         this.move (bg, wScroll, 75);
          this.move (train, wScroll, 18);
          this.move (grass, wScroll, 10);
       }
