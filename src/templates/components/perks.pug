@@ -1,10 +1,9 @@
 script(type="text/x-template")#perks-list
-   .perks__circles
-      ul.perks__array
-         li.perks__row(v-for="perk in perks" :key="perk.perksGroup")
-            perks-row(
-               :perk="perk"
-            )
+   ul.perks__array
+      li.perks__row(v-for="perk in perks" :key="perk.perksGroup")
+         perks-row(
+            :perk="perk"
+         )
 
 script(type="text/x-template")#perks-row
    .perks__crutch
