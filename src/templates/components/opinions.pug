@@ -1,0 +1,40 @@
+script(type="text/x-template")#opinions-list
+   .container.container--opinions
+      .opinions__title
+         h2.title.title--opinions Что обо мне говорят
+         .opinions__buttons
+            .prevbtn--opinions.btn--opinions
+               +icon('arrow-down')
+            .nextbtn--opinions.btn--opinions
+               +icon('arrow-down')
+      .opinions__slider
+         .opinions__list
+            swiper(ref="mySwiper" :options="swiperOption")
+               opinions-item(v-for="item in comments" :item="item")
+      .opinions__form
+         h2.title.title--form Связаться со мной
+         form.form(action="POST")
+            .form__data
+               label.form__name
+                  h4.subtitle.subtitle--form Введите ваше имя
+                  input(type="text" placeholder="Иван Иванов").form__input.form__input--name
+               label.form__email
+                  h4.subtitle.subtitle--form Введите ваш email
+                  input(type="text" placeholder="loftschool@study.com").form__input.form__input--email
+            .form__comment
+               label.form__comment
+                  h4.subtitle.subtitle--form Сообщение к письму
+                  textarea(placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса" rows="2").form__input.form__input--comment
+            button(type="button").form__button Отправить
+
+
+script(type="text/x-template")#opinions-item
+   swiper-slide
+      .opinions__comm
+         .maindesc.maindesc--opinions {{ item.text }}
+         .opinions__person
+            .opinions__avatar
+               img.opinions__photo(:src="item.photo")
+            .opinions__name
+               h3.title.title--person {{ item.name }}
+               .maindesc.maindesc--person {{ item.position }}

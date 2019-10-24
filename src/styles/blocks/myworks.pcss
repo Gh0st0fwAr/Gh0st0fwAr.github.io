@@ -72,47 +72,58 @@
 .btn--myworks {
    height: 50px;
    width: 50px;
-   opacity: 0.5;
-   cursor: default;   
+   fill: white;
+   cursor: pointer;
+   position: relative;
+   transition: 0.3s;
 
-   &--active {
+   &:hover {
       opacity: 1;
-      cursor: pointer;
-
+      background-color: #dc9322;
+      
+      & svg {
+         transition: 0.3s;
+      }
    }
+}
 
+.btn--myworks--disabled {
+   opacity: 0.5;
+   cursor: default;
 
+   &:hover {
+      background-color: #353e4e;
+      
+      & svg {
+         fill: white;
+      }
+   }
 }
 
 .nextbtn--myworks {
-   padding: 20px 20px;
-   
-   &::before {
-      display: block;
-      content: "";
+   & svg {
+      position: absolute;
       width: 10px;
       height: 10px;
-      background: svg-load('arrow-down.svg', fill="white", width="100%", height="100%");
-      background-repeat: no-repeat;
-      background-size: contain; 
-      
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
    }
    
 }
 
 
 .prevbtn--myworks {
-   padding: 20px 20px;
-   
-   &::before {
-      display: block;
-      content: "";
+   transform: rotate(-180deg);
+
+   & svg {
+      position: absolute;
       width: 10px;
       height: 10px;
-      background: svg-load('arrow-down.svg', fill="white", width="100%", height="100%");
-      background-repeat: no-repeat;
-      background-size: contain;
-      transform: scale(-1, -1);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      
    }
 }
 

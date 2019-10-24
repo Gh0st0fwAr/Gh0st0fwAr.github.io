@@ -31,7 +31,7 @@ new Vue({
    components: { perksRow },
 
    created() {
-      const data = require('../data//perks.json');
+      const data = require('../data/perks.json');
       this.perks = data;
    }
    
