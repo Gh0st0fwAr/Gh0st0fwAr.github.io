@@ -31,6 +31,12 @@ var parallax = (function () {
 window.onscroll = function () {
    var wScroll = window.pageYOffset;
 
-   parallax.init(wScroll);
+   // parallax.init(wScroll);
+
+   if (window.innerWidth < 768) {
+      parallax.init();
+   } else{
+      parallax.init(wScroll);
+   }
 
 }

@@ -27,7 +27,9 @@ body
 								-var socialIcons = ["ig", "vk", "github"]
 								each icon in socialIcons
 									li(class="social__item")
-										a(class=`social__link social__link--${icon}`) 
+										a(class=`social__link social__link--${icon}`)
+						.hamburger
+							a.hamburger__menu 
 				section.section.primary
 					.primary__wrap
 						.primary__titlebox
@@ -87,6 +89,7 @@ body
 					.myworks__sliderbox
 						h2.title.title--myworks Мои работы
 						.myworks__slider
+							+image('content/prev1.jpg', 'myworks__preview')
 							.myworks__examples
 								.myworks__wrap
 									ul.myworks__list
@@ -128,7 +131,7 @@ body
 						h3.title.footer--title Даниил Вирин
 						p.subdesc.footer__subdesc Личный сайт веб-разработчика
 					.footer__fill
-						nav.nav
+						nav.nav.nav--footer
 							ul.nav__list
 							-var links = ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"]
 							each link in links

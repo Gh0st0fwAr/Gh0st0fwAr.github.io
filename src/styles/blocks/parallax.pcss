@@ -14,6 +14,14 @@
    content: "";
    top: 44.3%;
 
+   @include tablets {
+      top: 46%;
+   }
+
+   @include phones {
+      display: none;
+   }
+
 }
 
 .parallax__grass {
@@ -29,6 +37,17 @@
    @include desktopHd {
       height: 38%;
    }
+
+   @include tablets {
+      top: 40%;
+      background-position-x: center;
+   }
+
+   @include phones {
+      top: 30%;
+      background-position-x: center;
+   }
+   
 }
 
 .parallax__train {
@@ -45,6 +64,17 @@
    @include desktop {
       height: 23%;
       top: 28%;
+   }
+
+   @include tablets {
+      height: 20%;
+      background-position-x: center;
+   }
+
+   @include phones {
+      height: 15%;
+      top: 20%;
+      background-position-x: center;
    }
 }
 

@@ -19,6 +19,14 @@
    width: 50%;
    z-index: 2;
 
+   @include tablets {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      margin-bottom: 150px;
+      
+   }
+
 }
 .title--primary {
    font-size: 72px;
@@ -32,6 +40,16 @@
    margin-right: 42px;
    width: 50%;
    white-space: nowrap;
+
+   @include tablets {
+      text-align: center;
+      margin-right: unset;
+      margin-bottom: 30px;
+   }
+
+   @include phones {
+      width: 100%;
+   }
 }
 
 .primary__scrolldesc {
