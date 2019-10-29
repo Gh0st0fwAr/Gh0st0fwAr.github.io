@@ -40,49 +40,61 @@
 
 }
 
+.smbtn {
+   width: fit-content;
+   height: fit-content;
+}
+
 .btn--opinions {
    border: 1px solid white;
    border-radius: 50%;
    height: 50px;
    width: 50px;
-   opacity: 0.7;
-   cursor: default;
-   
-   &--active {
-      opacity: 1;
-      cursor: pointer;
+   cursor: pointer;
+   fill: white;
+   position: relative;
+   transition: 0.3s;
+
+   &:hover {
+      background-color: white;
+      
+      & svg {
+         fill: black;
+         transition: 0.3s;
+      }
    }
+
 }
 
+
 .nextbtn--opinions {
-   padding: 20px 20px;
-   
-   &::before {
-      display: block;
-      content: "";
-      width: 10px;
+   & svg {
+      position: absolute;
+      width: 8px;
       height: 10px;
-      background: svg-load('arrow-down.svg', fill="white", width="100%", height="100%");
-      background-repeat: no-repeat;
-      background-size: contain; 
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
    }
+
 }
 
 .prevbtn--opinions {
-   padding: 20px 18px;
-   margin-right: 20px;
-   
-   &::before {
-      display: block;
-      content: "";
-      width: 10px;
+   margin-right: 20px;   
+   transform: rotate(-180deg);
+
+   & svg {
+      position: absolute;
+      width: 8px;
       height: 10px;
-      background: svg-load('arrow-down.svg', fill="white", width="100%", height="100%");
-      background-repeat: no-repeat;
-      background-size: contain;
-      transform: scaleX(-1);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      
    }
+
 }
+
 
 .opinions__slider {
    z-index: 300;
@@ -97,8 +109,7 @@
    width: 100%;
 }
 
-.opinions__comm {   
-   width: 50%;
+.opinions__comm {
    display: flex;
    flex-direction: column;
    justify-content: space-between;
@@ -145,6 +156,11 @@
    flex-shrink: 0;
    margin-right: 30px;
 
+}
+
+.opinions__photo {
+   width: 100%;
+   height: 100%;
 }
 
 .opinions__face {
@@ -201,5 +217,17 @@
    height: 30%;
 }
 
+.btn--opinions--disabled {
+   opacity: 0.5;
+   cursor: default;
+
+   &:hover {
+      background-color: transparent;
+      
+      & svg {
+         fill: white;
+      }
+   }
+}
 
 

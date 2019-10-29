@@ -1,0 +1,27 @@
+script(type="text/x-template")#perks-list
+   ul.perks__array
+      li.perks__row(v-for="perk in perks" :key="perk.perksGroup")
+         perks-row(
+            :perk="perk"
+         )
+
+script(type="text/x-template")#perks-row
+   .perks__crutch
+      h3.title.title--perks {{perk.perksGroup}}
+      ul.perks__list
+         li.perks__item(v-for="(perkPercent, perkName) in perk.perks")
+            perk(
+               :perk-name="perkName"
+               :perk-percent="perkPercent"
+            )
+
+
+script(type="text/x-template")#perk 
+   .perk
+      svg(viewBox="0 0 200 200" preserveAspectRatio="none").perks__shape
+         circle(r="80" cx="100" cy="100").perks__circle.perks__circle--position--under
+         circle(r="80" cx="100" cy="100" ref="color-circle" stroke="url(#linear)").perks__circle.perks__circle--position--above
+         linearGradient#linear(x1='0%' x2='100%').perks__circle--gradient
+            stop(offset="0%" stop-color="#d0731b")
+            stop(offset="100%" stop-color="#dc9322")
+      .perks__title {{perkName}}

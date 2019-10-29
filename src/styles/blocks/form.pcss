@@ -2,6 +2,14 @@
    z-index: 300;
    margin-top: 200px;
    width: 80%;
+   position: relative;
+
+   @include tablets {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+   }
 }
 
 .subtitle--form {
@@ -14,11 +22,20 @@
 .form {
    margin-top: 100px;
    margin-bottom: 150px;
+
+   @include tablets {
+      display: flex;
+      flex-direction: column;
+   }
 }
 
 .form__data {
    display: flex;
    margin-bottom: 40px;
+
+   @include phones {
+      flex-direction: column;
+   }
 }
 
 .form__comment {
@@ -48,6 +65,10 @@
    &:hover {
       border-bottom:1px solid #dc9322;
       transition: 0.3s;
+   }
+
+   &:focus {
+      border-bottom:1px solid #dc9322;
    }
 
 }
@@ -89,6 +110,10 @@
    &:active {
       transform: scale(0.95);
       transition: 0.2s;
+   }
+
+   @include tablets {
+      align-self: center;
    }
 }
 

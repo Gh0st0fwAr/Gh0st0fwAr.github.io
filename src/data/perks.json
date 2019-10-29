@@ -1,0 +1,21 @@
+
+[
+   {
+      "perksGroup": "Frontend",
+      "perks": {
+         "HTML5": 65,
+         "CSS3": 72,
+         "JavaScript & jQuery": 30
+      }
+   },
+
+   {
+      "perksGroup": "Workspace",
+      "perks": {
+         "IDE": 50,
+         "Zeplin": 80,
+         "Figma": 40,
+         "Terminal": 20
+      } 
+   }
+]

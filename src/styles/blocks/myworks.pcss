@@ -3,8 +3,25 @@
    background-color: white;
    min-height: fit-content;
    padding: 140px 0px;
+   position: relative;
+   
+   @include tablets {
+      z-index: 1;
+   }
 }
 
+.container--myworks {
+   display: flex;
+
+   @include tablets {
+      flex-direction: column;
+      width: 80%;
+   }
+
+   @include phones {
+      width: 100%;
+   }
+}
 
 .title--myworks {
    color: black;
@@ -16,22 +33,45 @@
 .myworks__sliderbox {
    margin-right: 100px;   
    z-index: 10;
+   width: 100%;
+
+   @include tablets {
+      margin-right: 0;
+   
+   }
 }
 
 .myworks__slider {
-   width: 622px;
-   height: 353px;
-   background: url(../images/content/prev1.jpg);
+   // width: 50%;
+   // height: 50%;
+   max-width: 975px;
+   max-height: 549px;
    background-size: contain;
-   display: block;
-   content: "";
+   display: flex;
    position: relative;
    z-index: 10;
 
 }
 
+.myworks__preview {
+   width: 100%;
+   height: 100%;
+   min-width: 50px;
+   object-fit: contain;
+}
+
 .myworks__desc {   
    z-index: 10;
+   flex-shrink: 2;
+   display: flex;
+   flex-direction: column;
+   position: relative;
+
+   @include tablets {
+      text-align: center;
+      align-items: center;
+      margin-top: 80px;
+   }
 
 }
 
@@ -39,10 +79,12 @@
 .myworks__examples {
    display: flex;
    position: absolute;
-   bottom: 0;
+   bottom: 25%;
    right: 0;
-   margin-bottom: 40px;
    
+   @include phones {
+      bottom: 0;
+   }
 }
 
 .myworks__wrap {
@@ -62,8 +104,25 @@
    z-index: 9;
    transform: translateX(100%);  
    background-color: #353e4e;
+
+   @include phones {
+      transform: translateY(-100%);
+   }
    
 }
+
+
+.counter {
+   font-size: 300px;
+   font-weight: 800;
+   line-height: 0.65;
+   color: #e6e6e6;
+   position: absolute;
+   z-index: 1;
+   left: 0;
+   top: 0;
+}
+
 
 .myworks__prev {
    z-index: 10;
@@ -72,54 +131,68 @@
 .btn--myworks {
    height: 50px;
    width: 50px;
-   opacity: 0.5;
-   cursor: default;   
+   fill: white;
+   cursor: pointer;
+   position: relative;
+   transition: 0.3s;
 
-   &--active {
+   &:hover {
       opacity: 1;
-      cursor: pointer;
-
+      background-color: #dc9322;
+      
+      & svg {
+         transition: 0.3s;
+      }
    }
+}
 
+.btn--myworks--disabled {
+   opacity: 0.5;
+   cursor: default;
 
+   &:hover {
+      background-color: #353e4e;
+      
+      & svg {
+         fill: white;
+      }
+   }
 }
 
 .nextbtn--myworks {
-   padding: 20px 20px;
-   
-   &::before {
-      display: block;
-      content: "";
+   & svg {
+      position: absolute;
       width: 10px;
       height: 10px;
-      background: svg-load('arrow-down.svg', fill="white", width="100%", height="100%");
-      background-repeat: no-repeat;
-      background-size: contain; 
-      
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
    }
    
 }
 
 
 .prevbtn--myworks {
-   padding: 20px 20px;
-   
-   &::before {
-      display: block;
-      content: "";
+   transform: rotate(-180deg);
+
+   & svg {
+      position: absolute;
       width: 10px;
       height: 10px;
-      background: svg-load('arrow-down.svg', fill="white", width="100%", height="100%");
-      background-repeat: no-repeat;
-      background-size: contain;
-      transform: scale(-1, -1);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      
    }
 }
 
 
+
 .myworks__item {
-   width: 176px;
-   height: 100px;
+   // width: 176px;
+   min-width: 120px;
+   // height: 100px;
+   max-width: 178px;
    
    &:hover {
       outline: 3px solid #dc9322;
@@ -129,6 +202,10 @@
 
    &--active {
       outline: 3px solid #dc9322;
+   }
+
+   @include phones {
+      display: none;
    }
 }
 
@@ -155,11 +232,18 @@
    color: black;
    z-index: 1;
    position: relative;
+   display: flex;
+   flex-direction: column;
+
+   @include tablets {
+      align-items: center;
+   }
 
 }
 
 .title--myworks {
    margin-bottom: 44px;
+   text-align: center;
 }
 
 .maindesc--myworks {
@@ -173,9 +257,15 @@
    color: #586ed3;
    display: flex;
    align-items: center;
+   border-bottom: 1px solid transparent;
+   width: fit-content;
+
+   &:hover {
+      border-bottom: 1px solid #586ed3;
+   }
 
    &:before {
-      margin-right: 20px;
+      margin-right: 15px;
       display: block;
       content: "";
       width: 15px;

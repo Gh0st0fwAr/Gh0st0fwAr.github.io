@@ -12,6 +12,10 @@
    justify-content: center;
    min-height: 100%;
    padding: 150px 0px;
+
+   @include tablets {
+      padding-bottom: 300px;
+   }
   
 }
 
@@ -37,6 +41,18 @@
       width: 65%;
    }
 
+   @include tablets {
+      height: 480px;
+      width: 330px;
+      left: 25%;
+      bottom: -7%;
+      transform: rotate(-90deg);
+   }
+
+   @include phones {
+      left: 18%;
+   }
+
 }
 
 .perks__row {
@@ -56,6 +72,12 @@
    width: 60%;
    z-index: 300;
    margin-top: 60px;
+   margin-bottom: 80px;
+
+   @include tablets {
+      text-align: center;
+      width: 80%;
+   }
 }
 
 .perks__par {
@@ -67,7 +89,7 @@
    font-size: 24px;
 }
 
-.perks__circles {
+.perks__widget {
    align-self: flex-end;
    margin-right: 90px;
    margin-bottom: 60px;
@@ -76,17 +98,33 @@
    @include desktop {
       margin-right: 60px;
    }
+
+   @include tablets {
+      align-self: unset;
+      margin: 0;
+   }
 }
 
 .perks__array {
    display: flex;
    flex-direction: column;
-   margin-top: 80px;
 }
 
 .perks__list {
    display: flex;
    margin-top: 50px;
+
+   @include tablets {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-gap: 20px 20px;
+   }
+
+   @include phones {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+   }
 
 }
 
@@ -96,16 +134,38 @@
    &:last-child {
       margin-right: 0;
    }
+
+   @include tablets {
+      margin: 0;
+   }
 }
 
-.perks__wrap {
+.perk {
    position: relative;
+}
+
+.perks__crutch {
+   position: relative;
+   z-index: 300;
+   display: flex;
+   flex-direction: column;
+
+   @include tablets {
+      align-items: center;
+      justify-content: center;
+   }
 }
 
 .perks__shape {
    width: 150px;
    fill: transparent;   
    transform: scale(-1, -1);
+
+   @include tablets {
+      width: 100%;
+      min-width: 100px;
+      max-width: 150px;
+   }
 
 }
 
@@ -117,7 +177,7 @@
 
 .perks__circle--position--above {
    stroke-width: 15px;
-   stroke-dasharray: 418;
+   stroke-dasharray: 502;
    
 }
 

@@ -1,8 +1,14 @@
 
 .container--about {
-   width: 1000px;
+   width: 90%;
    justify-content: space-between; 
    padding: 200px 0px;
+   position: relative;
+   z-index: 300;
+
+   @include phones {
+      flex-direction: column;
+   }
 
 }
 
@@ -10,7 +16,8 @@
    width: 100%;
    min-height: fit-content;
    background: url(../images/content/aboutbottom.jpg);
-   z-index: 1;
+   z-index: 5;
+   position: relative;
 }
 
 .about__avatar {
@@ -21,11 +28,22 @@
    margin-bottom: 80px;
    align-self: flex-end;
    margin-right: 20px;
+
+   @include phones {
+      margin-right: 0;
+      align-self: center;
+   }
 }
 
 .about__info {
    width: 59%;
    z-index: 300;
+
+   @include phones {
+      align-self: flex-start;
+      margin-top: 50px;
+      width: 100%;
+   }
 }
 
 .about__person {
@@ -33,6 +51,15 @@
    width: 30%;
    display: flex;
    flex-direction: column;
+
+   @include tablets {
+
+   }
+
+   @include phones {
+      min-width: 320px;
+   }
+
 }
 
 .about__pic {
@@ -43,6 +70,10 @@
 .about__table {
    display: flex;
    justify-content: space-between;
+
+   @include phones {
+
+   }
 }
 
 .about__col {

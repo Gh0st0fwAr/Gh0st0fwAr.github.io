@@ -5,15 +5,22 @@
 }
 
 .parallax__gradient {
-   z-index: 4;
-   background-image: linear-gradient(to top, rgb(34,36,39, 0) 0%, rgb(34,36,39, 1) 20%, rgb(34,36,39, 1) 45%, rgb(34,36,39, 0.7) 70%, rgb(34,36,39, 0) 100%);
-   height: 38%;
+   z-index: 6;
+   background-image: linear-gradient(to top, rgb(34,36,39, 0) 0%,rgb(34,36,39, 0.5) 20%, rgb(34,36,39, 1) 45%, rgb(34,36,39, 1) 55%,rgb(34,36,39, 0.5) 80%, rgb(34,36,39, 0) 100%);
+   height: 18%;
    width: 100%;
    position: absolute;
    display: block;
    content: "";
-   top: 50%;
-   transform: translateY(-50%);
+   top: 45%;
+
+   @include tablets {
+      top: 46%;
+   }
+
+   @include phones {
+      display: none;
+   }
 
 }
 
@@ -22,11 +29,25 @@
    background-image: url(../images/content/grass.png);
    background-repeat: no-repeat;
    background-size: cover;
-   height: 15%;
+   height: 25%;
    width: 100%;
    position: absolute;
-   top: 50%;
-   transform: translateY(-50%);
+   top: 45%;
+
+   @include desktopHd {
+      height: 38%;
+   }
+
+   @include tablets {
+      top: 40%;
+      background-position-x: center;
+   }
+
+   @include phones {
+      top: 30%;
+      background-position-x: center;
+   }
+   
 }
 
 .parallax__train {
@@ -37,11 +58,33 @@
    position: absolute;
    width: 100%;
    height: 25%;
-   top: 38%;
-   transform: translateY(-50%);
+   top: 28%;
+
 
    @include desktop {
       height: 23%;
-      top: 39%;
+      top: 28%;
    }
+
+   @include tablets {
+      height: 20%;
+      background-position-x: center;
+   }
+
+   @include phones {
+      height: 15%;
+      top: 20%;
+      background-position-x: center;
+   }
+}
+
+.parallax__bg {
+   z-index: 1;
+   background-image: url(../images/content/primary.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 50%;
+   width: 100%;
+   top: 0;
+   position: absolute;
 }

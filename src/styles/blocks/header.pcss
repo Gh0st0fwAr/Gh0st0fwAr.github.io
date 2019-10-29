@@ -5,6 +5,7 @@
    width: 100%;
    padding-top: 60px;
    z-index: 300;
+
 }
 
 .container--header {
@@ -29,6 +30,22 @@
       color: #d0731b;
       transition: 0.3s;
    }
+
+   @include tablets {
+      display: none;
+   }
+}
+
+.nav--footer {
+   @include tablets {
+      display: flex;
+      flex-wrap: wrap;
+
+      .nav__item {
+         margin-bottom: 30px;
+      }
+   }
+
 }
 
 
@@ -39,6 +56,11 @@
 
 }
 
+.social {
+   @include tablets {
+      margin-left: auto;
+   }
+}
 .social__icons {
    display: flex;
 
@@ -51,6 +73,7 @@
    content: "";
    opacity: 0.3;
    cursor: pointer;
+   transition: 0.3s;
    
    &:hover {
       opacity: 1;
@@ -73,4 +96,44 @@ $socials: ig, vk, github;
    background: svg-load('#{$social}.svg', fill=white, width=100%, height=100%);
    
 }
+}
+
+
+.hamburger__menu {
+   width: 26px;
+   height: 4px;
+   border-radius: 2px;
+   background-color: white;
+   display: block;
+   position: relative;
+   display: none;
+   margin-left: 90px;
+
+   &:before {
+      width: 26px;
+      height: 4px;
+      border-radius: 2px;
+      background-color: white;
+      display: block;
+      content: "";
+      position: absolute;
+      transform: translateY(8px);
+      
+   }
+
+   &:after {
+      width: 26px;
+      height: 4px;
+      border-radius: 2px;
+      background-color: white;
+      display: block;
+      content: "";
+      position: absolute;
+      transform: translateY(-8px);
+   }
+
+   @include tablets {
+      display: flex;
+   }
+   
 }

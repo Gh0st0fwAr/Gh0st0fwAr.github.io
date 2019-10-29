@@ -6,6 +6,7 @@ head
 	meta(charset="UTF-8")
 	meta(name="viewport", content="width=device-width, initial-scale=1.0")
 	meta(http-equiv="X-UA-Compatible", content="ie=edge")
+	script(src="")
 	title Portfolio | main page
 body
 	.wrapper
@@ -20,19 +21,23 @@ body
 							each link in links
 								li.nav__item
 									a.nav__link(href="#")= link
-								
+
 						.social
 							ul.social__icons
 								-var socialIcons = ["ig", "vk", "github"]
 								each icon in socialIcons
 									li(class="social__item")
-										a(class=`social__link social__link--${icon}`) 
+										a(class=`social__link social__link--${icon}`)
+						.hamburger
+							a.hamburger__menu 
 				section.section.primary
 					.primary__wrap
 						.primary__titlebox
 							h5.subtitle.subtitle--primary Личный сайт </br> веб разработчика 
 							h1.title.title--primary Вирин Даниил
-						.primary__scroll Скролл
+						.primary__scroll 
+							.primary__scrolldesc Скролл
+							+icon('scroll')
 				section.section.about
 					.container.container--about
 						.about__person
@@ -50,9 +55,9 @@ body
 									li.about__col
 										.about__maincol Москва
 									li.about__col
-										.about__maincol 27 лет
+										.about__maincol 22 года
 									li.about__col
-										.about__maincol 1 января 1991
+										.about__maincol 4 января 1997
 						.about__info
 							.about__desc
 								h5.subtitle.subtitle--about Привет, меня зовут
@@ -63,6 +68,8 @@ body
 								p.subdesc.about__loftschool Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
 									|Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво! 
 									|(Хотя этот градиент выше просто ужасен, как и переход ниже.)
+
+				.parallax__bg
 				.parallax__gradient
 				.parallax__grass
 				.parallax__train
@@ -72,34 +79,17 @@ body
 						h3.title.title--perks Чем я могу быть полезен вам
 						p.maindesc.perks__par Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
 							|Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво! 
-					.perks__circles
-						ul.perks__array
-							- 
-								var perk = [
-									['Front-end', ['HTML', 'CSS', 'JS', 'Jquery и Vue.js']],
-									['Workflow', ['git', 'Terminal', 'gulp']],
-								]
-							each item in perk
-								li.perks__row
-									h3.title.title--perks #{item[0]}
-									ul.perks__list
-										each perk in item[1]
-											li.perks__item
-												.perks__wrap
-													svg(viewbox="0 0 200 200" preserveAspectRatio="none").perks__shape
-														defs
-															linearGradient#linear(x1='0%' x2='100%').perks__circle--gradient
-																stop(offset="0%" stop-color="#d0731b")
-																stop(offset="100%" stop-color="#dc9322")
-														circle(r="80" cx="100" cy="100").perks__circle.perks__circle--position--under
-														circle(r="80" cx="100" cy="100" stroke="url(#linear)").perks__circle.perks__circle--position--above
-														.perks__title #{perk}
+					.perks__widget
+						#perks-component
+						include ./templates/components/perks.pug
+
 				.perks__hands
 			section.section.myworks
 				.container.container--myworks
 					.myworks__sliderbox
 						h2.title.title--myworks Мои работы
 						.myworks__slider
+							+image('content/prev1.jpg', 'myworks__preview')
 							.myworks__examples
 								.myworks__wrap
 									ul.myworks__list
@@ -108,8 +98,12 @@ body
 											li.myworks__item
 												+image(`content/${preview}.jpg`, `myworks__prev myworks__${preview}`)
 									.myworks__buttons
-										button(type="button").nextbtn--myworks.btn--myworks.btn--myworks--active
-										button(type="button").prevbtn--myworks.btn--myworks 
+										btn.prevbtn--myworks.btn--myworks
+											+icon('arrow-down')
+										btn.nextbtn--myworks.btn--myworks
+											+icon('arrow-down')
+								
+
 					.myworks__desc
 						.myworks__tags
 							ul.myworks__taglist
@@ -122,59 +116,10 @@ body
 								|не где-то, а в Loftschool! 2 месяца только самых тяжелых испытаний и бессонных ночей
 							a.myworks__link(href="#") Посмотреть сайт
 			section.section.opinions
-				.container.container--opinions
-					.opinions__title
-						h2.title.title--opinions Что обо мне говорят
-						.opinions__buttons
-							button(type="button").prevbtn--opinions.btn--opinions
-							button(type="button").nextbtn--opinions.btn--opinions.btn--opinions--active
-					.opinions__slider
-						ul.opinions__list
-							li.opinions__comm
-								.maindesc.maindesc--opinions Если бы это был настоящий комментарий, то, возможно, 
-									|в нём было бы что-нибудь конструктивное или типа того. Но так как это всего лишь
-									|макет, то я попытаюсь сломать верстку и добавить головной боли с выравниванием.
-								.opinions__person
-									.opinions__avatar
-										+image("content/comm1.jpg", "opinions__face")
-									.opinions__name
-										h3.title.title--person Ковальчук Дмитрий
-										.maindesc.maindesc--person Основатель Loftschool
-							li.opinions__comm
-								.maindesc.maindesc--opinions По правде сказать, понятия не имею, кто это, 
-									|но так как это ученик нашей школы, то могу сказать только хорошее. И эти два факта вовсе
-									|никак не связаны!
-								.opinions__person
-									.opinions__avatar
-										+image("content/comm2.jpg", "opinions__face")
-									.opinions__name
-										h3.title.title--person Сабанцев Владимир
-										.maindesc.maindesc--person Преподаватель
-							li.opinions__comm
-								.maindesc.maindesc--opinions По правде сказать, понятия не имею, кто это, 
-									|но так как это ученик нашей школы, то могу сказать только хорошее. И эти два факта вовсе
-									|никак не связаны!
-								.opinions__person
-									.opinions__avatar
-										+image("content/comm2.jpg", "opinions__face")
-									.opinions__name
-										h3.title.title--person Сабанцев Владимир
-										.maindesc.maindesc--person Преподаватель
-					.opinions__form
-						h2.title.title--form Связаться со мной
-						form.form(action="POST")
-							.form__data
-								label.form__name
-									h4.subtitle.subtitle--form Введите ваше имя
-									input(type="text" placeholder="Иван Иванов").form__input.form__input--name
-								label.form__email
-									h4.subtitle.subtitle--form Введите ваш email
-									input(type="text" placeholder="loftschool@study.com").form__input.form__input--email
-							.form__comment
-								label.form__comment
-									h4.subtitle.subtitle--form Сообщение к письму
-									textarea(placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса" rows="2").form__input.form__input--comment
-							button(type="button").form__button Отправить
+
+				include ./templates/components/opinions.pug
+				#opinions-component
+
 				.opinions__gradient
 				.leaf.leaf1
 				.leaf.leaf2
@@ -187,12 +132,12 @@ body
 						h3.title.footer--title Даниил Вирин
 						p.subdesc.footer__subdesc Личный сайт веб-разработчика
 					.footer__fill
-						nav.nav
-								ul.nav__list
-								-var links = ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"]
-								each link in links
-									li.nav__item
-										a.nav__link(href="#")= link
+						nav.nav.nav--footer
+							ul.nav__list
+							-var links = ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"]
+							each link in links
+								li.nav__item
+									a.nav__link(href="#")= link
 						.footer__desc
 							.footer__socials
 								p.maindesc.footer--maindesc Этот сайт я сделал в рамках обучения в Школе онлайн 
@@ -206,4 +151,3 @@ body
 								p.subdesc.footer--maindesc Всегда пишите код так, будто сопровождать его будет склонный 
 									|к насилию психопат, который знает где вы живете
 								h4.subdesc.footer__quoter Martin Golding
-					
