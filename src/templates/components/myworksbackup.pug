@@ -1,0 +1,29 @@
+.myworks__sliderbox
+   h2.title.title--myworks Мои работы
+   .myworks__slider
+      +image('content/prev1.jpg', 'myworks__preview')
+      .myworks__examples
+         .myworks__wrap
+            ul.myworks__list
+               -var prev = ['prev1', 'prev2', 'prev3']
+               each preview in prev
+                  li.myworks__item
+                     +image(`content/${preview}.jpg`, `myworks__prev myworks__${preview}`)
+            .myworks__buttons
+               btn.prevbtn--myworks.btn--myworks
+                  +icon('arrow-down')
+               btn.nextbtn--myworks.btn--myworks
+                  +icon('arrow-down')
+
+
+.myworks__desc
+   .myworks__tags
+      ul.myworks__taglist
+         -var tags = ['HTML', 'CSS', 'Javascript']
+         each tag in tags
+            li.myworks__ability= tag
+   .myworks__title
+      h3.title.title--myworks Сайт школы образования
+      p.maindesc.maindesc--myworks Этот парень проходил обучение веб-разработке
+         |не где-то, а в Loftschool! 2 месяца только самых тяжелых испытаний и бессонных ночей
+      a.myworks__link(href="#") Посмотреть сайт
