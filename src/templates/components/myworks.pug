@@ -23,6 +23,7 @@ script(type="text/x-template")#myworks-display
                btns(
                   @slide="$emit('slide', $event)"
                )
+         .counter {{ currentWork.id }}
 
 script(type="text/x-template")#myworks-info
    .myworks__desc
