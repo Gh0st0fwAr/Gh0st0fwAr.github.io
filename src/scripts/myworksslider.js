@@ -4,7 +4,11 @@ import Vue from "vue";
 const thumbs = {
    template: "#myworks-thumbs",
    props: ["works", "currentWork"],
-   
+   methods: {
+      selectSlide(slideIndex) {
+         this.$emit("selectSlide", slideIndex)
+      }
+   }
 };
 
 const btns = {
@@ -14,7 +18,12 @@ const btns = {
 const display = {
    template: "#myworks-display",
    components: { thumbs, btns },
-   props: ["works", "currentWork"]
+   props: ["works", "currentWork"],
+   methods: {
+      selectSlide(slideIndex) {
+         this.$emit("selectSlide", slideIndex)
+      }
+   }
 };
 
 const tags = {
@@ -72,13 +81,14 @@ new Vue({
                this.currentIndex--;
                break;
          }
+      },
+      clickOn(slideIndex) {
+         this.currentIndex = slideIndex;
       }
    },
    created() {
       const data = require('../data/works.json');
       this.works = this.makeArrWithRequiredImages(data);
-
-      // this.currentWork = this.works[this.currentIndex];
    },
 });
 

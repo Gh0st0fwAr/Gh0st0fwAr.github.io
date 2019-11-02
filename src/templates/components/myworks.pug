@@ -4,6 +4,7 @@ script(type="text/x-template")#myworks-sliderbox
          :works="works"
          :current-work="currentWork"
          @slide="handleSlide"
+         @selectSlide="clickOn"
       )
       info(
          :current-work="currentWork"
@@ -19,6 +20,7 @@ script(type="text/x-template")#myworks-display
                thumbs(
                   :works="works"
                   :current-work="currentWork"
+                  @selectSlide="selectSlide"
                )
                btns(
                   @slide="$emit('slide', $event)"
@@ -39,9 +41,10 @@ script(type="text/x-template")#myworks-info
 script(type="text/x-template")#myworks-thumbs
    ul.myworks__list
       li.myworks__item(
-         v-for="work in works" 
+         v-for="(work, slideIndex) in works" 
          :key="work.id"
          :class="{active: work.id === currentWork.id}"
+         @click="selectSlide(slideIndex)"
       )
          img(:src="work.photo" alt="").myworks__prev
 
