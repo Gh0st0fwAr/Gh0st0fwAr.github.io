@@ -5,9 +5,12 @@
           cardTitle(
              :cat="cat"
           )
-          skillItem
+          skillItem(
+            @skillAdded="addSkill"
+          )
           skillAdd(
             :cat="cat"
+            
           )
 </template>
 
@@ -32,6 +35,14 @@ export default {
         this.$emit('skillAdded', response.data);
       });
       this.skill = dataSkill;
+   },
+   addSkill(newSkill) {
+     this.cat = this.cat.map(category => {
+       if (cat.id === newSkill.category) {
+         category.skills.push(newSkill);
+       }
+       return cat;
+     })
    }
 }
 </script>

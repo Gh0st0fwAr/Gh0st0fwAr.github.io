@@ -27,14 +27,11 @@ export default {
    data() {
       return {
          categories: [],
-         skill: [],
       }
    },
    async created() {
       const { data } = await $axios.get('/categories');
       this.categories = data;
-      const { dataSkill } = await $axios.get("/skills/216");
-      this.skill = dataSkill;
    },
 }
 </script>
