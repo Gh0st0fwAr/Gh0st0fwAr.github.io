@@ -21,19 +21,25 @@ export default {
          formData : {
             title: "",
             percent: "",
+            category: this.cat.id
          },
          copyCat: {...this.cat},
          copySkill: {...this.skill},
       }
    },
    methods: {
-      async submitForm() {
-         $axios.post('/skills', {
-            title: this.formData.title,
-            percent: this.formData.percent,
-            category: this.copyCat.id,
-         });         
-      }
+      // async submitForm() {
+      //    await $axios.post('/skills', this.formData);
+      //    this.$emit('skillAdded', this.formData);         
+      // },
+      submitForm() {
+         $axios.post('/skills', this.formData).then(response => {
+            this.$emit('skill-added', response.data);
+            this.formData.title = "";
+            this.formData.percent = "";
+         })
+      }      
+
    },
    props: {
       cat: Object,

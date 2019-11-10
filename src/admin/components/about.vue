@@ -3,8 +3,8 @@
       .container-admin.container-about
         .titlebox
           .titlebox__about Блок "Обо мне"
-          a.titlebox__add
-            button(type="button").titlebox__button
+          a.titlebox__add(@click="addCard")
+            button(type="button" ).titlebox__button
               svg(viewBox="0 0 38 38" preserveAspectRatio="xMidYMid")
                 circle(r="16" cx="50%" cy="50%" fill="url(#addbtn)")
                 linearGradient#addbtn(y1='0%' y2='100%').admin-addbtn
@@ -15,6 +15,7 @@
         ul.groupsgrid
           skillCard(
              v-for="cat in categories" :cat="cat"
+             @delete-card="cardDelete"
           )
 </template>
 
@@ -27,11 +28,29 @@ export default {
    data() {
       return {
          categories: [],
+         clearData: {
+            title: "newcard"
+         }
       }
    },
    async created() {
       const { data } = await $axios.get('/categories');
       this.categories = data;
+   },
+   methods: {
+      cardDelete(someCard) {
+         this.cat.pop(someCard);
+         console.log(someCard);
+         console.log("1");
+      },
+      addCard() {
+         console.log("click");
+         $axios.post('/categories', this.clearData).then(response => {
+            const newCat = response.data;
+            this.categories.push(newCat);
+         })
+         
+      }
    },
 }
 </script>
