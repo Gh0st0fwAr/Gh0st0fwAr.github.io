@@ -1,17 +1,35 @@
 <template lang="pug">
-   .sites__prev.sites__prev--disabled
+   .sites__prev
       .prev__imgbox
-         img(src="../../../images/content/prev1.jpg").prev__img
-         ul.prev__tags
-            li.prev__tag HTML
-            li.prev__tag CSS
-            li.prev__tag Javascript
+         img(:src="`https://webdev-api.loftschool.com/${work.photo}`").prev__img
+         tagList(:techs="work.techs")
       .prev__desc.prev__desc--works
-         .prev__title Сайт школы образования
-         p.prev__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool!
-            |4,5 месяца только самых тяжелых испытаний и бессонных ночей!
-         a.prev__link(href="#") http://loftschool.ru
+         .prev__title {{ work.title }}
+         p.prev__text {{ work.description }}
+         a.prev__link(href="#") {{ work.link }}
       .prev__btns
          button(type="button").prev__editbtn.prevbtn Править
          button(type="button").prev__deletebtn.prevbtn Удалить   
 </template>
+
+<script>
+import $axios from "@/requests";
+export default {
+   components: {
+     tagList: () => import("./tagList.vue"),
+   },
+	data() {
+		return {
+         work: [],
+		}
+   },
+   methods: {
+      someMethod() {
+         console.log(this.work.photo);
+      }
+   },
+   props: {
+      work: Object,
+   }
+}
+</script>

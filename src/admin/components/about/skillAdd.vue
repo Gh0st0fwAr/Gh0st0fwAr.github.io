@@ -28,10 +28,6 @@ export default {
       }
    },
    methods: {
-      // async submitForm() {
-      //    await $axios.post('/skills', this.formData);
-      //    this.$emit('skillAdded', this.formData);         
-      // },
       submitForm() {
          $axios.post('/skills', this.formData).then(response => {
             this.$emit('skill-added', response.data);
