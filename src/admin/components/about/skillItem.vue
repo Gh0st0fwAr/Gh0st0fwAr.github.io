@@ -29,7 +29,7 @@ export default {
    methods: {
      	deleteRow() {
        	$axios.delete(`/skills/${this.copySkill.id}`).then(() => {
-				 this.$emit('delete-row');
+				 this.$emit('delete-row', this.copySkill);
 			})
      	}
    },

@@ -3,8 +3,8 @@
 		form.groups(action="")
 			.groups__wrapper
 				cardTitle(
-					:cat="cat"
-					@delete-card="testVar"
+					:cat="cat"					
+					@delete-card="$emit('delete-card')"
 				)
 				skillItem(
 					:skill="skill"

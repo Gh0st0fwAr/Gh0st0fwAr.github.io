@@ -61,6 +61,17 @@
    background-image: linear-gradient(to right, #006aed, #3f35cb); 
    transition: 0.3s;
    margin-top: 26px;
+   position: relative;
+
+   & input {
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      opacity: 0;
+   }
 
    &:hover {
       transform: scale(1.05);

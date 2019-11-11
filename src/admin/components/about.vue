@@ -39,12 +39,11 @@ export default {
    },
    methods: {
       cardDelete(someCard) {
-         this.cat.pop(someCard);
+         this.categories.pop(someCard);
          console.log(someCard);
          console.log("1");
       },
       addCard() {
-         console.log("click");
          $axios.post('/categories', this.clearData).then(response => {
             const newCat = response.data;
             this.categories.push(newCat);
