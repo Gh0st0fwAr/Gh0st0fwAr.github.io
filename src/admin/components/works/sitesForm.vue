@@ -1,11 +1,12 @@
 <template lang="pug">
-   form.works-form
+   form(v-bind:class="{activeform: isActiveForm}").works-form
       .titlerow
          .title-admin Редактирование Работы
       .works-add
-         .works-add__imgwrap
-            .works-add__image
-               .works-add__imgdesc Перетащите или загрузите для загрузки изображения
+         .works-add__imgwrap()
+            .works-add__image()
+               img.works-add__imgpreview(v-show="imageSrc" :src="imageSrc")
+               .works-add__imgdesc(v-show="!imageSrc") Перетащите или загрузите для загрузки изображения
                a().works-add__btn Загрузить
                   input(type="file" accept="image/jpeg" @change="processFile($event)")
          .works-add__desc
@@ -32,7 +33,7 @@
                   .works-add__tag--text
                   button(type="button").works-add__tag--btn 
             .works-add__save
-               button(type="submit").works-add__undo Отмена
+               button(type="submit" @click.prevent="clearForm").works-add__undo Отмена
                button(type="button" @click="submitForm").works-add__savebtn Сохранить
 </template>
 
@@ -48,6 +49,27 @@ export default {
             link: "",
             description: "",
 
+         },
+         imageSrc: 0,
+         isActiveForm: false,
+      }
+   },
+   props: {
+      isEdit: Boolean,
+      forEdit: Object,
+      isReady: Boolean,
+   },
+   watch: {
+      forEdit: {
+         immediate: true,
+         handler (newVal, oldVal) {
+            this.editFill();
+         }
+      },
+      isReady: {
+         immediate: true,
+         handler (newVal, oldVal) {
+            this.isActiveForm = newVal;
          }
       }
    },
@@ -58,9 +80,32 @@ export default {
             header : {
                'Content-Type' : 'image/jpeg'
             }
-         }
+         };
+         this.selectImage(event.target.files[0]);         
+      },
+      selectImage(file) {
+         this.file = file;
+         let reader = new FileReader();
+         reader.onload = this.formData.photo;
+         reader.readAsDataURL(file);
+         console.log(file);
       },
       submitForm() {
+         if (this.isEdit === true) {
+            let data = new FormData();
+            data.append('photo', this.formData.photo);
+            data.append('title', this.formData.title);
+            data.append('techs', this.formData.techs);
+            data.append('link', this.formData.link);
+            data.append('description', this.formData.description);
+            $axios.post(`/works/${this.forEdit.id}`, data).then(response => {
+            console.log(response.data);
+            this.formData.title = "";
+            this.formData.techs = "";
+            this.formData.photo = 0;
+            this.formData.link = "";
+            this.formData.description = "";
+         }) } else {
          let data = new FormData();
          data.append('photo', this.formData.photo);
          data.append('title', this.formData.title);
@@ -75,8 +120,27 @@ export default {
             this.formData.photo = 0;
             this.formData.link = "";
             this.formData.description = "";
-         })
+         }) }
+         
+      },
+      editFill() {         
+         this.formData.title = this.forEdit.title;
+         this.formData.techs = this.forEdit.techs;
+         this.formData.photo = this.forEdit.photo;
+         this.formData.link = this.forEdit.link;
+         this.formData.description = this.forEdit.description;      
+      },
+      clearForm() {
+         this.formData.title = "";
+         this.formData.techs = "";
+         this.formData.photo = 0;
+         this.formData.link = "";
+         this.formData.description = "";
+         this.isEdit = false;
+         this.isActiveForm = false;
+         this.$emit('cancel-sites');
       }
+      
    },
 
 }
