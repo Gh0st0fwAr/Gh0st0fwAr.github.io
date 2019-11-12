@@ -76,7 +76,7 @@ export default {
    },
    watch: {
       forEdit: {
-         immediate: true,
+         immediate: false,
          handler (newVal, oldVal) {
             this.editFill();
          }
@@ -131,7 +131,7 @@ export default {
             this.formdata.link = "";
             this.formdata.description = "";
          }) } else {
-         let data = new formdata();
+         let data = new FormData();
          data.append('photo', this.formdata.photo);
          data.append('title', this.formdata.title);
          data.append('techs', this.formdata.techs);
