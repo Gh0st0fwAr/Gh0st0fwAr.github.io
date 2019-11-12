@@ -12,16 +12,16 @@
          .works-add__desc
             label.works-add__row
                .works-add__title Название
-               input(type="text" placeholder="Название работы" v-model="formData.title").works-add__text
+               input(type="text" placeholder="Название работы" v-model="formdata.title").works-add__text
             label.works-add__row
                .works-add__title Ссылка
-               input(type="text" placeholder="https://www.yoursite.ru" v-model="formData.link").works-add__text
+               input(type="text" placeholder="https://www.yoursite.ru" v-model="formdata.link").works-add__text
             label.works-add__row
                .works-add__title Описание
-               textarea(cols="30", rows="10" placeholder="Описание сайта" v-model="formData.description").works-add__text.works-add--textarea
+               textarea(cols="30", rows="10" placeholder="Описание сайта" v-model="formdata.description").works-add__text.works-add--textarea
             label.works-add__row
                .works-add__title Добавление тэга
-               input(type="text" placeholder="Jquery, Vue.js, HTML5" v-model="formData.techs").works-add__text
+               input(type="text" placeholder="Jquery, Vue.js, HTML5" v-model="formdata.techs").works-add__text
             ul.works-add__tags
                li.works-add__tag HTML
                   .works-add__tag--text
@@ -43,7 +43,7 @@ import $axios from "@/requests";
 export default {
    data() {
       return {
-         formData: {
+         formdata: {
             title: "",
             techs: "",
             photo: "",
@@ -61,16 +61,16 @@ export default {
       isReady: Boolean,
    },
    validators: {
-      'formData.title': function(value) {
+      'formdata.title': function(value) {
          return Validator.value(value).required();
       },
-      'formData.techs': function(value) {
+      'formdata.techs': function(value) {
          return Validator.value(value).required();
       },
-      'formData.link': function(value) {
+      'formdata.link': function(value) {
          return Validator.value(value).required();
       },
-      'formData.description': function(value) {
+      'formdata.description': function(value) {
          return Validator.value(value).required();
       },
    },
@@ -90,15 +90,15 @@ export default {
    },
    methods: {
       processFile(event) {
-         this.formData.photo = event.target.files[0];
-         this.renderFile(this.formData.photo).then((f) => {
+         this.formdata.photo = event.target.files[0];
+         this.renderFile(this.formdata.photo).then((f) => {
             this.filePreview = f
         })
       },
       selectImage(file) {
          this.file = file;
          let reader = new FileReader();
-         reader.onload = this.formData.photo;
+         reader.onload = this.formdata.photo;
          reader.readAsDataURL(file);
          console.log(file);
       },
@@ -119,32 +119,33 @@ export default {
       submitForm() {
          if (this.isEdit === true) {
             let data = new FormData();
-            data.append('photo', this.formData.photo);
-            data.append('title', this.formData.title);
-            data.append('techs', this.formData.techs);
-            data.append('link', this.formData.link);
-            data.append('description', this.formData.description);
+            data.append('photo', this.formdata.photo);
+            data.append('title', this.formdata.title);
+            data.append('techs', this.formdata.techs);
+            data.append('link', this.formdata.link);
+            data.append('description', this.formdata.description);
             $axios.post(`/works/${this.forEdit.id}`, data).then(response => {
-            this.formData.title = "";
-            this.formData.techs = "";
-            this.formData.photo = 0;
-            this.formData.link = "";
-            this.formData.description = "";
+            this.formdata.title = "";
+            this.formdata.techs = "";
+            this.formdata.photo = 0;
+            this.formdata.link = "";
+            this.formdata.description = "";
          }) } else {
-         let data = new FormData();
-         data.append('photo', this.formData.photo);
-         data.append('title', this.formData.title);
-         data.append('techs', this.formData.techs);
-         data.append('link', this.formData.link);
-         data.append('description', this.formData.description);
+         let data = new formdata();
+         data.append('photo', this.formdata.photo);
+         data.append('title', this.formdata.title);
+         data.append('techs', this.formdata.techs);
+         data.append('link', this.formdata.link);
+         data.append('description', this.formdata.description);
          this.$validate().then(success => {
             if (success) {
                $axios.post('/works', data).then(response => {
-                  this.formData.title = "";
-                  this.formData.techs = "";
-                  this.formData.photo = 0;
-                  this.formData.link = "";
-                  this.formData.description = "";
+                  this.formdata.title = "";
+                  this.formdata.techs = "";
+                  this.formdata.photo = 0;
+                  this.formdata.link = "";
+                  this.formdata.description = "";
+                  alert('Validation succeeded!')
                });
             } else {
                console.log("Validation error");
@@ -154,18 +155,18 @@ export default {
          
       },
       editFill() {         
-         this.formData.title = this.forEdit.title;
-         this.formData.techs = this.forEdit.techs;
-         this.formData.photo = this.forEdit.photo;
-         this.formData.link = this.forEdit.link;
-         this.formData.description = this.forEdit.description;      
+         this.formdata.title = this.forEdit.title;
+         this.formdata.techs = this.forEdit.techs;
+         this.formdata.photo = this.forEdit.photo;
+         this.formdata.link = this.forEdit.link;
+         this.formdata.description = this.forEdit.description;      
       },
       clearForm() {
-         this.formData.title = "";
-         this.formData.techs = "";
-         this.formData.photo = 0;
-         this.formData.link = "";
-         this.formData.description = "";
+         this.formdata.title = "";
+         this.formdata.techs = "";
+         this.formdata.photo = 0;
+         this.formdata.link = "";
+         this.formdata.description = "";
          this.isActiveForm = false;
          this.$emit('cancel-sites');
       }
