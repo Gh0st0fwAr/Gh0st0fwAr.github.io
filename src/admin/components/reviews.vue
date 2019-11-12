@@ -13,6 +13,7 @@
 				addReviews(@activate-form="activateForm")
 				reviewCard(
 					v-for="review in reviews"
+					:key="review.id"
 					:reviews="review"
 					@delete-card="cardDelete"
 					@edit-card="cardEdit"
@@ -45,6 +46,7 @@ export default {
 		},
 		isNot() {
 			this.isReady = false;
+			this.isEdit = false;
 		},
 		activateForm() {
 			this.isReady = true;

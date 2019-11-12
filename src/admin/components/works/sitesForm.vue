@@ -5,8 +5,8 @@
       .works-add
          .works-add__imgwrap()
             .works-add__image()
-               img.works-add__imgpreview(v-show="imageSrc" :src="imageSrc")
-               .works-add__imgdesc(v-show="!imageSrc") Перетащите или загрузите для загрузки изображения
+               img.works-add__imgpreview(:src="filePreview" v-show="filePreview")
+               .works-add__imgdesc(v-show="!filePreview") Перетащите или загрузите для загрузки изображения
                a().works-add__btn Загрузить
                   input(type="file" accept="image/jpeg" @change="processFile($event)")
          .works-add__desc
@@ -38,6 +38,7 @@
 </template>
 
 <script>
+import { Validator } from 'simple-vue-validator';
 import $axios from "@/requests";
 export default {
    data() {
@@ -45,12 +46,12 @@ export default {
          formData: {
             title: "",
             techs: "",
-            photo: 0,
+            photo: "",
             link: "",
             description: "",
 
          },
-         imageSrc: 0,
+         filePreview: "",
          isActiveForm: false,
       }
    },
@@ -58,6 +59,20 @@ export default {
       isEdit: Boolean,
       forEdit: Object,
       isReady: Boolean,
+   },
+   validators: {
+      'formData.title': function(value) {
+         return Validator.value(value).required();
+      },
+      'formData.techs': function(value) {
+         return Validator.value(value).required();
+      },
+      'formData.link': function(value) {
+         return Validator.value(value).required();
+      },
+      'formData.description': function(value) {
+         return Validator.value(value).required();
+      },
    },
    watch: {
       forEdit: {
@@ -76,12 +91,9 @@ export default {
    methods: {
       processFile(event) {
          this.formData.photo = event.target.files[0];
-         let config = {
-            header : {
-               'Content-Type' : 'image/jpeg'
-            }
-         };
-         this.selectImage(event.target.files[0]);         
+         this.renderFile(this.formData.photo).then((f) => {
+            this.filePreview = f
+        })
       },
       selectImage(file) {
          this.file = file;
@@ -90,6 +102,20 @@ export default {
          reader.readAsDataURL(file);
          console.log(file);
       },
+      renderFile(file) {
+      const reader = new FileReader();
+
+      return new Promise((resolve, reject) => {
+          try {
+              reader.readAsDataURL(file);
+              reader.onloadend = () => {
+                  resolve(reader.result);
+              };
+          } catch (error) {
+              throw new Error("Ошибка при чтении файла");
+          }
+      });
+    },
       submitForm() {
          if (this.isEdit === true) {
             let data = new FormData();
@@ -99,7 +125,6 @@ export default {
             data.append('link', this.formData.link);
             data.append('description', this.formData.description);
             $axios.post(`/works/${this.forEdit.id}`, data).then(response => {
-            console.log(response.data);
             this.formData.title = "";
             this.formData.techs = "";
             this.formData.photo = 0;
@@ -112,15 +137,20 @@ export default {
          data.append('techs', this.formData.techs);
          data.append('link', this.formData.link);
          data.append('description', this.formData.description);
-         console.log(data);
-         $axios.post('/works', data).then(response => {
-            console.log(response.data);
-            this.formData.title = "";
-            this.formData.techs = "";
-            this.formData.photo = 0;
-            this.formData.link = "";
-            this.formData.description = "";
-         }) }
+         this.$validate().then(success => {
+            if (success) {
+               $axios.post('/works', data).then(response => {
+                  this.formData.title = "";
+                  this.formData.techs = "";
+                  this.formData.photo = 0;
+                  this.formData.link = "";
+                  this.formData.description = "";
+               });
+            } else {
+               console.log("Validation error");
+            }
+         })
+         }
          
       },
       editFill() {         
@@ -136,7 +166,6 @@ export default {
          this.formData.photo = 0;
          this.formData.link = "";
          this.formData.description = "";
-         this.isEdit = false;
          this.isActiveForm = false;
          this.$emit('cancel-sites');
       }

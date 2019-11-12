@@ -4,12 +4,13 @@
 			.groups__wrapper
 				cardTitle(
 					:cat="cat"					
-					@delete-card="$emit('delete-card')"
+					@delete-card="cardIndex"
 				)
 				skillItem(
 					:skill="skill"
 					v-for="skill in skills"
 					@delete-row="rowDelete"
+					:key="skill.id"
 				)
 				skillAdd(
 					:cat="cat"
@@ -41,12 +42,18 @@ export default {
 		this.skills = filteredSkills;
 	},
 	methods: {
+		cardIndex(emitCard) {
+			this.$emit('delete-card', emitCard);
+		},
 		addSkill(newSkill) {
 			this.skills.push(newSkill);
 		},
 		rowDelete(someSkill) {
-			this.skills.pop(someSkill);
-			console.log(someSkill);
+			let deleteIndex = this.skills.findIndex((el) => {
+				return el.id === someSkill.id;
+			});
+			console.log(deleteIndex);
+			this.skills.splice(deleteIndex, 1);
 		},
 		
 	},

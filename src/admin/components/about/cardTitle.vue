@@ -26,7 +26,7 @@ export default {
       },
       deleteCard() {
          $axios.delete(`/categories/${this.copyCat.id}`).then(() => {
-            this.$emit('delete-card');
+            this.$emit('delete-card', this.cat.id);
          })
       }
    },

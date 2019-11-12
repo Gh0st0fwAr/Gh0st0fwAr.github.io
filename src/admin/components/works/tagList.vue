@@ -1,7 +1,8 @@
 <template lang="pug">
    ul.prev__tags
       tagItem(
-         v-for="tech in techsArray"
+         v-for="(tech, ind) in techsArray"
+         :key="ind"
          :tech="tech"
       )
 </template>

@@ -15,6 +15,7 @@
         ul.groupsgrid
           skillCard(
              v-for="cat in categories" :cat="cat"
+             :key="cat.id"
              @delete-card="cardDelete"
           )
 </template>
@@ -39,9 +40,10 @@ export default {
    },
    methods: {
       cardDelete(someCard) {
-         this.categories.pop(someCard);
-         console.log(someCard);
-         console.log("1");
+         let deleteIndex = this.categories.findIndex((el) => {
+				return el.id === someCard;
+         });
+			this.categories.splice(deleteIndex, 1);
       },
       addCard() {
          $axios.post('/categories', this.clearData).then(response => {

@@ -14,6 +14,7 @@ section.works-admin.section-admin
 			siteCard(
 				v-for="work in works" 
 				:work="work"
+				:key="work.id"
 				@delete-card="cardDelete"
 				@edit-card="cardEdit"
 			)
@@ -43,6 +44,7 @@ export default {
 	methods: {
 		isNot() {
 			this.isReady = false;
+			this.isEdit = false;
 		},
 		activateForm() {
 			this.isReady = true;

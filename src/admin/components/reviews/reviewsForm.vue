@@ -111,7 +111,6 @@ export default {
          this.formData.occ = "";
          this.formData.photo = 0;
          this.formData.text = "";
-         this.isEdit = false;
          this.isActiveForm = false;
          this.$emit('cancel-sites');
       }
