@@ -13,15 +13,19 @@
             label.works-add__row
                .works-add__title Название
                input(type="text" placeholder="Название работы" v-model="formdata.title").works-add__text
+               span.error {{ this.validation.firstError('formdata.title') }}
             label.works-add__row
                .works-add__title Ссылка
                input(type="text" placeholder="https://www.yoursite.ru" v-model="formdata.link").works-add__text
+               span.error {{ this.validation.firstError('formdata.link') }}
             label.works-add__row
                .works-add__title Описание
                textarea(cols="30", rows="10" placeholder="Описание сайта" v-model="formdata.description").works-add__text.works-add--textarea
+               span.error {{ this.validation.firstError('formdata.description') }}
             label.works-add__row
                .works-add__title Добавление тэга
                input(type="text" placeholder="Jquery, Vue.js, HTML5" v-model="formdata.techs").works-add__text
+               span.error {{ this.validation.firstError('formdata.techs') }}
             ul.works-add__tags
                li.works-add__tag HTML
                   .works-add__tag--text
@@ -59,6 +63,20 @@ export default {
       isEdit: Boolean,
       forEdit: Object,
       isReady: Boolean,
+   },
+   computed: {
+        titleError() {
+            return this.validation.firstError('formdata.title')
+        },
+        titleError() {
+            return this.validation.firstError('formdata.title')
+        },
+        titleError() {
+            return this.validation.firstError('formdata.title')
+        },
+        percentError() {
+            return this.validation.firstError('formdata.link')
+        }
    },
    validators: {
       'formdata.title': function(value) {

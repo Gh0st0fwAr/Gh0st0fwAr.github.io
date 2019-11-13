@@ -8,11 +8,10 @@
          .login-subtitle Пароль
          input(type="password" v-model="formData.password").login__input.login__input--password
       button.login__button Отправить
-      .exitbtn X
 </template>
 
 <script>
-import axios from "axios"
+import $axios from "@/requests";
 export default {
    data() {
       return {
@@ -23,8 +22,14 @@ export default {
       }
    },
    methods: {
-      async submitForm() {
-         const { data: { token } } = await axios.post('https://webdev-api.loftschool.com/login', this.formData);
+      submitForm() {
+         const { data: { token } } = $axios.post('https://webdev-api.loftschool.com/login', this.formData).then(response => {
+            if (response.status === 200) {
+               alert("Авторизация успешна");
+            } else {
+               alert(response.error);
+            }
+         });
          localStorage.setItem("token", token);
       }
    },

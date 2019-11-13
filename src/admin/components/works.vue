@@ -1,29 +1,34 @@
 <template lang="pug">
-section.works-admin.section-admin
-	.container-admin.container-works
-		.titlebox
-			.titlebox__about Блок "Обо мне"
-		sitesForm(
-			:is-edit="isEdit"
-			:for-edit="forEdit"
-			:is-ready="isReady"
-			@cancel-sites="isNot"
-		)
-		.sites
-			addSites(@activate-form="activateForm")
-			siteCard(
-				v-for="work in works" 
-				:work="work"
-				:key="work.id"
-				@delete-card="cardDelete"
-				@edit-card="cardEdit"
+.admincontainer
+	appHeader
+	appNav
+	section.works-admin.section-admin
+		.container-admin.container-works
+			.titlebox
+				.titlebox__about Блок "Обо мне"
+			sitesForm(
+				:is-edit="isEdit"
+				:for-edit="forEdit"
+				:is-ready="isReady"
+				@cancel-sites="isNot"
 			)
+			.sites
+				addSites(@activate-form="activateForm")
+				siteCard(
+					v-for="work in works" 
+					:work="work"
+					:key="work.id"
+					@delete-card="cardDelete"
+					@edit-card="cardEdit"
+				)
 </template>
 
 <script>
 import $axios from "@/requests";
 export default {
-	components: {
+	components: {		
+		appHeader: () => import("../components/header.vue"),
+		appNav: () => import("../components/nav.vue"),
 		addSites: () => import ("./works/addSites.vue"),
 		siteCard: () => import ("./works/siteCard.vue"),
 		sitesForm: () => import ("./works/sitesForm")
@@ -36,7 +41,7 @@ export default {
 			isReady: false,
 		}
 	},
-	
+
 	async created() {
 		const { data } = await $axios.get('/works/216');
 		this.works = data;
@@ -50,7 +55,7 @@ export default {
 			this.isReady = true;
 		},
 		cardDelete(someCard) {
-         this.works.pop(someCard);
+			this.works.pop(someCard);
 		},
 		cardEdit(editedCard) {
 			this.isEdit = true;

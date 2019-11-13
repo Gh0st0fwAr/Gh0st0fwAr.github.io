@@ -1,4 +1,7 @@
 <template lang="pug">
+.aboutcontainer
+	appHeader
+	appNav
 	section.works-admin.section-admin.reviews-admin
 		.container-admin.container-works
 			.titlebox
@@ -24,6 +27,8 @@
 import $axios from "@/requests";
 export default {
 	components: {
+      appHeader: () => import("../components/header.vue"),
+      appNav: () => import("../components/nav.vue"),  
 		addReviews: () => import ("./reviews/addReviews.vue"),
 		reviewCard: () => import ("./reviews/reviewCard.vue"),
 		reviewsForm: () => import ("./reviews/reviewsForm.vue")

@@ -1,4 +1,8 @@
 <template lang="pug">
+.aboutcontainer
+   appHeader
+   appNav
+   loginBlock
    section.about-admin.section-admin
       .container-admin.container-about
         .titlebox
@@ -24,6 +28,9 @@
 import $axios from "@/requests";
 export default {
    components: {
+      appHeader: () => import("../components/header.vue"),
+      appNav: () => import("../components/nav.vue"),      
+      loginBlock: () => import("../components/login"),
       skillCard: () => import("./about/skillCard.vue"),
    },
    data() {

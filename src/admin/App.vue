@@ -1,11 +1,9 @@
 <template lang="pug">
   .subwrapper-admin
-    appHeader
-    appNav
-    loginBlock
-    aboutPage
-    worksPage
-    reviewsPage
+    router-view
+      aboutPage
+      worksPage
+      reviewsPage
                  
                 
 </template>
@@ -23,14 +21,6 @@ export default {
     loginBlock: () => import("./components/login")
 
   },
-  data() {
-    return {
-      
-    }
-  },
-  validators: {
-
-  }
 }
 </script>
 
