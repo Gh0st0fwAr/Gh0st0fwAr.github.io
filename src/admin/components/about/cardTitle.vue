@@ -4,7 +4,7 @@
       span.error {{ this.validation.firstError('formdata.title') }}
       .groups__edit
         label.editbtn
-          input(type="checkbox" @click="submitForm").someinput
+          input(type="checkbox" v-model="isChecked" @click="submitForm").someinput
           span.input__editbtn
         button(type="button" @click="deleteCard").deletebtn
           svg
@@ -20,6 +20,7 @@ export default {
             title: this.cat.category
          },
          copyCat: {...this.cat},
+         isChecked: false,
       }
    },
    computed: {
@@ -36,8 +37,10 @@ export default {
       submitForm() {
          this.$validate().then(success => {
             if (success) {
-               $axios.post(`/categories/${this.copyCat.id}`, this.formData);
-               alert('Validation succeeded!')
+               $axios.post(`/categories/${this.copyCat.id}`, this.formdata).then(response => {
+                  this.isChecked = false;
+                  alert('Validation succeeded!');
+               });               
             } else {
                console.log("Validation error");
             }
