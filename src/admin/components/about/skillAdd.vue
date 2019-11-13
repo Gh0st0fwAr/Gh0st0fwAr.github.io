@@ -1,8 +1,8 @@
 <template lang="pug">
    .groups__addrow
-      input(type="text" placeholder="Новый навык" v-model="formData.title").groups__addskill.input--active
-      input(type="text" placeholder="100" v-model="formData.percent").groups__addpercent.input--active
-      button(type="button" @click="submitForm").groups__addbtn
+      input(type="text" required placeholder="Новый навык" v-model="formData.title").groups__addskill.input--active
+      input(type="text" required placeholder="100" v-model="formData.percent").groups__addpercent.input--active
+      button(type="submit" @click="submitForm").groups__addbtn
         svg(viewBox="0 0 38 38" preserveAspectRatio="xMidYMid")
           circle(r="16" cx="50%" cy="50%" fill="url(#addbtn)")
           linearGradient#addbtn(y1='0%' y2='100%').admin-addbtn
