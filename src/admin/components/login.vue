@@ -23,14 +23,15 @@ export default {
    },
    methods: {
       submitForm() {
-         const { data: { token } } = $axios.post('https://webdev-api.loftschool.com/login', this.formData).then(response => {
+         $axios.post('https://webdev-api.loftschool.com/login', this.formData).then(response => {
             if (response.status === 200) {
                alert("Авторизация успешна");
-            } else {
-               alert(response.error);
+               localStorage.setItem("token", token);
             }
+         }).catch(err => {
+            console.log(err.response.status);          
+            alert(err.response.data.error);            
          });
-         localStorage.setItem("token", token);
       }
    },
 }
