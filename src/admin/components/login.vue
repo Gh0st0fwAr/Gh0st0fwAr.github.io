@@ -26,7 +26,7 @@ export default {
          $axios.post('https://webdev-api.loftschool.com/login', this.formData).then(response => {
             if (response.status === 200) {
                alert("Авторизация успешна");
-               localStorage.setItem("token", token);
+               localStorage.setItem("token", response.data.token);
             }
          }).catch(err => {
             console.log(err.response.status);          
