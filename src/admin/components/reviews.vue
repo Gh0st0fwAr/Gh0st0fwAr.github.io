@@ -1,7 +1,5 @@
 <template lang="pug">
 .aboutcontainer
-	appHeader
-	appNav
 	section.works-admin.section-admin.reviews-admin
 		.container-admin.container-works
 			.titlebox

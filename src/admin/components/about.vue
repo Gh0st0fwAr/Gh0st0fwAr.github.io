@@ -1,7 +1,5 @@
 <template lang="pug">
 .aboutcontainer
-   appHeader
-   appNav
    loginBlock
    section.about-admin.section-admin
       .container-admin.container-about

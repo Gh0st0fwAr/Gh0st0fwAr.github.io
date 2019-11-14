@@ -1,9 +1,11 @@
 <template lang="pug">
   .subwrapper-admin
+    appHeader
+    appNav
     router-view
-      aboutPage
-      worksPage
-      reviewsPage
+      //- aboutPage
+      //- worksPage
+      //- reviewsPage
                  
                 
 </template>
