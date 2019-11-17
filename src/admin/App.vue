@@ -3,9 +3,6 @@
     appHeader
     appNav
     router-view
-      //- aboutPage
-      //- worksPage
-      //- reviewsPage
                  
                 
 </template>

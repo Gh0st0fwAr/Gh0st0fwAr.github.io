@@ -1,6 +1,5 @@
 <template lang="pug">
 .aboutcontainer
-   loginBlock
    section.about-admin.section-admin
       .container-admin.container-about
         .titlebox
