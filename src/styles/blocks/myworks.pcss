@@ -28,6 +28,11 @@
    font-weight: bold;
    margin-bottom: 62px;
 
+   @include tablets {
+      margin-bottom: 44px;
+      text-align: center;
+   }
+
 }
 
 .myworks__sliderbox {
@@ -49,7 +54,11 @@
    background-size: contain;
    display: flex;
    position: relative;
-   z-index: 10;
+   // z-index: 10;
+
+   & img {
+      z-index: 9;
+   }
 
 }
 
@@ -79,8 +88,9 @@
 .myworks__examples {
    display: flex;
    position: absolute;
-   bottom: 25%;
+   bottom: 8%;
    right: 0;
+   z-index: 10;
    
    @include phones {
       bottom: 0;
@@ -113,14 +123,20 @@
 
 
 .counter {
-   font-size: 300px;
+   font-size: 280px;
    font-weight: 800;
-   line-height: 0.65;
+   line-height: 0.78;
    color: #e6e6e6;
    position: absolute;
    z-index: 1;
-   left: 0;
-   top: 0;
+   bottom: calc(8% + 101px);
+   transform: translateX(68%);
+   right: 0;
+
+   @include phones {
+      display: none;
+   }
+   
 }
 
 
@@ -135,6 +151,7 @@
    cursor: pointer;
    position: relative;
    transition: 0.3s;
+   background-color: #353e4e;
 
    &:hover {
       opacity: 1;
@@ -200,13 +217,19 @@
       cursor: pointer;
    }
 
-   &--active {
-      outline: 3px solid #dc9322;
-   }
-
    @include phones {
       display: none;
    }
+
+   & img {
+      max-height: unset;
+      max-width: 100%;
+   }
+}
+
+.active {
+   outline: 3px solid #dc9322;
+   z-index: 300;
 }
 
 .myworks__tags {
@@ -226,6 +249,7 @@
    color: #7f8690;
    font-weight: 600;
    margin-right: 10px;
+   white-space: nowrap;
 }
 
 .myworks__title {
@@ -241,10 +265,6 @@
 
 }
 
-.title--myworks {
-   margin-bottom: 44px;
-   text-align: center;
-}
 
 .maindesc--myworks {
    margin-bottom: 44px;

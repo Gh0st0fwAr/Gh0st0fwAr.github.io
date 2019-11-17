@@ -5,17 +5,26 @@
       "perks": {
          "HTML5": 65,
          "CSS3": 72,
-         "JavaScript & jQuery": 30
+         "JavaScript & jQuery": 20,
+         "Vue.js": 28
       }
    },
 
    {
-      "perksGroup": "Workspace",
+      "perksGroup": "Workflow",
       "perks": {
-         "IDE": 50,
-         "Zeplin": 80,
-         "Figma": 40,
-         "Terminal": 20
+         "Git": 25,
+         "Terminal": 18,
+         "Webpack": 25
+      } 
+   },
+
+   {
+      "perksGroup": "Рабочая среда",
+      "perks": {
+         "Photoshop & Zeplin": 68,
+         "Figma": 35,
+         "GitHub Desktop": 85
       } 
    }
 ]

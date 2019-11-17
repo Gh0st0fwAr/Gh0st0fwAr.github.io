@@ -3,9 +3,9 @@ script(type="text/x-template")#opinions-list
       .opinions__title
          h2.title.title--opinions Что обо мне говорят
          .opinions__buttons
-            btn.prevbtn--opinions.btn--opinions
+            button.prevbtn--opinions.btn--opinions
                +icon('arrow-down')
-            btn.nextbtn--opinions.btn--opinions
+            button.nextbtn--opinions.btn--opinions
                +icon('arrow-down')
       .opinions__slider
          .opinions__list
@@ -17,15 +17,15 @@ script(type="text/x-template")#opinions-list
             .form__data
                label.form__name
                   h4.subtitle.subtitle--form Введите ваше имя
-                  input(type="text" placeholder="Иван Иванов").form__input.form__input--name
+                  input(type="text" required placeholder="Иван Иванов").form__input.form__input--name
                label.form__email
                   h4.subtitle.subtitle--form Введите ваш email
-                  input(type="text" placeholder="loftschool@study.com").form__input.form__input--email
+                  input(type="text" required placeholder="loftschool@study.com").form__input.form__input--email
             .form__comment
                label.form__comment
                   h4.subtitle.subtitle--form Сообщение к письму
-                  textarea(placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса" rows="2").form__input.form__input--comment
-            button(type="button").form__button Отправить
+                  textarea(placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса" rows="2" required).form__input.form__input--comment
+            button(type="POST").form__button Отправить
 
 
 script(type="text/x-template")#opinions-item
