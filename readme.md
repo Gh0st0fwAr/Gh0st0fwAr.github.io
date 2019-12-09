@@ -2,7 +2,7 @@
 Меня зовут Вирин Даниил Дмитриевич. Это мой выпускной проект в школе онлайн-образования LoftSchool. Вы можете ознакомиться с кодом или запустить сборку у себя на компьютере, чтобы составить обо мне какое-то общее представление
 
 ## Работы на GitHub Pages
-[Данная работа](https://gh0st0fwar.github.io/dist/index.html)
+[Данная работа](https://gh0st0fwar.github.io/dist/index.html)  
 [Пятнашки на Vue и SCSS](https://gh0st0fwar.github.io/blackwalltask/dist/)
 
 ## Окей, что мне с этим делать?
