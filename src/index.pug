@@ -16,11 +16,19 @@ body
 					.container.container--header
 						.initials DV
 						nav.nav
-							ul.nav__list
-							-var links = ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"]
-							each link in links
-								li.nav__item
-									a.nav__link(href="#")= link
+							//- -var links = ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"]
+							//- -var anchors = ["#primary", "#about", "#perks", "#myworks", "#opinions", "call"]
+							//- ul.nav__list
+							//- 	each link in links
+							//- 		li.nav__item
+							//- 			a.nav__link(href="#")= link
+							//- -var anchors = ["#primary", "#about", "#perks", "#myworks", "#opinions"]
+							//- each anchor in anchors
+							//- 	li.nav__item
+							//- 		a.nav__link(href="#{anchor}")= link
+							//- ul.nav__list
+							include ./templates/components/nav.pug
+							
 
 						.social
 							ul.social__icons
@@ -30,7 +38,7 @@ body
 										a(class=`social__link social__link--${icon}`)
 						.hamburger
 							a.hamburger__menu 
-				section.section.primary
+				section.section.primary(id="primary")
 					.primary__wrap
 						.primary__titlebox
 							h5.subtitle.subtitle--primary Личный сайт </br> веб разработчика 
@@ -38,7 +46,7 @@ body
 						.primary__scroll 
 							.primary__scrolldesc Скролл
 							+icon('scroll')
-				section.section.about
+				section.section.about(id="about")
 					.container.container--about
 						.about__person
 							.about__avatar
@@ -72,7 +80,7 @@ body
 				.parallax__gradient
 				.parallax__grass
 				.parallax__train
-			section.section.perks
+			section.section.perks(id="perks")
 				.container.container--perks
 					.perks__desc
 						h3.title.title--perks Чем я могу быть полезен вам
@@ -84,12 +92,12 @@ body
 						include ./templates/components/perks.pug
 
 				.perks__hands
-			section.section.myworks
+			section.section.myworks(id="myworks")
 				
 				include ./templates/components/myworks.pug
 				#myworks-component
 
-			section.section.opinions
+			section.section.opinions(id="opinions")
 
 				include ./templates/components/opinions.pug
 				#opinions-component
@@ -99,7 +107,7 @@ body
 				.leaf.leaf2
 				.leaf.leaf3
 				.leaf.leaf4
-			footer.footer
+			footer.footer(id="call")
 				.container.container--footer 
 					.footer__author
 						h2.footer__copyright © 2019
@@ -107,11 +115,12 @@ body
 						p.subdesc.footer__subdesc Личный сайт веб-разработчика
 					.footer__fill
 						nav.nav.nav--footer
-							ul.nav__list
-							-var links = ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"]
-							each link in links
-								li.nav__item
-									a.nav__link(href="#")= link
+							include ./templates/components/nav.pug
+							//- ul.nav__list
+							//- -var links = ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"]
+							//- each link in links
+							//- 	li.nav__item
+							//- 		a.nav__link(href="#")= link
 						.footer__desc
 							.footer__socials
 								p.maindesc.footer--maindesc Этот сайт я сделал в рамках обучения в Школе онлайн 
