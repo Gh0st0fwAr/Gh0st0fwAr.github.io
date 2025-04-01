@@ -5,7 +5,7 @@
 [Выпускной проект LoftSchool (Vue, Webpack, PCSS, Pug)](https://gh0st0fwar.github.io/dist/index.html) | [Репозиторий](https://github.com/Gh0st0fwAr/Gh0st0fwAr.github.io)  
 [Пятнашки на Vue и SCSS](https://gh0st0fwar.github.io/blackwalltask/dist/) | [Репозиторий](https://github.com/Gh0st0fwAr/blackwalltask)  
 [Лэндинг бургерной на ванильном HTML и JS + JQuery и SCSS](https://gh0st0fwar.github.io/burgers/) | [Репозиторий](https://github.com/Gh0st0fwAr/burgers)  
-[Трекер криптовалют на websocket (только один книент) ] (https://gh0st0fwar.github.io/winbeetask/dist/) | [Репозиторий] (https://github.com/Gh0st0fwAr/winbeetask)
+[Трекер криптовалют на websocket (только один книент)](https://gh0st0fwar.github.io/winbeetask/dist/) | [Репозиторий](https://github.com/Gh0st0fwAr/winbeetask)
 
 ## Окей, что мне с этим делать?
 Чтобы развернуть проект, необходимо: 
