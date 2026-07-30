@@ -7,7 +7,7 @@
 [Лэндинг бургерной на ванильном HTML и JS + JQuery и SCSS](https://gh0st0fwar.github.io/burgers/) | [Репозиторий](https://github.com/Gh0st0fwAr/burgers)  
 [Трекер криптовалют на websocket (только один книент)](https://gh0st0fwar.github.io/winbeetask/dist/) | [Репозиторий](https://github.com/Gh0st0fwAr/winbeetask)
 [Система создания постов с фильтром](https://gh0st0fwar.github.io/1Ttask/dist/#/) |
-Репозиторий](https://github.com/Gh0st0fwAr/1Ttask)
+[Репозиторий](https://github.com/Gh0st0fwAr/1Ttask)
 [Классическая змейка на TypeScript](https://gh0st0fwar.github.io/snake/dist/) | [Репозиторий](https://github.com/Gh0st0fwAr/snake/tree/main)
 
 ## Окей, что мне с этим делать?
