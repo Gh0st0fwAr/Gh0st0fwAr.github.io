@@ -9,7 +9,7 @@
 * [Система создания постов с фильтром](https://gh0st0fwar.github.io/1Ttask/dist/#/) — [Репозиторий](https://github.com/Gh0st0fwAr/1Ttask)  
 * [Классическая змейка на TypeScript](https://gh0st0fwar.github.io/snake/dist/) — [Репозиторий](https://github.com/Gh0st0fwAr/snake/tree/main)  
 * FriendlyStorage — микробиблиотека для работы с LocalStorage — [Репозиторий](https://github.com/Gh0st0fwAr/FriendlyStorage.js)
-* * [Персональный дэшборд продуктивности DevPulse (Vue3 Composition API + Typescript](https://gh0st0fwar.github.io/DevPulse/tasks) — [Репозиторий](https://github.com/Gh0st0fwAr/DevPulse)  
+   [Персональный дэшборд продуктивности DevPulse (Vue3 Composition API + Typescript](https://gh0st0fwar.github.io/DevPulse/tasks) — [Репозиторий](https://github.com/Gh0st0fwAr/DevPulse)  
 
 ## Окей, что мне с этим делать?
 Чтобы развернуть проект, необходимо выполнить команды в терминале: 
