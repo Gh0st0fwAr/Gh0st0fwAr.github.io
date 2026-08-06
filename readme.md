@@ -1,4 +1,3 @@
-Markdown
 # Обо мне
 Меня зовут Вирин Даниил Дмитриевич. Это моё портфолио, а по этому репозиторию — еще и мой выпускной проект в школе LoftSchool. Вы можете ознакомиться с кодом или запустить сборку у себя на компьютере, чтобы составить обо мне какое-то общее представление.
 
@@ -12,4 +11,4 @@ Markdown
 * [Классическая змейка на TypeScript](https://gh0st0fwar.github.io/snake/) — [Репозиторий](https://github.com/Gh0st0fwAr/snake/tree/main)
 * [Персональный дэшборд продуктивности DevPulse (Vue3 Composition API + Typescript)](https://gh0st0fwar.github.io/DevPulse/tasks) — [Репозиторий](https://github.com/Gh0st0fwAr/DevPulse)
 * [Тетрис на Vue3 + TypeScript](https://gh0st0fwar.github.io/Tetris/) — [Репозиторий](https://github.com/Gh0st0fwAr/Tetris)
-* [Шедулер на Vue3 + TypeScript](https://gh0st0fwar.github.io/Scheduler/) — [Репозиторий](https://github.com/
+* [Шедулер на Vue3 + TypeScript](https://gh0st0fwar.github.io/Scheduler/) — [Репозиторий](https://github.com/Gh0st0fwAr/Scheduler)
